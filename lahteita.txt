@@ -1,0 +1,22 @@
+Hakusanoja:
+"scientific papers on ionic framework"
+http://iisit.org/Vol14/IISITv14p049-065Huynh3472.pdf
+http://www.ijircst.org/DOC/7_IRP471_2e3be55d0-6fda-45f1-878d-1a4f4120fa10.pdf
+https://www.diva-portal.org/smash/get/diva2:842367/FULLTEXT01.pdf
+ - > http://www.inderscienceonline.com/doi/abs/10.1504/IJMLO.2013.057162
+ 
+ "Hybrid applications"
+https://www.nngroup.com/articles/mobile-native-apps/
+https://www.sitepoint.com/native-vs-hybrid-app-development/
+https://developer.salesforce.com/page/Native,_HTML5,_or_Hybrid:_Understanding_Your_Mobile_Application_Development_Options
+http://ionicframework.com/docs/
+ 
+"AngularJS"
+https://books.google.fi/books?id=eNExy_X1YYcC&printsec=frontcover&hl=fi&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false
+https://pdfs.semanticscholar.org/a8bd/ab90c7b568755d718f9fd0a92221488f757d.pdf
+
+"Autism and usability"
+https://www.learntechlib.org/p/28561/
+http://chais.openu.ac.il/research_center/chais2011/download/weiss-92_eng.pdf
+http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6720615 TOSI HYVÄ!
+
