@@ -1,0 +1,225 @@
+\documentclass[utf8]{gradu3}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+% HUOM! Tämän tulee olla viimeinen \usepackage koko dokumentissa!
+\usepackage[bookmarksopen,bookmarksnumbered,linktocpage]{hyperref}
+
+\addbibresource{gradubibtex.bib} % Lähdetietokannan tiedostonimi
+
+\begin{document}
+
+\title{Puheen ongelmista kärsiville tarkoitetun kommunikointisovelluksen toteuttaminen Ionic-kehyksellä}
+\translatedtitle{Puheen ongelmista kärsiville tarkoitetun kommunikointisovelluksen toteuttaminen Ionic-kehyksellä}
+\studyline{Ohjelmistotekniikka}
+\avainsanat{%
+  Ionic,
+  AAC,
+  www-sovellukset,
+  käytettävyys
+}
+\keywords{%
+  Ionic,
+  AAC,
+  web applications,
+  usability
+}
+\tiivistelma{%
+  Tämä kirjoitelma on esimerkki siitä, kuinka
+  {gradu3}-tutkielmapohjaa käytetään.  Se sisältää myös
+  käyttöohjeet ja tutkielman rakennetta koskevia ohjeita.
+
+  Tutkielman tiivistelmä on tyypillisesti lyhyt esitys, jossa
+  kerrotaan tutkielman taustoista, tavoitteesta, tutkimusmenetelmistä,
+  saavutetuista tuloksista, tulosten tulkinnasta ja johtopäätöksistä.
+  Tiivistelmän tulee olla niin lyhyt, että se, englanninkielinen
+  abstrakti ja muut metatiedot mahtuvat kaikki samalle sivulle.
+}
+\abstract{%
+  Tiivistelmä englanniksi.
+}
+
+\author{Roope Kivioja}
+\contactinformation{\texttt{roope.kivioja@gmail.com}}
+
+\supervisor{Jukka-Pekka Santala}
+\supervisor{Se toinen}
+
+\maketitle
+
+\begin{thetermlist}
+\item[Ionic] Ohjelmistokehys.
+\item[AAC] Assistive and augmented computing eli puhetta tukeva ja korvaava kommunikaatio.
+\end{thetermlist}
+
+\mainmatter
+
+\chapter{Johdanto}
+
+Tähän tulee johdanto.
+
+\chapter{Taustatietoa}
+
+- TODO: Kerrotaan yleisesti taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
+
+On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkilön puheen tuottamisen kyky voi hetkellisesti tai pysyvästi heikentyä. Tällöin näistä ongelmista kärsivä henkilö saattaa joutua turvautumaan arkipäivän kommunikaatiossa erinäisiin tietoteknisiin sovelluksiin, joiden kautta käyttäjä kirjoittaa joko suoraan tekstiä tai kommunikoi valitsemalla symboleja. Yleisesti näitä viestintämenetelmiä kuvaamaan tarkoitettu termi on "puhetta tukeva ja korvaava kommunikaatio" (engl. Augmentative and Alternative Communication, lyh. AAC).
+
+- TODO: Kerrotaan yleisesti PWA-sovelluksista/hybridisovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
+
+Progressiiviset sovellukset ovat WWW-sovelluksia, joiden ulkoasu on optimoitu mobiililaitteille niin, että ne eivät eroa natiiveista sovelluksista. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä "hybridisovellus".
+
+Idea natiivien sovellusten rakentamisesta webteknologioiden päälle ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. (koko edellinen \parencite[]{escaping-tabs})
+
+Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. (edellinen kappale \parencite[]{google-pwa-marketing}))
+
+\section{Ionic-kehys}
+
+Kerrotaan PWA-sovelluksista/hybridisovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
+
+Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnittelluista kehyksistä. Se on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä AngularJS -ohjelmistokehystä.
+
+Nykyisten AAC-sovellusten ongelma on, että niitä voidaan käyttää vain yhdellä laitteella (lähde?), joten progressiivisten sovellusten käyttäminen voisi parantaa tilannetta.
+
+\section{AAC-sovellukset}
+
+Kerrotaan taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
+
+Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteisee. Avustamattomalla AAC:lla tarkoitetaan puhetta tukevaa ja korvaavaa kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomankieli on yksi esimerkki avustamattomasta AAC:sta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. Avustettu AAC tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu AAC voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian AAC:hen. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista AAC-tyypeistä.  TODO: jaa kappaleisiin, lähdeviittaus: (koko edellinen \parencite[]{AAC-conditional-use})
+
+\chapter{Sovelluksen toteutus ja rakenne}
+
+Kerrotaan mistä palasista ohjelma koostuu ja miten ne keskustelevat keskenään. Verrataan tätä kirjallisuuden suosituksiin.
+Täysin tekninen kuvaus.
+
+Sovellus koostuu valikkorakenteesta, korttien luontinäkymästä ja kommunikaationäkymästä.
+
+\section{Valikot}
+
+Ionicin standardielementeistä luotu.
+
+\section{Korttien luontinäkymä}
+
+Voidaan tehdä erikokoisia kortteja. Käytetään Papu.net-sivuston vapaata kuvapankkia.
+
+\section{Kommunikaationäkymä}
+
+Valitaan kortti. Kirjataan viesti symboleja painamalla.
+
+\chapter{Toteutuksessa opittua}
+
+Kerrotaan lyhyesti opituista asioista.
+
+Tuli aivan hyvä sovellus.
+
+\section{Ohjelmistotekniikan näkökulma}
+
+Kerrotaan ohjelmistotekniikan näkökulmasta kaikki opittu.
+
+Kuvien kanssa värkkääminen aika haastavaa. Progressiiviset sovellukset kohtalaisen hyviä tähän käyttötarkoitukseen eli yksinkertaisiin mobiilikeskeisiin sovelluksiin.
+
+\section{Käytettävyyden näkökulma}
+
+Kerrotaan käytettävyyden näkökulmasta. Erityisesti erikoisryhmien käytettävyys nostetaan esille.
+
+Autisteille pitää olla yksinkertaisia värejä ja yksinkertaisia valikkoja.
+
+\chapter{Johtopäätökset}
+
+Johtopäätöksiä (pitäisikö miettiä miten saadaan edellisen kappaleen kanssa jaettua nätisti?)
+
+\chapter{Yhteenveto}
+
+Tutkielman viimeinen luku on Yhteenveto.  Sen on hyvä olla lyhyt;
+siinä todetaan, mitä tutkielmassa esitetyn nojalla voidaan sanoa
+johdannon väitteen totuudesta tai tutkimuskysymyksen vastauksesta.
+Yhteenvedossa tuodaan myös esille tutkielman heikkoudet (erityisesti
+tekijät, jotka heikentävät tutkielman tulosten luotettavuutta), ellei
+niitä ole jo aiemmin tuotu esiin esimerkiksi Pohdinta-luvussa.  Tässä
+luvussa voidaan myös tuoda esille, mitä tutkimusta olisi tämän
+tutkielman tulosten valossa syytä tehdä seuraavaksi.
+
+Jos Yhteenveto alkaa pitkittyä, se kannattaa jakaa kahtia niin, että
+tulosten tulkinta otetaan omaksi Pohdinta-luvukseen, jolloin
+Yhteenvedosta tulee varsin lyhyt ja lakoninen.
+
+Yhteenvedon jälkeen tulee \string\printbibliography-komennolla
+laadittu lähdeluettelo ja sen jälkeen mahdolliset liitteet.
+
+\printbibliography
+
+\appendix
+\section{Liite-esimerkki}
+
+Keskeneräisen tutkielman siirtäminen gradu2:sta gradu3:een ei ole
+kovin vaikeata.  Aluksi on totta kai vaihdettava
+\string\documentclass-komennossa gradu2 gradu3:ksi.  Komennon
+optioista suurin osa on poistettava, koska niitä ei enää tueta;
+ainoastaan merkistön ilmoittava optio jää jäljelle.  Mahdollinen
+kandi-optio vaihdetaan optioksi bachelor.
+
+Taulukossa~\ref{tbl:cmdchange} on lueteltu tarvittavat
+komentovaihdokset.  Viiva tarkoittaa, ettei vastaavaa komentoa ole
+lainkaan.  Huomaa erityisesti uudet komennot.
+
+\begin{table}[h]\centering
+  \begin{tabular}{ll}
+    \toprule
+    gradu2                 & gradu3  \\
+    \midrule
+    ---                    & \string\maketitle \\
+    ---                    & \string\supervisor \\
+    \string\acmccs         & --- \\
+    \string\aine           & \string\subject\\
+    \string\copyrightowner & --- \\
+    \string\fulltitle      & --- \\
+    \string\laitos         & \string\department\\
+    \string\license        & --- \\
+    \string\linja          & \string\studyline\\
+    \string\paikka         & --- \\
+    \string\setauthor      & \string\author\\
+    \string\termlist       & thetermlist-ympäristö\\
+    \string\tyyppi         & \string\type\\
+    \string\yhteystiedot   & \string\contactinformation\\
+    \string\yliopisto      & \string\university\\
+    \string\ysa            & --- \\
+    \bottomrule
+  \end{tabular}
+  \caption{Komentomuutokset gradu2:sta gradu3:een}
+  \label{tbl:cmdchange}
+\end{table}
+
+Isoin työ voi aiheutua lähdeluettelon laatimistekniikan muuttumiseen
+sopeutumisesta.
+
+\section{Liite-esimerkki 2}
+
+Aiemmin esiteltyjen lisäksi gradu3 tarjoaa seuraavat lisäominaisuudet:
+\begin{itemize}
+\item \LaTeXe:n vakio-optiot draft ja final toimivat.
+\item Vaikka tutkielman suomenkielisyyttä ei tarvitse erikseen
+  mainita, finnish-optio toimii.
+\item \string\university-komennolla voit ilmoittaa tutkielman
+  kotiyliopistoksi jonkin muun kuin Jyväskylän yliopiston.
+\item  \string\department-komennolla voit ilmoittaa tutkielman
+  kotilaitokseksi jonkin muun kuin Informaatioteknologian tiedekunnan.
+\item \string\subject-komennolla voit ilmoittaa tutkielman
+  oppiaineeksi jonkin muun kuin tietotekniikan.  Huomaa, että oppiaine
+  tulisi suomenkielisissä tutkielmissa kirjoittaa genetiivimuodossa ja
+  isolla alkukirjaimella (''Tietotekniikan''), englanninkielisissä
+  tuktkielmissa in-preposition kanssa (''in Information Technology'').
+\item \string\type-komennolla voit ilmoittaa tutkielman tyypin, jos se
+  on jokin muu kuin pro gradu (oletus) tai kandidaatintutkielma
+  (optiolla bachelor).
+\item \string\setdate-komennolla voit asettaa päivämäärän
+  haluamaksesi.  Anna komennolle kolme parametria -- päivä,
+  kuukausi ja vuosi -- numeerisessa muodossa.
+\item Ympäristöllä chapterquote voit laittaa luvun alkuun
+  mietelauseen.  Sillä on yksi pakollinen parametri (lainauksen
+  attribuutio).
+\item Komento \string\graduclsdate\ sisältää käytössä olevan gradu3:n
+  julkaisupäivämäärän ja \string\graduclsversion\ sen versionumeron.
+\end{itemize}
+
+\end{document}
