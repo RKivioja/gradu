@@ -44,7 +44,7 @@
 \author{Roope Kivioja}
 \contactinformation{\texttt{roope.kivioja@gmail.com}}
 
-\supervisor{Jukka-Pekka Santala}
+\supervisor{Jukka-Pekka Santanen}
 \supervisor{Se toinen}
 
 \maketitle
@@ -60,6 +60,8 @@
 
 Tähän tulee johdanto.
 
+Yksi merkittävimmistä ongelmista nykyisissä AAC-sovelluksissa on niiden heikko saatavuus eri laitteille. (lähde, viittaus omaan haastatteluun?) Tämä oli suurin syy progressiivisen sovelluksen kehittämiseksi.
+
 \chapter{Taustatietoa}
 
 - TODO: Kerrotaan yleisesti taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
@@ -68,25 +70,27 @@ On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkil
 
 - TODO: Kerrotaan yleisesti PWA-sovelluksista/hybridisovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
 
-Progressiiviset sovellukset ovat WWW-sovelluksia, joiden ulkoasu on optimoitu mobiililaitteille niin, että ne eivät eroa natiiveista sovelluksista. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä "hybridisovellus".
+Progressiiviset sovellukset ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu on optimoitu laitteelle niin, että ne eivät eroa natiiveista sovelluksista. Progressiivisuudella tarkoitetaan sovellusta, joka pystyy käyttämään tarjolla olevan sovellusympäristön resursseja joustavasti sen sijaan, että se itse määrittäisi vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä "hybridisovellus".
 
 Idea natiivien sovellusten rakentamisesta webteknologioiden päälle ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. (koko edellinen \parencite[]{escaping-tabs})
 
-Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. (edellinen kappale \parencite[]{google-pwa-marketing}))
+Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. TODO: tähän omaa pohdintaa (edellinen kappale \parencite[]{google-pwa-marketing}))
+
+Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnittelluista kehyksistä. Se on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä AngularJS -ohjelmistokehystä.
 
 \section{Ionic-kehys}
 
 Kerrotaan PWA-sovelluksista/hybridisovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
 
-Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnittelluista kehyksistä. Se on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä AngularJS -ohjelmistokehystä.
-
 Nykyisten AAC-sovellusten ongelma on, että niitä voidaan käyttää vain yhdellä laitteella (lähde?), joten progressiivisten sovellusten käyttäminen voisi parantaa tilannetta.
+
+Progressiivisten sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska kyse on uudesta suuntauksesta ohjelmistokehitysessä, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen sekä kehysten käyttämistä kehitystyössä. Toinen merkittävä kompastuskivi voi olla tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu luontevaa tallennustilaa. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. TODO: tähän omaa pohdintaa (edellinen kappale \parencite[]{pwa-design-challenges}))
 
 \section{AAC-sovellukset}
 
 Kerrotaan taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
 
-Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteisee. Avustamattomalla AAC:lla tarkoitetaan puhetta tukevaa ja korvaavaa kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomankieli on yksi esimerkki avustamattomasta AAC:sta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. Avustettu AAC tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu AAC voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian AAC:hen. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista AAC-tyypeistä.  TODO: jaa kappaleisiin, lähdeviittaus: (koko edellinen \parencite[]{AAC-conditional-use})
+Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteiseen. Avustamattomalla AAC:lla tarkoitetaan puhetta tukevaa ja korvaavaa kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomankieli on yksi esimerkki avustamattomasta AAC:sta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. Avustettu AAC tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu AAC voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian AAC:hen. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista AAC-tyypeistä.  TODO: jaa kappaleisiin, lähdeviittaus: (koko edellinen \parencite[]{AAC-conditional-use})
 
 \chapter{Sovelluksen toteutus ja rakenne}
 
@@ -123,7 +127,13 @@ Kuvien kanssa värkkääminen aika haastavaa. Progressiiviset sovellukset kohtal
 
 Kerrotaan käytettävyyden näkökulmasta. Erityisesti erikoisryhmien käytettävyys nostetaan esille.
 
-Autisteille pitää olla yksinkertaisia värejä ja yksinkertaisia valikkoja.
+Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käyttäjille. Autismiin liittyvän aistiyliherkkyyden takia sovelluksen toteutuksessa käytettävyys oli isossa roolissa.
+
+Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen myötä kykyyn käyttää sovelluksia. Iso-Britannian The National Autistic Society listaa verkkosivuillaan autistisille ihmisille sopivien verkkosivujen visuaalisesta toteutuksen päävaatimukset \parencite[]{autism-friendly-websites}. Listauksessa painotetaan erityisesti visuaalisen ilmeen selkeyttä, staattisuutta ja yksiselitteisyyttä. Lisäksi koekäyttäjien roolia korostetaan.
+
+Symbolien käyttöä tulisi välttää TODO:lähde
+
+Yksi varsin vähän tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihin. Grandgeorgen ja Masatakan \parencite[]{color-preference-autism} mukaan autistiset lapset pitävät erityisesti vihreästä väristä. Keltaista ja ruskeaa tulisi välttää. Edellä mainitun tutkimuksen otoskoko oli kuitenkin pieni, joten tuloksia ei voi yleistää. Lapset pitävät erityisesti pääväreistä.
 
 \chapter{Johtopäätökset}
 
