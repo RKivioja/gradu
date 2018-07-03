@@ -72,11 +72,11 @@ On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkil
 
 Progressiiviset sovellukset ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu on optimoitu laitteelle niin, että ne eivät eroa natiiveista sovelluksista. Progressiivisuudella tarkoitetaan sovellusta, joka pystyy käyttämään tarjolla olevan sovellusympäristön resursseja joustavasti sen sijaan, että se itse määrittäisi vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä "hybridisovellus".
 
-Idea natiivien sovellusten rakentamisesta webteknologioiden päälle ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. (koko edellinen \parencite[]{escaping-tabs})
-
 Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. TODO: tähän omaa pohdintaa (edellinen kappale \parencite[]{google-pwa-marketing}))
 
-Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnittelluista kehyksistä. Se on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä AngularJS -ohjelmistokehystä.
+Idea natiivien sovellusten rakentamisesta webteknologioiden päälle ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. (koko edellinen \parencite[]{escaping-tabs}) Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat rohkaisevia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% per sessio, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta tilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että 45\% sen sisällöstä ladataan 2G-verkon läpi. Sekä AliExpress että Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. \parencite[]{beginners-guide-pwa})  TODO: omaa pohdintaa
+
+Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnitelluista kehyksistä. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä AngularJS -ohjelmistokehystä.
 
 \section{Ionic-kehys}
 
@@ -92,12 +92,16 @@ Kerrotaan taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä kä
 
 Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteiseen. Avustamattomalla AAC:lla tarkoitetaan puhetta tukevaa ja korvaavaa kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomankieli on yksi esimerkki avustamattomasta AAC:sta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. Avustettu AAC tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu AAC voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian AAC:hen. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista AAC-tyypeistä.  TODO: jaa kappaleisiin, lähdeviittaus: (koko edellinen \parencite[]{AAC-conditional-use})
 
+Tyypillisesti AAC-sovelluksessa kommunikaatio tapahtuu symbolien avulla. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle tyypillinen tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa  \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenväti kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle AAC-kommunikoinnille on siis sekä tutkimuspohjaista näyttöä että käytännön kokemuksiin perustuvaa kannustetta.
+
+AAC-sovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista AAC-sovelluksessa.\parencite[]{AAC-interventions}
+
 \chapter{Sovelluksen toteutus ja rakenne}
 
 Kerrotaan mistä palasista ohjelma koostuu ja miten ne keskustelevat keskenään. Verrataan tätä kirjallisuuden suosituksiin.
 Täysin tekninen kuvaus.
 
-Sovellus koostuu valikkorakenteesta, korttien luontinäkymästä ja kommunikaationäkymästä.
+Sovellus koostuu valikkorakenteesta, korttien luontinäkymistä ja kommunikaationäkymästä.
 
 \section{Valikot}
 
