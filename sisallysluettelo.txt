@@ -1,9 +1,15 @@
-1. Johdanto
-2. Taustatietoa
- 2.1 Ionic ja hybridisovellukset
- 2.2 AAC-sovellukset
-3. Sovelluksen toteutus ja rakenne
-4. Toteutuksessa opittua
- 4.1 Ohjelmistotekniikan näkökulma
- 4.2 Käytettävyyden näkökulma
-5. Johtopäätökset
+1. Johdanto [Johdantoluku (esim. 5 sivua)]
+2. Kommunikaatiossa avustavan sovelluksen teoriaa ja menetelmiä [Teorialuku (esim. 10-15 sivua)]
+ 2.1 Avusteinen kommunikaatio
+ 2.2 Progressiiviset WWW-sovellukset
+  2.2.1 Ionic
+   2.2.1.1 Angular
+   2.2.1.2 TypeScript
+ 2.3 Yleistä käytettävyydestä
+3. Kommunikaatiossa avustavan sovelluksen suunnittelu ja toteutus [Metodi- ja materiaaliluku (esim. 10-15 sivua)]
+ 3.2 Ohjelmistotekninen näkökulma
+ 3.3 Käytettävyysnäkökulma
+4. Toteutuneen sovelluksen arvionti (15-20 sivua)
+ 4.1 Toteutuksessa havaittua
+5. Pohdinta [Pohdintaluku (5-10 sivua)]
+6. Johtopäätökset [Johtopäätökset (3-5 sivua)]
