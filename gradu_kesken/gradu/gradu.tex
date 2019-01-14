@@ -28,15 +28,7 @@
   usability
 }
 \tiivistelma{%
-  Tämä kirjoitelma on esimerkki siitä, kuinka
-  {gradu3}-tutkielmapohjaa käytetään.  Se sisältää myös
-  käyttöohjeet ja tutkielman rakennetta koskevia ohjeita.
-
-  Tutkielman tiivistelmä on tyypillisesti lyhyt esitys, jossa
-  kerrotaan tutkielman taustoista, tavoitteesta, tutkimusmenetelmistä,
-  saavutetuista tuloksista, tulosten tulkinnasta ja johtopäätöksistä.
-  Tiivistelmän tulee olla niin lyhyt, että se, englanninkielinen
-  abstrakti ja muut metatiedot mahtuvat kaikki samalle sivulle.
+  Tutkielman tiivistelmä on tyypillisesti lyhyt esitys, jossa kerrotaan tutkielman taustoista, tavoitteesta, tutkimusmenetelmistä, saavutetuista tuloksista, tulosten tulkinnasta ja johtopäätöksistä. Tiivistelmän tulee olla niin lyhyt, että se, englanninkielinen abstrakti ja muut metatiedot mahtuvat kaikki samalle sivulle.
 }
 \abstract{%
   Tiivistelmä englanniksi.
@@ -46,13 +38,12 @@
 \contactinformation{\texttt{roope.kivioja@gmail.com}}
 
 \supervisor{Jukka-Pekka Santanen}
-\supervisor{a}
+\supervisor{Jonne Itkonen}
 
 \maketitle
 
 \begin{thetermlist}
 \item[Ionic] Ohjelmistokehys.
-\item[AAC] Assistive and augmented computing eli puhetta tukeva ja korvaava kommunikaatio.
 \end{thetermlist}
 
 \mainmatter
@@ -61,56 +52,90 @@
 
 Tähän tulee johdanto.
 
-Yksi merkittävimmistä ongelmista nykyisissä AAC-sovelluksissa on niiden heikko saatavuus eri laitteille. (lähde, viittaus omaan haastatteluun?) Tämä oli suurin syy progressiivisen WWW-sovelluksen kehittämiseksi.
-
 \chapter{Kommunikaatiossa avustavan sovelluksen rakentamiseen tarvittavia taustatietoja ja menetelmiä}
 
 \section{Avusteinen kommunikaatio}
 
 - TODO: Kerrotaan yleisesti taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
 
-On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkilön puheen tuottamisen kyky voi hetkellisesti tai pysyvästi heikentyä. Puheen tuottamisen ongelmista kärsivä henkilö saattaa joutua turvautumaan arkipäivän kommunikaatiossa erilaisiin apuvälineisiin kommunikoidakseen muiden ihmisten kanssa. Yleisesti näitä viestintämenetelmiä kuvaamaan tarkoitettu termi on "puhetta tukeva ja korvaava kommunikaatio" (engl. Augmentative and Alternative Communication, lyh. AAC). 
+On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkilön puheen tuottamisen kyky voi hetkellisesti tai pysyvästi heikentyä. Puheen tuottamisen ongelmista kärsivä henkilö saattaa joutua turvautumaan arkipäivän kommunikaatiossa erilaisiin apuvälineisiin kommunikoidakseen muiden ihmisten kanssa. Yleisesti näitä viestintämenetelmiä kuvaamaan tarkoitettu termi on "puhetta tukeva ja korvaava kommunikaatio" (engl. Augmentative and Alternative Communication, lyh. AAC).
 
-Puhetta tukevaa ja korvaavaa kommunikaatiota usein tarjotaan puheen tuottamisen ongelmista kärsiville myös tietoteknisten sovellusten avulla, joiden kautta käyttäjä kirjoittaa joko suoraan tekstiä tai kommunikoi valitsemalla symboleja. Esimerkiksi autistisilla käyttäjillä on tyypillisesti hyvin henkilö- ja yksityiskohtaisia tarpeita puhetta tukevalle ja korvaavalle kommunikaatiolle, joten tietotekniset sovellukset sopivat hyvin ratkaisemaan ongelmia, joita ei voida ratkaista perinteisemmin menetelmin.
+Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteiseen. Avustamattomalla puhetta tukevalla ja korvaavalla kommunikaatiolla tarkoitetaan puhetta tukevaa ja korvaavaa kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomankieli on yksi esimerkki avustamattomasta puhetta tukevasta ja korvaavaasta kommunikaatiosta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. 
 
-Kerrotaan taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
+Avustettu puhetta tukevaa ja korvaava kommunikaatio tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu puhetta tukevaa ja korvaava kommunikaatio voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian puhetta tukevaan ja korvaavaan kommunikaatioon. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista tyypeistä. \parencite[]{AAC-conditional-use}
 
-Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteiseen. Avustamattomalla AAC:lla tarkoitetaan puhetta tukevaa ja korvaavaa kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomankieli on yksi esimerkki avustamattomasta AAC:sta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. Avustettu AAC tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu AAC voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian AAC:hen. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista AAC-tyypeistä.  TODO: jaa kappaleisiin, lähdeviittaus: (koko edellinen \parencite[]{AAC-conditional-use})
+Puhetta tukevaa ja korvaavaa kommunikaatiota tarjotaan puheen tuottamisen ongelmista kärsiville myös tietoteknisten sovellusten avulla, joiden kautta käyttäjä kirjoittaa joko suoraan tekstiä tai kommunikoi valitsemalla symboleja. Esimerkiksi autistisilla käyttäjillä on tyypillisesti hyvin henkilö- ja yksityiskohtaisia tarpeita puhetta tukevalle ja korvaavalle kommunikaatiolle, joten tietoteknisten sovellusten suhteellisen helppo muokattavuus puoltaa niiden käyttöä perinteisempien puhetta ja kommunikointia korvaavien apuvälineiden sijaan.
 
-Tyypillisesti AAC-sovelluksessa kommunikaatio tapahtuu symbolien avulla. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle tyypillinen tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa  \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenväti kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle AAC-kommunikoinnille on siis sekä tutkimuspohjaista näyttöä, että käytännön kokemuksiin perustuvaa kannustetta.
+Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin symboleja. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle luontevin tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa  \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenväti kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle puhetta tukevalle ja korvaavalle kommunikaatiolle on siis sekä tutkimuspohjaista näyttöä, että käytännön kokemuksiin perustuvaa kannustetta.
 
-AAC-sovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista AAC-sovelluksessa.\parencite[]{AAC-interventions}
+Puhetta tukevat ja korvaavat kommunikointisovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista puhetta tukevassa ja korvaavassa kommunikointisovelluksessa.\parencite[]{AAC-interventions}
+
+Nykyisten puhetta tukevien ja korvaavien kommunikointisovellukseen ongelma on, että niitä voidaan käyttää vain yhdellä laitteella (lähde?), joten progressiivisten sovellusten käyttäminen voisi parantaa tilannetta.
 
 \section{Progressiiviset WWW-sovellukset}
 
-Kerrotaan PWA-sovelluksista/hybridisovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
+- TODO: Kerrotaan yleisesti PWA-sovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
 
-- TODO: Kerrotaan yleisesti PWA-sovelluksista/hybridisovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
+Progressiiviset sovellukset ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu on optimoitu laitteelle niin, että ne eivät eroa natiiveista sovelluksista. Progressiivisella sovelluksella tarkoitetaan sovellusta, joka pystyy käyttämään tarjolla olevan sovellusympäristön resursseja joustavasti sen sijaan, että se itse määrittäisi vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa on käytetty aiemmin myös termiä "hybridisovellus".
 
-Progressiiviset sovellukset ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu on optimoitu laitteelle niin, että ne eivät eroa natiiveista eli sovelluksista. Progressiivisuudella tarkoitetaan sovellusta, joka pystyy käyttämään tarjolla olevan sovellusympäristön resursseja joustavasti sen sijaan, että se itse määrittäisi vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä "hybridisovellus".
+Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. \parencite[]{google-pwa-marketing}
+TODO: tähän omaa pohdintaa
 
-Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. TODO: tähän omaa pohdintaa (edellinen kappale \parencite[]{google-pwa-marketing}))
+Idea natiivien sovellusten rakentamisesta selainalustoja hyödyntämällä ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat rohkaisevia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% per sessio, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta tilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että 45\% sen sisällöstä ladataan 2G-verkon läpi. \parencite[]{beginners-guide-pwa}
 
-Idea natiivien sovellusten rakentamisesta selainalustoja hyödyntämällä ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. (koko edellinen \parencite[]{escaping-tabs}) Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat rohkaisevia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% per sessio, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta tilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että 45\% sen sisällöstä ladataan 2G-verkon läpi. Sekä AliExpress että Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. \parencite[]{beginners-guide-pwa})  TODO: omaa pohdintaa
+AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. \parencite[]{beginners-guide-pwa}  TODO: omaa pohdintaa
 
-Nykyisten AAC-sovellusten ongelma on, että niitä voidaan käyttää vain yhdellä laitteella (lähde?), joten progressiivisten sovellusten käyttäminen voisi parantaa tilannetta.
-
-Progressiivisten sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska kyse on uudesta suuntauksesta ohjelmistokehitysessä, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen sekä kehysten käyttämistä kehitystyössä. Toinen merkittävä kompastuskivi voi olla tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu luontevaa tallennustilaa. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. TODO: tähän omaa pohdintaa (edellinen kappale \parencite[]{pwa-design-challenges}))
+Progressiivisten sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska kyse on uudesta suuntauksesta ohjelmistokehitysessä, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen sekä kehysten käyttämistä kehitystyössä. Toinen merkittävä kompastuskivi voi olla tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu luontevaa tallennustilaa. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. TODO: tähän omaa pohdintaa \parencite[]{pwa-design-challenges}
 
 \section{Ionic}
 
-Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnitelluista kehyksistä. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä Angular-ohjelmistokehystä. Angular-ohjelmistokehitys perustuu TypeScript-ohjelmointikieleen.
+Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnitelluista kehyksistä. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä Angular-ohjelmistokehystä. Ionic on MIT-lisenssin alainen. Angular-ohjelmistokehys perustuu TypeScript-ohjelmointikieleen. Kehyksenä Ionicin pääpaino on tarjota kehittäjälle oikealta näyttävä ja visuaalisesti toimiva sovellus. Sen ei ole tarkoitus korvata tyypillisiä JavaScript-kirjastoja vaan se toimii niiden tukena. \parencite[]{ionic-documentation}
+
+Ionic koostuu komponenteista. Ionicin komponentit ovat uudelleenkäytettäviä käyttöliittymäelementtejä, jotka toimivat sovelluksen käyttöliittymän rakennusosina. Niiden avulla sovellus näyttää yhtenäiseltä ja käyttöliittymän kehitystyö nopeutuu. Komponentit koostuvat HTML:stä, CSS:stä ja JavaScriptistä.
+
+Ionicin ulkoasu perustuu teemoihin. Myös teemat lisäävät sovelluksen ulkoasun yhtenäisyyttä. Teemat voivat myös mukautua eri alustojen käytäntöjen mukaisiksi. Esimerkiksi Android- ja iOS -mobiilikäyttöjärjestelmille suunnattujen sovellusten ulkoasu poikkeaa toisistaan, jos käytetään Ionicin oletusteemoja. Teemojen käyttäminen parantaa sovelluksen käytettävyyttä.
+
+ -> katso dokumentaatiosta
 
 \subsection{Angular}
+
+Angular on Googlen Angular Teamin ylläpitämä TypeScript-pohjainen käyttöliittymäkehys. Se on jatkoa aiemmin ilmestyneelle AngularJS-kehykselle. Alkuperäinen AngularJS-kehys ilmestyi vuonna 2010 ja se oli ensimmäinen valmis ratkaisu dynaamisten HTML-sivujen rakentamiseen mahdollistaen tehokkaamman yhden sivun WWW-sovellusten rakentamisen. Angular julkaistiin vuonna 2016 ja se on kokonaan uudelleenohjelmoitu versio AngularJS:stä.
+
+AngularJS perustuu MVC-arkkitehtuuriin kun taas uudempi Angular on komponenttipohjainen. Komponenttipohjainen arkkitehtuuri pyrkii tarjoamaan paremman uudelleenkäytettävyyden, luettavuuden, testattavuuden ja ylläpidettävyyden. Ohjelma jaetaan itsenäisiin komponentteihin, jota voidaan käyttää useasti ja niiden itsenäisyys helpottaa yksikkötestaamista. Itsenäiset komponentit ovat huomattavasti helpommin ymmärrettävissä ja niiden korvaaminen on joustavampaa mikä parantaa ylläpidettävyyttä. \parencite[]{good-and-bad-angular}
+
 \subsection{TypeScript}
 
+Angular-ohjelmointikehyksen avulla ohjelmointiin käytetään TypeScript-ohjelmointikieltä. TypeScript on avoimen lähdekoodin ohjelmointikieli, jota ylläpitää Microsoft. Se kääntyy suoritusvaiheessa JavaScriptiksi ja se on tarkoitettu tukemaan JavaScript-ohjelmien kehitystä tarjoamalla muunmuassa staattisen tyypityksen. 
+
+TypeScriptin on tarkoitus tarjota Microsoftin .NET-ympäristöön tottuneille ohjelmoijille oliolähtöisempi lähestymistapa JavaScript-kehitykseen \parencite[]{maharry-typescript}. JavaScript on suosittu ohjelmointikieli, mutta varsinkin ohjelmiston lähdekoodin määrän kasvaessa sen heikkoudet alkavat tulla esiin. TypeScript pyrkii puuttumaan näihin ongelmiin tarjoamalla ohjelmoijalle moduulijärjestelmän, luokat, rajapinnat ja staattisen tyypityksen \parencite[]{understanding-typescript}.
+
+- modulaarisuuden edut?
+- luokkien edut vrt. js?
+- rajapintojen edut vrt. js?
+- staattisen tyypityksen edut vrt. js?
+
 \section{Käytettävyyden perusteet}
+
+Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka ihmiset ovat suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Kommunikaatiossa avustavan sovelluksen suunnittelussa tulisi olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
+
+Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää useasti päivittäin.
+
+- tyypillisimmät käytettävyystekijät DoET:sta tai muusta perusteoksesta käyttäen muitakin lähteitä
+
+\subsection{Käytettävyys ja autismi}
+
+Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen myötä kykyyn käyttää sovelluksia. Iso-Britannian The National Autistic Society listaa verkkosivuillaan autistisille ihmisille sopivien verkkosivujen visuaalisesta toteutuksen päävaatimukset \parencite[]{autism-friendly-websites}. Listauksessa painotetaan erityisesti visuaalisen ilmeen selkeyttä, staattisuutta ja yksiselitteisyyttä. Lisäksi koekäyttäjien roolia korostetaan.
+
+Symbolien käyttöä tulisi välttää TODO:lähde
+
+Yksi varsin vähän tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihin. Grandgeorgen ja Masatakan \parencite[]{color-preference-autism} mukaan autistiset lapset pitävät erityisesti vihreästä väristä. Keltaista ja ruskeaa tulisi välttää. Edellä mainitun tutkimuksen otoskoko oli kuitenkin pieni, joten tuloksia ei voi yleistää. Lapset pitävät erityisesti pääväreistä.
+
+- etsi lisää lähteitä, ainakin .txt-tiedostossa oli jotain vanhoja
 
 \chapter{Kommunikaatiossa avustavan sovelluksen suunnittelu ja toteutus}
 
 \section{Ohjelmistotekninen näkökulma}
-Kerrotaan mistä palasista ohjelma koostuu ja miten ne keskustelevat keskenään. Verrataan tätä kirjallisuuden suosituksiin.
-Täysin tekninen kuvaus.
+Tekninen kuvaus ohjelmasta. Verrataan tätä kirjallisuuden suosituksiin.
 
 Sovellus koostuu valikkorakenteesta, korttien luontinäkymistä ja kommunikaationäkymästä.
 
@@ -130,19 +155,12 @@ Valitaan kortti. Kirjataan viesti symboleja painamalla.
 
 Kerrotaan käytettävyyden näkökulmasta. Erityisesti erikoisryhmien käytettävyys nostetaan esille.
 
-Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käyttäjille. Autismiin liittyvän aistiyliherkkyyden takia sovelluksen toteutuksessa käytettävyys oli isossa roolissa.
-
-Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen myötä kykyyn käyttää sovelluksia. Iso-Britannian The National Autistic Society listaa verkkosivuillaan autistisille ihmisille sopivien verkkosivujen visuaalisesta toteutuksen päävaatimukset \parencite[]{autism-friendly-websites}. Listauksessa painotetaan erityisesti visuaalisen ilmeen selkeyttä, staattisuutta ja yksiselitteisyyttä. Lisäksi koekäyttäjien roolia korostetaan.
-
-Symbolien käyttöä tulisi välttää TODO:lähde
-
-Yksi varsin vähän tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihin. Grandgeorgen ja Masatakan \parencite[]{color-preference-autism} mukaan autistiset lapset pitävät erityisesti vihreästä väristä. Keltaista ja ruskeaa tulisi välttää. Edellä mainitun tutkimuksen otoskoko oli kuitenkin pieni, joten tuloksia ei voi yleistää. Lapset pitävät erityisesti pääväreistä.
+Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käyttäjille.
 
 \chapter{Toteutuneen sovelluksen arviointi}
 
-Kuvien kanssa värkkääminen aika haastavaa. Progressiiviset sovellukset kohtalaisen hyviä tähän käyttötarkoitukseen eli yksinkertaisiin mobiilikeskeisiin sovelluksiin.
+Kuvien käsittely ja tallentaminen haastavaa. Progressiiviset sovellukset kohtalaisen hyviä tähän käyttötarkoitukseen eli yksinkertaisiin mobiilikeskeisiin sovelluksiin.
 
-Tuli aivan hyvä sovellus.
 
 \chapter{Pohdinta}
 
