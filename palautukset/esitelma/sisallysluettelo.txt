@@ -1,9 +1,0 @@
-1. Johdanto
-2. Taustatietoa
- 2.1 Ionic ja hybridisovellukset
- 2.2 AAC-sovellukset
-3. Sovelluksen toteutus ja rakenne
-4. Toteutuksessa opittua
- 4.1 Ohjelmistotekniikan näkökulma
- 4.2 Käytettävyyden näkökulma
-5. Johtopäätökset
