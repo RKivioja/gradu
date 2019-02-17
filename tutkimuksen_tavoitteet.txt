@@ -1,0 +1,16 @@
+Taustat ja tarpeet = tavoitteet (2-5 kpl)
+- progressiivisten WWW-sovellusten tutkiminen
+- avusteisen kommunikaation mobiilisovellukset
+
+-> tavoite: Ionic-kehyksen toiminnan tutkiminen
+-> tavoite: Ionic-kehyksen avulla tehdyn avusteisen kommunikaation sovelluksen vertaaminen 
+ohjelmistoteknisiin ja käytettävyyspohjaisiin suosituksiin
+-> tavoite: Ionic-kehyksen avulla tehdyn avusteisen kommunikaation sovelluksen vertaaminen
+autistien käytettävyystarpeisiin
+
+Näkökulma:
+- kehittäjänäkökulma
+
+Toiset näkökulmat?
+- Ei ole aikaa tehdä Ionicin lisäksi muita
+

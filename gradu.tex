@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage[backend=biber]{biblatex}
+\usepackage[dvipsnames]{xcolor}
 
 % HUOM! Tämän tulee olla viimeinen \usepackage koko dokumentissa!
 \usepackage[bookmarksopen,bookmarksnumbered,linktocpage]{hyperref}
@@ -50,15 +51,13 @@
 
 \chapter{Johdanto}
 
-- TODO: Tähän tulee johdanto.
+\colorbox{YellowGreen}{// TODO: Tähän tulee johdanto.}
 
 \chapter{Kommunikaatiossa avustavan sovelluksen rakentamiseen tarvittavia taustatietoja ja menetelmiä}
 
-- TODO: Lyhyt siltaava kappale johdannosta taustatietoihin
+\colorbox{YellowGreen}{// TODO: Lyhyt siltaava kappale johdannosta taustatietoihin}
 
 \section{Avusteinen kommunikaatio}
-
-- TODO: Kerrotaan yleisesti taustoista (mihin avustavaa tietotekniikkaa tarvitaan, miten sitä käytetään, mitä ongelmia jne.)
 
 On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkilön puheen tuottamisen kyky voi hetkellisesti tai pysyvästi heikentyä. Puheen tuottamisen ongelmista kärsivä henkilö saattaa joutua turvautumaan arkipäivän kommunikaatiossa erilaisiin apuvälineisiin kommunikoidakseen muiden ihmisten kanssa. Yleisesti näitä viestintämenetelmiä kuvaamaan tarkoitettu termi on \textbf{puhetta tukeva ja korvaava kommunikaatio} (engl. \textit{Augmentative and Alternative Communication, lyh. AAC}).
 
@@ -72,39 +71,51 @@ Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin sy
 
 Puhetta tukevat ja korvaavat kommunikointisovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista puhetta tukevassa ja korvaavassa kommunikointisovelluksessa. \parencite[]{AAC-interventions}
 
+\colorbox{YellowGreen}{// TODO: mitä ongelmia} 
+
 \section{Progressiiviset WWW-sovellukset}
 
-- TODO: Kerrotaan yleisesti PWA-sovelluksista (mihin pohjautuu, miksi käytetään, miksi juuri tähän projektiin)
+Progressiiviset sovellukset ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu määrittyy alustakohtaisesti niin, että niiden ulkoasu on mahdollisimman yhdenmukainen laitteen natiivien sovellusten kanssa. Selainpohjaisuuden takia progressiiviset sovellukset pystyvät käyttämään tarjolla olevan sovellusympäristön resursseja joustavasti sen sijaan, että se itse määrittäisi vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä \textbf{hybridisovellus}.
 
-Progressiiviset sovellukset ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu on optimoitu laitekohtaisesti niin, että niiden ulkoasu ei eroa laitteen natiiveista sovelluksista. Progressiivisella sovelluksella tarkoitetaan sovellusta, joka pystyy käyttämään tarjolla olevan sovellusympäristön resursseja joustavasti sen sijaan, että se itse määrittäisi vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa on käytetty aiemmin myös termiä \textbf{hybridisovellus}.
+Progressiivisten sovellusten ilmeisin hyöty on alustariippumattomuus. Samaa sovellusta voidaan kaikissa ympäristöissä, jotka tukevat WWW-selaimia. Näin säästyy suuri määrä resursseja, koska eri versioita samasta sovelluksesta ei tarvitse kehittää ja ylläpitää erikseen. Hyvä esimerkki progressiivisten sovellusten käyttöä tukevasta markkinatilanteesta on nykyisten älytelevisioiden kirjava tarjonta: valmistajien omien käyttöjärjestelmien lisäksi muunmuassa Apple, Amazon ja Roku kehittävät televisioon liitettäviä laitteita, joiden avulla käyttäjä voi ajaa erilaisia sovelluksia. Näiden kaikkien laitteiden tukeminen olisi hyvin vaikeaa perinteisten sovellusten avulla.
 
-Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä. Sovellusmaisuus puolestaan parantaa käyttäjän immersiota. \parencite[]{google-pwa-marketing}
-- TODO: tähän omaa kriittistä pohdintaa (Microsoft ja Edge-selaimen siirtyminen Chromium-pohjaiseksi?)
+Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Yrityksen mukaan luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä ja sovellusmaisuus puolestaan parantaa käyttäjän immersiota. \parencite[]{google-pwa-marketing}
 
-Idea natiivien sovellusten rakentamisesta selainalustoja hyödyntämällä ei ole uusi. Muutamia esimerkkejä idean käytöstä ovat Adobe AIR - ja Electron -sovellukset. Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat olleet positiivisia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% per sessio, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta tilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että vuonna 2017 45\% sen sisällöstä ladattiin 2G-verkon läpi. \parencite[]{beginners-guide-pwa}
+Googlen Chrome-selain on rakennettu avoimen lähdekoodin Chromium-selaimen päälle. Yksi merkittävimmistä Chromium-selaimeen pohjautuvista progressiivisten WWW-sovellusten kehitykseen tarkoitetuista kehyksistä on Electron. Electron on Microsoftin nykyisin omistaman GitHubin kehittämä ja ylläpitämä. Esimerkkejä Electron-sovelluksista ovat Discord, Slack ja Visual Studio Code. On todennäköistä, että Microsoftin päätös muuttaa Edge-selain Chromium-pohjaiseksi johtui ainakin osittain progressiivisten WWW-sovellusten tukemisesta.
 
-AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. \parencite[]{beginners-guide-pwa}
-- TODO: tähän omaa kriittistä pohdintaa
+Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat olleet positiivisia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% per sessio, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta tilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että vuonna 2017 45\% sen sisällöstä ladattiin 2G-verkon läpi. \parencite[]{beginners-guide-pwa}
+
+AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. \parencite[]{beginners-guide-pwa} Edellä mainitut tulokset eivät kuitenkaan ole suoraan yleistettävissä yleisemmin progressiivisten sovellusten vaikutuksiin, sillä niiden otoskoko on erittäin pieni.
 
 Progressiivisten sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska kyse on uudesta suuntauksesta ohjelmistokehitysessä, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen sekä kehysten käyttämistä kehitystyössä. Toinen merkittävä haaste voi olla tiedon tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu luontevaa tallennustilaa. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. \parencite[]{pwa-design-challenges}
-- TODO: tähän omaa kriittistä pohdintaa
+
+Myös progressiivisten sovellusten muistinkäyttöä on kritisoitu. Progressiiviset sovellukset vaativat perinteisiä sovelluksia enemmän muistia, koska niitä ajetaan selaimen päällä.
+\colorbox{YellowGreen}{// - TODO: tutkimuksia ja tilastoja muistinkäytöstä?}
+\colorbox{YellowGreen}{// - TODO: tähän omaa kriittistä pohdintaa}
+
+\colorbox{YellowGreen}{// - TODO: miksi juuri tähän projektiin}
 
 \section{Ionic}
 
-Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnitelluista kehyksistä. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä Angular-ohjelmistokehystä. Ionic on MIT-lisenssin alainen. Angular-ohjelmistokehys perustuu TypeScript-ohjelmointikieleen. Kehyksenä Ionicin pääpaino on tarjota kehittäjälle oikealta näyttävä ja visuaalisesti toimiva sovellus. Sen ei ole tarkoitus korvata tyypillisiä JavaScript-kirjastoja vaan se toimii niiden tukena. \parencite[]{ionic-documentation}
+Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnitelluista kehyksistä. Electronin ollessa kiinteille päätteille suunnattu kehys, Ionic keskittyy mobiililaitteiden vaatimuksiin. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä Angular-ohjelmistokehystä. Ionic on MIT-lisenssin alainen. Angular-ohjelmistokehys perustuu TypeScript-ohjelmointikieleen. Kehyksenä Ionicin pääpaino on tarjota kehittäjälle oikealta näyttävä ja visuaalisesti toimiva sovellus. Sen ei ole tarkoitus korvata tyypillisiä JavaScript-kirjastoja vaan se toimii niiden tukena. \parencite[]{ionic-documentation}
 
-- TODO: kaavio Ionicin hierarkiasta?
+\begin{figure}[h]\centering
+  \includegraphics[height=9cm,keepaspectratio]{ionic-structure}
+  \caption[Ionic-sovelluksen perusrakenne]
+  {Ionic-sovelluksen perusrakenne.}
+  \label{fig:ionic-structure}
+\end{figure}
 
 Ionic koostuu komponenteista. Ionicin komponentit ovat uudelleenkäytettäviä käyttöliittymäelementtejä, jotka toimivat sovelluksen käyttöliittymän rakennusosina. Niiden avulla sovellus näyttää yhtenäiseltä ja käyttöliittymän kehitystyö nopeutuu. Komponentit koostuvat HTML:stä, CSS:stä ja JavaScriptistä. Esimerkkejä tällaisista komponenteista ovat muunmuassa painikkeet, välilehdet ja erilaiset listat.
 
-Ionicin ulkoasu perustuu teemoihin. Myös teemat lisäävät sovelluksen ulkoasun yhtenäisyyttä. Teemat myös mukautuvat eri alustojen ulkoasustandardien mukaisiksi kehittäjän niin halutessa. Esimerkiksi Android- ja iOS -mobiilikäyttöjärjestelmille suunnattujen sovellusten ulkoasu poikkeaa toisistaan, jos käytetään Ionicin oletusteemoja. Teemojen käyttäminen parantaa sovelluksen käytettävyyttä tekemällä sen ulkoasusta ennustettavamman ja tutumman loppukäyttäjälle.
+Ionicin ulkoasu perustuu teemoihin. Myös teemat lisäävät sovelluksen ulkoasun yhtenäisyyttä. Teemat myös mukautuvat eri alustojen ulkoasustandardien mukaisiksi kehittäjän niin halutessa. Esimerkiksi Android- ja iOS -mobiilikäyttöjärjestelmille suunnattujen sovellusten ulkoasu poikkeaa toisistaan, jos käytetään Ionicin oletusteemoja. Teemojen käyttäminen parantaa sovelluksen käytettävyyttä tekemällä sen ulkoasusta ennustettavamman ja tutumman loppukäyttäjälle. 
+\colorbox{YellowGreen}{// - TODO: täsmennä}
 
-- TODO: lisää Ionicista
+\colorbox{YellowGreen}{// - TODO: lisää Ionicista}
 
 \subsection{Apache Cordova}
 
 Apache Cordova (aikaisemmin PhoneGap) on alunperin Nitobin kehittämä sovelluskehitysympäristö mobiililaitteille. Adobe osti Nitobin vuonna 2011 ja myöhemmin uudelleenjulkaisi Apache Cordovan avoimena lähdekoodina. Apache Cordova toimii WWW-sovelluskehyksien ja natiivien sovelluskehyksien välisenä linkityskerroksena \parencite[]{ionic-framework-hybrid}. Apache Cordovan avulla Ionic ja muut Apache Cordovan päälle rakennetut ohjelmistokehykset voivat toimia syvemmällä tasolla kuin tyypillinen WWW-sovellus, sillä niille tarjoutuu rajapinta suoraan natiiveihin sovelluskehyksiin.
-
 
 \subsection{Angular}
 
@@ -116,22 +127,24 @@ Web-komponentit on laaja-alainen termi, jolla tarkoitetaan neljää WWW-selaimis
 
 \subsection{TypeScript}
 
-Angular-ohjelmointikehyksen avulla ohjelmointiin käytetään TypeScript-ohjelmointikieltä. TypeScript on avoimen lähdekoodin ohjelmointikieli, jota ylläpitää Microsoft. TypeScript kääntyy suoritusvaiheessa JavaScriptiksi, ja se on tarkoitettu tukemaan JavaScript-ohjelmien kehitystä lisäämällä siihen ominaisuuksia. TypeScript sisältää ES 2015 -standardin mukaiset ominaisuudet ja lisäksi se tarjoaa ohjelmoijan käyttöön tyypit ja koristelijat. 
+TypeScript on avoimen lähdekoodin ohjelmointikieli, jota ylläpitää Microsoft. TypeScript kääntyy suoritusvaiheessa JavaScriptiksi, ja se on tarkoitettu tukemaan JavaScript-ohjelmien kehitystä lisäämällä siihen ominaisuuksia. TypeScript sisältää ES 2015 -standardin mukaiset ominaisuudet ja lisäksi se tarjoaa ohjelmoijan käyttöön tyypit ja koristelijat. Angular-ohjelmointikehyksen ohjelmointiin käytetään TypeScript-ohjelmointikieltä.
 
 TypeScriptin on tarkoitus tarjota Microsoftin .NET-ympäristöön tottuneille ohjelmoijille oliolähtöisempi lähestymistapa JavaScript-kehitykseen \parencite[]{maharry-typescript}. JavaScript on suosittu ohjelmointikieli, mutta varsinkin ohjelmiston lähdekoodin määrän kasvaessa sen heikkoudet alkavat tulla esiin. TypeScript pyrkii puuttumaan näihin ongelmiin tarjoamalla ohjelmoijalle moduulijärjestelmän, luokat, rajapinnat ja staattisen tyypityksen \parencite[]{understanding-typescript}.
 
 Ohjelmointikielen modulaarisuudella tarkoitetaan sitä, että muuttujat, funktiot, luokat ja muut vastaavat ohjelmointikielen perusrakenteet ovat olemassa vain moduulien sisällä, ellei niitä erikseen esitellä muille moduuleille \parencite[]{typescript-modules}.
-- TODO: lisää pohdintaa modulaarisuuden edut?
+
+\colorbox{YellowGreen}{// TODO: lisää pohdintaa modulaarisuuden edut?}
 
 Perinteisesti JavaScript on käyttänyt uudestikäytettävien komponenttien rakentamiseen funktioita ja prototyyppipohjaista perintää. Iso osa nykyohjelmoijista ei kuitenkaan ole tottunut käyttämään edellä mainittuja keinoja, vaan nykyisin suosituin lähestymistapa uudelleenkäytettävyyteen on luokkien käyttäminen. \parencite[]{typescript-classes}
-- TODO: luokkien edut vrt. js?
+
+\colorbox{YellowGreen}{// TODO: luokkien edut vrt. js?}
 
 Rajapintoja käytetään kuvaamaan luokkien ominaisuuksia. TypeScriptissä rajapintoja käytetään tyyppien nimeämiseen ja niiden avulla voidaan tehdä olioiden välisiä sopimuksia ohjelmoijan itse laatiman ohjelmistokoodin sisällä sekä myös ohjelmoijan oman ohjelmistokoodin ja muiden tuottamien kirjastojen välillä. \parencite[]{typescript-interfaces} Esimerkiksi Swagger-niminen työkalu generoi .NET-palvelinkoodista valmiita rajapintoja, joita TypeScript-selainpuolen on helpompi käyttää.
-- TODO: rajapintojen edut vrt. js?
+\colorbox{YellowGreen}{// TODO: rajapintojen edut vrt. js?}
 
 TypeScript on staattisesti tyypitetty kieli toisin kuin JavaScript. Staattisen tyypityksen avulla ohjelmoija näkee suoraan, että ohjelman tieto on oikean tyyppistä sitä käsitellessä.
-- TODO: ducktyping
-- TODO: staattisen tyypityksen edut vrt. js?
+\colorbox{YellowGreen}{// TODO: ducktyping}
+\colorbox{YellowGreen}{// TODO: staattisen tyypityksen edut vrt. js?}
 
 \section{Käytettävyyden perusteet}
 
@@ -139,24 +152,26 @@ Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka ihmiset ov
 
 Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää useasti päivittäin.
 
-- TODO: tyypillisimmät käytettävyystekijät DoET:sta tai muusta perusteoksesta käyttäen muitakin lähteitä
+\colorbox{YellowGreen}{// TODO: tyypillisimmät käytettävyystekijät DoET:sta tai muusta perusteoksesta käyttäen muitakin lähteitä}
 
 \subsection{Käytettävyys ja autismi}
 
 Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen myötä kykyyn käyttää sovelluksia. Iso-Britannian The National Autistic Society listaa verkkosivuillaan autistisille ihmisille sopivien verkkosivujen visuaalisesta toteutuksen päävaatimukset \parencite[]{autism-friendly-websites}. Listauksessa painotetaan erityisesti visuaalisen ilmeen selkeyttä, staattisuutta ja yksiselitteisyyttä. Lisäksi koekäyttäjien roolia korostetaan.
 
 Symbolien käyttöä tulisi välttää 
-- TODO: lähde
+\colorbox{YellowGreen}{// TODO: lähde}
 
 Yksi varsin vähän tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihin. Grandgeorgen ja Masatakan \parencite[]{color-preference-autism} mukaan autistiset lapset pitävät erityisesti vihreästä väristä. Keltaista ja ruskeaa tulisi välttää. Edellä mainitun tutkimuksen otoskoko oli kuitenkin pieni, joten tuloksia ei voi yleistää. Lapset pitävät erityisesti pääväreistä.
 
-- TODO: etsi lisää lähteitä, .txt-tiedostossa oli jotain
+\colorbox{YellowGreen}{// TODO: etsi lisää lähteitä}
 
 \chapter{Kommunikaatiossa avustavan sovelluksen suunnittelu ja toteutus}
-- TODO: Siltaava kappale, jossa alustetaan aliotsikot.
+
+\colorbox{YellowGreen}{// TODO: Siltaava kappale, jossa alustetaan aliotsikot}
 
 \section{Ohjelmistotekninen näkökulma}
-- TODO: Tekninen kuvaus ohjelmasta.
+
+\colorbox{YellowGreen}{// TODO: Tekninen kuvaus ohjelmasta.}
 
 Sovellus koostuu valikkorakenteesta, korttien luontinäkymistä ja kommunikaationäkymästä.
 
@@ -174,7 +189,7 @@ Valitaan kortti. Kirjataan viesti symboleja painamalla.
 
 \section{Käytettävyysnäkökulma}
 
-- TODO: Kerrotaan käytettävyyden näkökulmasta. Erityisesti erikoisryhmien käytettävyys nostetaan esille.
+\colorbox{YellowGreen}{// TODO: Kerrotaan käytettävyyden näkökulmasta. Erityisesti erikoisryhmien käytettävyys nostetaan esille.}
 
 Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käyttäjille.
 
@@ -185,18 +200,18 @@ Kuvien käsittely ja tallentaminen haastavaa. Progressiiviset sovellukset kohtal
 
 \chapter{Pohdinta}
 
--- Mitä aineistoanalyysi kertoo tutkimushypoteesista? Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä? Vastasiko tutkimusmetodi odotuksia? Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?
+\colorbox{YellowGreen}{-- Mitä aineistoanalyysi kertoo tutkimushypoteesista? Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä? Vastasiko tutkimusmetodi odotuksia? Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?
 
-Pohdintaluvussa harjoitetaan itsenäistä ajattelua. Sen voi periaatteessa kirjoittaa ilman lähdekirjallisuutta, sillä tarkastelun kohteena on aiemmin kirjoitettamasi materiaali. Nyt tutkimuksen tuloksia on aika arvioida kriittisesti. Niitä verrataan aiempaan tutkimukseen ja pohditaan, mitä uutta tutkimus paljastaa aiheesta ja miten tulokset suhteutuvat aiempaan tutkimukseen – tukevatko vai ovatko ristiriidassa? Jos analyysivaiheessa on ollut vaikeuksia, niitä ei pidä lakaista maton alle; niiden puntaroiminen kertoo tutkimuksen läpinäkyvyydestä ja tulosten luotettavuudesta. --
+Pohdintaluvussa harjoitetaan itsenäistä ajattelua. Sen voi periaatteessa kirjoittaa ilman lähdekirjallisuutta, sillä tarkastelun kohteena on aiemmin kirjoitettamasi materiaali. Nyt tutkimuksen tuloksia on aika arvioida kriittisesti. Niitä verrataan aiempaan tutkimukseen ja pohditaan, mitä uutta tutkimus paljastaa aiheesta ja miten tulokset suhteutuvat aiempaan tutkimukseen – tukevatko vai ovatko ristiriidassa? Jos analyysivaiheessa on ollut vaikeuksia, niitä ei pidä lakaista maton alle; niiden puntaroiminen kertoo tutkimuksen läpinäkyvyydestä ja tulosten luotettavuudesta. --}
+
 
 \chapter{Yhteenveto}
 
--- Tutkielman viimeinen luku on Yhteenveto.  Sen on hyvä olla lyhyt; siinä todetaan, mitä tutkielmassa esitetyn nojalla voidaan sanoa johdannon väitteen totuudesta tai tutkimuskysymyksen vastauksesta. Yhteenvedossa tuodaan myös esille tutkielman heikkoudet (erityisesti tekijät, jotka heikentävät tutkielman tulosten luotettavuutta), ellei niitä ole jo aiemmin tuotu esiin esimerkiksi Pohdinta-luvussa. Tässä luvussa voidaan myös tuoda esille, mitä tutkimusta olisi tämän
-tutkielman tulosten valossa syytä tehdä seuraavaksi.
+\colorbox{YellowGreen}{-- Tutkielman viimeinen luku on Yhteenveto.  Sen on hyvä olla lyhyt; siinä todetaan, mitä tutkielmassa esitetyn nojalla voidaan sanoa johdannon väitteen totuudesta tai tutkimuskysymyksen vastauksesta. Yhteenvedossa tuodaan myös esille tutkielman heikkoudet (erityisesti tekijät, jotka heikentävät tutkielman tulosten luotettavuutta), ellei niitä ole jo aiemmin tuotu esiin esimerkiksi Pohdinta-luvussa. Tässä luvussa voidaan myös tuoda esille, mitä tutkimusta olisi tämän tutkielman tulosten valossa syytä tehdä seuraavaksi.
 
 Jos Yhteenveto alkaa pitkittyä, se kannattaa jakaa kahtia niin, että tulosten tulkinta otetaan omaksi Pohdinta-luvukseen, jolloin Yhteenvedosta tulee varsin lyhyt ja lakoninen.
 
-Yhteenvedon jälkeen tulee \string\printbibliography-komennolla laadittu lähdeluettelo ja sen jälkeen mahdolliset liitteet. --
+Yhteenvedon jälkeen tulee \string\printbibliography-komennolla laadittu lähdeluettelo ja sen jälkeen mahdolliset liitteet. --}
 
 %\printbibliography{gradubibtex}
 
