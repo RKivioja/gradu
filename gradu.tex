@@ -50,10 +50,12 @@
 \mainmatter
 
 \chapter{Johdanto}
+\colorbox{YellowGreen}{// Ohjepituus 5 sivua.}
 
 \colorbox{YellowGreen}{// TODO: Tähän tulee johdanto.}
 
 \chapter{Kommunikaatiossa avustavan sovelluksen rakentamiseen tarvittavia taustatietoja ja menetelmiä}
+\colorbox{YellowGreen}{// Ohjepituus 10-15 sivua.}
 
 \colorbox{YellowGreen}{// TODO: Lyhyt siltaava kappale johdannosta teoriakappaleeseen}
 
@@ -70,6 +72,8 @@ Puhetta tukevaa ja korvaavaa kommunikaatiota tarjotaan puheen tuottamisen ongelm
 Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin symboleja. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle luontevin tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa  \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenivät kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle puhetta tukevalle ja korvaavalle kommunikaatiolle on siis sekä tutkimuspohjaista näyttöä että käytännön kokemuksiin perustuvaa kannustetta.
 
 Puhetta tukevat ja korvaavat kommunikointisovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista puhetta tukevassa ja korvaavassa kommunikointisovelluksessa. \parencite[]{AAC-interventions}
+
+Esimerkiksi ääniominaisuuden lisäämisellä avustetusta puhetta tukevasta ja korvaavasta kommunikaatiosta voidaan tehdä \textbf{monimodaalista}. Monimodaalisuus tarkoittaa usean eri kommunikaatiotavan kautta tapahtuvaa kommunikaatiota. Monimodaalinen kommunikaatio voi tapahtua eri tapojen kautta yhtäaikaisesti tai peräkkäin. Puhetta tukevasta ja korvaavasta kommunikaatiosta kannattaa tehdä monimodaalista useista eri syistä. Ensinnäkin, suurin osa kaikesta kommunikaatiosta on monimodaalista: toiselle ihmiselle puhuttaessa on tavallista selkeyttää sanomaa ilmein ja elein. Toiseksi, puhetta tukevaa ja korvaavaa kommunikaatiota käyttävä henkilön tarvitsee useasti kommunikoida muiden puhetta tukevaa ja korvaavaa kommunikaatiota käyttävien henkilöiden kanssa, jolloin vaihtoehdoista on hyötyä. Kolmas merkittävä syy on se, että eri puhetta tukevissa ja korvaavissa kommuunikaatiotavoissa on vahvuuksia ja heikkouksia, joten eri kommunikaatiotapoja sekoittamalla voidaan korvata yksittäisen kommunikaatiotavan heikkouksia. \parencite[]{AAC-conditional-use}
 
 \colorbox{YellowGreen}{// TODO: mitä ongelmia} 
 
@@ -90,6 +94,7 @@ AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mo
 Progressiivisten sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska kyse on uudesta suuntauksesta ohjelmistokehitysessä, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen sekä kehysten käyttämistä kehitystyössä. Toinen merkittävä haaste voi olla tiedon tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu luontevaa tallennustilaa. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. \parencite[]{pwa-design-challenges}
 
 Myös progressiivisten sovellusten muistinkäyttöä on kritisoitu. Progressiiviset sovellukset vaativat perinteisiä sovelluksia enemmän muistia, koska niitä ajetaan selaimen päällä. On vaikea arvioida kuinka suuri osa muistinkäytöstä johtuu sovelluksen toteutuksesta ja kuinka suuri osa itse ohjelmistokehyksestä, mutta hyvin yksinkertaisissakin testeissä on saatu tuloksia, jotka viittaavat moninkertaiseen muistinkäyttöön natiiveihin sovelluksiin verrattuna \parencite[]{electron-memory-usage}.
+
 \colorbox{YellowGreen}{// - TODO: tähän omaa kriittistä pohdintaa}
 
 Progressiiviset WWW-sovellukset sopivat siis parhaiten tilanteisiin, joissa vähän muistia vaativan sovelluksen halutaan tukevan useita eri alustoja, mutta joissa tavallinen WWW-sivu ei riitä. Avusteisen kommunikaation sovelluksien vaatimukset osuvat hyvin yhteen progressiivisten WWW-sovellusten vaatimusten kanssa, sillä kuvakorttien näyttäminen ei ole muisti-intensiivistä, mutta toisaalta taas avusteisen kommunikaation sovellusten halutaan olevan helposti muovattavissa henkilökohtaisiin tarpeisiin sopiviksi sekä toimivan useilla eri alustoilla.
@@ -107,7 +112,7 @@ Ionic on yksi suosituimpia progressiivisten sovellusten tuottamiseen suunnitellu
 
 Ionic koostuu komponenteista. Ionicin komponentit ovat uudelleenkäytettäviä käyttöliittymäelementtejä, jotka toimivat sovelluksen käyttöliittymän rakennusosina. Niiden avulla sovellus näyttää yhtenäiseltä ja käyttöliittymän kehitystyö nopeutuu. Komponentit koostuvat HTML:stä, CSS:stä ja JavaScriptistä. Esimerkkejä tällaisista komponenteista ovat muunmuassa painikkeet, välilehdet ja erilaiset listat. Ionicin toteutuksessa on pyritty tukemaan näiden komponenttien mahdollisimman joustavaa kustomointia \parencite[]{ionic-documentation}.
 
-Ionicin ulkoasu perustuu teemoihin. Myös teemat lisäävät sovelluksen ulkoasun yhtenäisyyttä. Teemat myös mukautuvat eri alustojen ulkoasustandardien mukaisiksi kehittäjän niin halutessa. Esimerkiksi Android- ja iOS -mobiilikäyttöjärjestelmille suunnattujen sovellusten ulkoasu poikkeaa toisistaan, jos käytetään Ionicin oletusteemoja. Teemojen käyttäminen parantaa sovelluksen käytettävyyttä tekemällä sen ulkoasusta ennustettavamman ja tutumman loppukäyttäjälle. Ionicin oletusteemat noudattavat Applen iOS-designperiaatteita sekä Googlen Material Design -asetuksia.
+Ionicin ulkoasu perustuu teemoihin. Myös teemat lisäävät sovelluksen ulkoasun yhtenäisyyttä. Teemat myös mukautuvat eri alustojen ulkoasustandardien mukaisiksi kehittäjän niin halutessa. Esimerkiksi Android- ja iOS -mobiilikäyttöjärjestelmille suunnattujen sovellusten ulkoasu poikkeaa toisistaan, jos käytetään Ionicin oletusteemoja. Teemojen käyttäminen parantaa sovelluksen käytettävyyttä tekemällä sen ulkoasusta ennustettavamman ja tutumman loppukäyttäjälle. Ionicin oletusteemat noudattavat Applen iOS-designperiaatteita sekä Googlen Material Design -määrityksiä.
 
 \colorbox{YellowGreen}{// - TODO: lisää Ionicista}
 
@@ -129,28 +134,25 @@ TypeScript on avoimen lähdekoodin ohjelmointikieli, jota ylläpitää Microsoft
 
 TypeScriptin on tarkoitus tarjota Microsoftin .NET-ympäristöön tottuneille ohjelmoijille oliolähtöisempi lähestymistapa JavaScript-kehitykseen \parencite[]{maharry-typescript}. JavaScript on suosittu ohjelmointikieli, mutta varsinkin ohjelmiston lähdekoodin määrän kasvaessa sen heikkoudet alkavat tulla esiin. TypeScript pyrkii puuttumaan näihin ongelmiin tarjoamalla ohjelmoijalle moduulijärjestelmän, luokat, rajapinnat ja staattisen tyypityksen \parencite[]{understanding-typescript}.
 
-Ohjelmointikielen modulaarisuudella tarkoitetaan sitä, että muuttujat, funktiot, luokat ja muut vastaavat ohjelmointikielen perusrakenteet ovat olemassa vain moduulien sisällä, ellei niitä erikseen esitellä muille moduuleille \parencite[]{typescript-modules}.
-
-\colorbox{YellowGreen}{// TODO: lisää pohdintaa modulaarisuuden edut?}
+Ohjelmointikielen modulaarisuudella tarkoitetaan sitä, että muuttujat, funktiot, luokat ja muut vastaavat ohjelmointikielen perusrakenteet ovat olemassa vain moduulien sisällä, ellei niitä erikseen esitellä muille moduuleille \parencite[]{typescript-modules}. Tämä vähentää ohjelman eri osien välistä riippuvuutta toisistaan, mikä helpottaa muutosten tekemistä ohjelmistoon.
 
 Perinteisesti JavaScript on käyttänyt uudestikäytettävien komponenttien rakentamiseen funktioita ja prototyyppipohjaista perintää. Iso osa nykyohjelmoijista ei kuitenkaan ole tottunut käyttämään edellä mainittuja keinoja, vaan nykyisin suosituin lähestymistapa uudelleenkäytettävyyteen on luokkien käyttäminen. \parencite[]{typescript-classes}
 
-\colorbox{YellowGreen}{// TODO: luokkien edut vrt. js?}
+Uudelleenkäytettävyyden lisäksi TypeScriptin luokkien avulla saadaan JavaScriptiin verrattuna helpommin aikaan modulaarisia komponentteja, joita on helpompi ylläpitää ja skaalata. Virheiden löytämistä helpottaa se, että luokkien avulla ohjelmakoodin rajoista saadaan selkeämpiä. Skaalautuvuutta varten täytyy monesti pystyä korvaamaan vanhoja komponentteja uusilla ja luokkia käyttämällä myös tämä on helpompaa.
 
-Rajapintoja käytetään kuvaamaan luokkien ominaisuuksia. TypeScriptissä rajapintoja käytetään tyyppien nimeämiseen ja niiden avulla voidaan tehdä olioiden välisiä sopimuksia ohjelmoijan itse laatiman ohjelmistokoodin sisällä sekä myös ohjelmoijan oman ohjelmistokoodin ja muiden tuottamien kirjastojen välillä. \parencite[]{typescript-interfaces} Esimerkiksi Swagger-niminen työkalu generoi .NET-palvelinkoodista valmiita rajapintoja, joita TypeScript-pohjaisen WWW-sovelluksen on helpompi käyttää.
-\colorbox{YellowGreen}{// TODO: rajapintojen edut vrt. js?}
+Rajapintoja käytetään kuvaamaan luokkien ominaisuuksia. TypeScriptissä rajapintoja käytetään tyyppien nimeämiseen ja niiden avulla voidaan tehdä olioiden välisiä sopimuksia ohjelmoijan itse laatiman ohjelmistokoodin sisällä sekä myös ohjelmoijan oman ohjelmistokoodin ja muiden tuottamien kirjastojen välillä. \parencite[]{typescript-interfaces} Esimerkiksi Swagger-niminen työkalu generoi .NET-palvelinkoodista valmiita rajapintoja, joita TypeScript-pohjaisen WWW-sovelluksen on helpompi käyttää. Rajapinnat ovat luonnollinen jatke luokille. Niiden avulla luokan toteutus voidaan eroittaa sen ulkopuolelle näkyvistä osista ja jakaa luokkia ryhmiin. Kuten luokkienkin kohdalla, rajapintojen käyttäminen voi parantaa ohjelman ylläpidettävyyttä, skaalautuvuutta ja osien uudelleenkäytettävyyttä. 
 
 TypeScript on dynaamisesti tyypitetty kieli samoin kuin JavaScript, mutta se noudattaa \textbf{ankkatyypitystä} (engl. duck typing). Ankkatyypitys tarkoittaa sitä, että luokan käyttömahdollisuudet eivät määrity sen tyypin perusteella vaan luokkaa voidaan käyttää sen ominaisuuksien ja metodien perusteella.
 
-JavaScriptistä poiketen TypeScriptin tyypitys on myös vahvaa. Vahvalla tyypityksellä tarkoitetaan sitä, että tyyppien täytyy olla operaatioissa toisiaan vastaavia. Vahvan tyypityksen avulla ohjelmoijan on helpompi nähdä suoraan, että ohjelman tieto on oikean tyyppistä sitä käsitellessä. Iso osa tyyppivirheistä jää tällöin kiinni jo ennen kääntämistä kun taas JavaScriptilla ohjelmoidun ohjelman kohdalla näin ei käy.
-
-\colorbox{YellowGreen}{// TODO: staattisen tyypityksen edut vrt. js?}
+JavaScriptistä poiketen TypeScriptin tyypitys on myös vahvaa. Vahvalla tyypityksellä tarkoitetaan sitä, että tyyppien täytyy olla operaatioissa toisiaan vastaavia. Vahvan tyypityksen avulla ohjelmoijan on helpompi nähdä suoraan, että ohjelman tieto on oikean tyyppistä sitä käsitellessä. Iso osa tyyppivirheistä jää tällöin kiinni jo ennen kääntämistä kun taas JavaScriptilla ohjelmoidun ohjelman kohdalla näin ei käy. Toisaalta vahva tyypitys aiheuttaa lisätyötä tyyppimuunnosten takia.
 
 \section{Käytettävyyden perusteet}
 
-Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka ihmiset ovat suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Kommunikaatiossa avustavan sovelluksen suunnittelussa tulisi olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
+Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka olemme suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Kommunikaatiossa avustavan sovelluksen suunnittelussa tulisi olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
 
-Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää useasti päivittäin.
+Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää useasti päivittäin. Avustettua kommunikaatiota käyttävillä ryhmillä on myös omia käytettävyystarpeita, joiden huomioimista varten täytyy ymmärtää käytettävyyttä tavallista laajemmassa kontekstissa.
+
+Ohjelman käyttöliittymän käytettävyys voidaan jakaa viiteen laadulliseen määritteeseen: opittavuus, tehokkuus, muistettavuus, virhealttius ja tyydyttävyys. Opittavuus tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän tehokkuus määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun käyttöliittymää on opittu käyttämään. Muistettavuus on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. Virhealttiudella tarkoitetaan käyttäjien tekemien virheiden määrää, niiden laatua ja kuinka helppoa niistä selviäminen on. Tyydyttävyys kertoo miten tyytyväinen käyttäjä on käyttöliittymään. \parencite[]{usability-101}
 
 \colorbox{YellowGreen}{// TODO: tyypillisimmät käytettävyystekijät DoET:sta tai muusta perusteoksesta käyttäen muitakin lähteitä}
 
@@ -166,6 +168,7 @@ Yksi varsin vähän tutkittu seikka on autismin vaikutus ihmisen suosikkiväreih
 \colorbox{YellowGreen}{// TODO: etsi lisää lähteitä}
 
 \chapter{Kommunikaatiossa avustavan sovelluksen suunnittelu ja toteutus}
+\colorbox{YellowGreen}{// Ohjepituus 10-15 sivua.}
 
 \colorbox{YellowGreen}{// TODO: Siltaava kappale, jossa alustetaan aliotsikot}
 
@@ -194,11 +197,13 @@ Valitaan kortti. Kirjataan viesti symboleja painamalla.
 Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käyttäjille.
 
 \chapter{Toteutuneen sovelluksen arviointi}
+\colorbox{YellowGreen}{// Ohjepituus 15-20 sivua.}
 
 Kuvien käsittely ja tallentaminen haastavaa. Progressiiviset sovellukset kohtalaisen hyviä tähän käyttötarkoitukseen eli yksinkertaisiin mobiilikeskeisiin sovelluksiin.
 
 
 \chapter{Pohdinta}
+\colorbox{YellowGreen}{// Ohjepituus 5-10 sivua.}
 
 \colorbox{YellowGreen}{-- Mitä aineistoanalyysi kertoo tutkimushypoteesista? Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä? Vastasiko tutkimusmetodi odotuksia? Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?
 
@@ -206,6 +211,7 @@ Pohdintaluvussa harjoitetaan itsenäistä ajattelua. Sen voi periaatteessa kirjo
 
 
 \chapter{Yhteenveto}
+\colorbox{YellowGreen}{// Ohjepituus 3-5 sivua.}
 
 \colorbox{YellowGreen}{-- Tutkielman viimeinen luku on Yhteenveto.  Sen on hyvä olla lyhyt; siinä todetaan, mitä tutkielmassa esitetyn nojalla voidaan sanoa johdannon väitteen totuudesta tai tutkimuskysymyksen vastauksesta. Yhteenvedossa tuodaan myös esille tutkielman heikkoudet (erityisesti tekijät, jotka heikentävät tutkielman tulosten luotettavuutta), ellei niitä ole jo aiemmin tuotu esiin esimerkiksi Pohdinta-luvussa. Tässä luvussa voidaan myös tuoda esille, mitä tutkimusta olisi tämän tutkielman tulosten valossa syytä tehdä seuraavaksi.
 
