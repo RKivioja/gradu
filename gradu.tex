@@ -144,7 +144,11 @@ AngularJS perustuu MVC-arkkitehtuuriin, kun taas uudempi Angular on komponenttip
 
 Angularin komponenttipohjainen rakenne perustuu kolmeen hiljattain ilmestyneeseen teknologiaan: Web-komponentteihin (engl. \textit{Web Components}), JavaScriptin ES2015-standardiin ja TypeScript-ohjelmointikieleen.
 
-\textbf{Web-komponentit} (engl. \textit{shadow DOM}) on laaja-alainen termi, jolla tarkoitetaan neljää WWW-selaimissa yleistyvää standardia: \textbf{kustomoitavat elementit} (engl. \textit{custom elements}), \textbf{varjo-DOM} (engl. \textit{shadow DOM}), \textbf{mallit} (engl. \textit{templates}) ja \textbf{HTML-tuonti} (engl. \textit{HTML imports}). Kustomoitavat HTML-elementit ovat HTML-standardielementtien ulkopuolisia elementtejä, joita voidaan käyttää standardielementtien seassa. Kustomoitava HTML-elementti irroittaa komponentin sivun muista osista, joten se mahdollistaa komponentin eristämisen. Varjo-DOM on piiloitettu osa sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille. Varjo-DOM:in elementit ja tyylit eivät vaikuta varjo-DOM:in ulkopuolisiin alueisiin ja vastavuoroisesti muut sivun elementit ja tyylit eivät vaikuta varjo-DOM:in alaisiin osiin. Komponentti voi täten käyttää tätä eristettyä aluetta renderöintiin. Mallit ovat HTML-palasia, jotka eivät lataudu välittömästi HTML-sivun auetessa vaan ne voidaan aktivoida JavaScriptillä myöhemmin. Malleista on useita toteutuksia eri kehyksissä, mutta Web-komponentit standardisoivat mallien rakentamisen ja tarjoavat suoran tuen niiden hyödyntämiselle selaimessa. Malleja käyttämällä varjo-DOM:iin piilotetusta sisällöstä voidaan tehdä dynaamista. Viimeinen Web-komponenttien osa on HTML-tuonti. HTML-tuonnin avulla HTML-, CSS- ja JavaScript-tiedostoja voidaan ladata yhtenäisinä osina. Angular ei käytä HTML-tuontia, vaan se käyttää JavaScriptin moduulilatausta. \parencite[]{angular-6-by-example}
+\textbf{Web-komponentit} on laaja-alainen termi, jolla tarkoitetaan neljää WWW-selaimissa yleistyvää standardia: \textbf{kustomoitavat elementit} (engl. \textit{custom elements}), \textbf{varjo-DOM} (engl. \textit{shadow DOM}), \textbf{mallit} (engl. \textit{templates}) ja \textbf{HTML-tuonti} (engl. \textit{HTML imports}). 
+
+Kustomoitavat HTML-elementit ovat HTML-standardielementtien ulkopuolisia elementtejä, joita voidaan käyttää standardielementtien seassa. Kustomoitava HTML-elementti irroittaa komponentin sivun muista osista, joten se mahdollistaa komponentin eristämisen. Varjo-DOM on piiloitettu osa sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille. Varjo-DOM:in elementit ja tyylit eivät vaikuta varjo-DOM:in ulkopuolisiin alueisiin ja vastavuoroisesti muut sivun elementit ja tyylit eivät vaikuta varjo-DOM:in alaisiin osiin. Komponentti voi täten käyttää tätä eristettyä aluetta renderöintiin. 
+
+Mallit ovat HTML-palasia, jotka eivät lataudu välittömästi HTML-sivun auetessa vaan ne voidaan aktivoida JavaScriptillä myöhemmin. Malleista on useita toteutuksia eri kehyksissä, mutta Web-komponentit standardisoivat mallien rakentamisen ja tarjoavat suoran tuen niiden hyödyntämiselle selaimessa. Malleja käyttämällä varjo-DOM:iin piilotetusta sisällöstä voidaan tehdä dynaamista. Viimeinen Web-komponenttien osa on HTML-tuonti. HTML-tuonnin avulla HTML-, CSS- ja JavaScript-tiedostoja voidaan ladata yhtenäisinä osina. Angular ei käytä HTML-tuontia, vaan se käyttää JavaScriptin moduulilatausta. \parencite[]{angular-6-by-example}
 
 \subsection{TypeScript}
 
@@ -154,11 +158,13 @@ TypeScriptin on tarkoitus tarjota Microsoftin .NET-ympäristöön tottuneille oh
 
 Ohjelmointikielen \textbf{modulaarisuudella} tarkoitetaan sitä, että muuttujat, funktiot, luokat ja muut vastaavat ohjelmointikielen perusrakenteet ovat olemassa vain moduulien sisällä, ellei niitä erikseen esitellä muille moduuleille \parencite[]{typescript-modules}. Tämä vähentää ohjelman eri osien välistä riippuvuutta toisistaan, mikä helpottaa muutosten tekemistä ohjelmistoon.
 
-Perinteisesti JavaScript on käyttänyt uudestikäytettävien komponenttien rakentamiseen funktioita ja prototyyppipohjaista perintää. Iso osa nykyohjelmoijista ei kuitenkaan ole tottunut käyttämään edellä mainittuja keinoja, vaan nykyisin suosituin lähestymistapa uudelleenkäytettävyyteen on luokkien käyttäminen. \parencite[]{typescript-classes}
+Perinteisesti JavaScript on käyttänyt uudestikäytettävien komponenttien rakentamiseen funktioita ja prototyyppipohjaista perintää. Iso osa nykyohjelmoijista ei kuitenkaan ole tottunut käyttämään edellä mainittuja keinoja, vaan nykyisin suosituin lähestymistapa uudelleenkäytettävyyteen on luokkien käyttäminen. Myös JavaScriptin oliotukea on pyritty parantelemaan sen viimeisimmissä versioissa. \parencite[]{typescript-classes}
 
-Uudelleenkäytettävyyden lisäksi TypeScriptin luokkien avulla saadaan JavaScriptiin verrattuna helpommin aikaan modulaarisia komponentteja, joita on helpompi ylläpitää ja skaalata. Virheiden löytämistä helpottaa se, että luokkien avulla ohjelmakoodin rajoista saadaan selkeämpiä. Skaalautuvuutta varten täytyy monesti pystyä korvaamaan vanhoja komponentteja uusilla ja luokkia käyttämällä myös tämä on helpompaa.
+Uudelleenkäytettävyyden lisäksi TypeScriptin luokkien avulla aikaan modulaarisia komponentteja, joita on helpompi ylläpitää ja skaalata. Virheiden löytämistä helpottaa se, että luokkien avulla ohjelmakoodin rajoista saadaan selkeämpiä. Skaalautuvuutta varten täytyy monesti pystyä korvaamaan vanhoja komponentteja uusilla ja luokkia käyttämällä myös tämä on helpompaa.
 
 \textbf{Rajapintoja} käytetään kuvaamaan luokkien ominaisuuksia. TypeScriptissä rajapintoja käytetään tyyppien nimeämiseen ja niiden avulla voidaan tehdä olioiden välisiä sopimuksia ohjelmoijan itse laatiman ohjelmistokoodin sisällä sekä myös ohjelmoijan oman ohjelmistokoodin ja muiden kehittämien kirjastojen välillä. \parencite[]{typescript-interfaces} Esimerkiksi Swagger-niminen työkalu generoi .NET-palvelinkoodista valmiita rajapintoja, joita TypeScript-pohjaisen WWW-sovelluksen on helpompi käyttää. Rajapinnat ovat luonnollinen osa luokkiin perustuvaa ohjelmointia. Niiden avulla luokan toteutus voidaan eroittaa sen ulkopuolelle näkyvistä osista ja jakaa luokkia ryhmiin. Kuten luokkienkin kohdalla, rajapintojen käyttäminen voi parantaa ohjelman ylläpidettävyyttä, skaalautuvuutta ja osien uudelleenkäytettävyyttä.
+
+\colorbox{YellowGreen}{// TODO: kirjoita tyypitykseen liittyvät kappaleet uudelleen selkeämmiksi}
 
 TypeScript on dynaamisesti tyypitetty kieli samoin kuin JavaScript, mutta se noudattaa \textbf{ankkatyypitystä} (engl. \textit{duck typing}). Ankkatyypitys tarkoittaa sitä, että luokan käyttömahdollisuudet eivät määrity sen tyypin perusteella, vaan luokkaa voidaan käyttää sen ominaisuuksien ja metodien perusteella.
 
@@ -170,7 +176,9 @@ Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka olemme suo
 
 Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää useasti päivittäin. Avustettua kommunikaatiota käyttävillä ryhmillä on myös omia käytettävyystarpeita, joiden huomioimista varten täytyy ymmärtää käytettävyyttä tavallista laajemmassa kontekstissa.
 
-Ohjelman käyttöliittymän \textbf{käytettävyys} (\textit{engl. usability}) on laadullinen määre, joka voidaan jakaa viiteen laadulliseen osa-alueeseen: \textbf{opittavuus} (\textit{engl. learnability}), \textbf{tehokkuus} (\textit{engl. efficiency}), \textbf{muistettavuus} (\textit{engl. memorability}), \textbf{virhealttius} (\textit{engl. errors}) ja \textbf{tyydyttävyys} (\textit{engl. satisfaction}). Opittavuus tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän tehokkuus määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. Muistettavuus on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. Virhealttiudella tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. Tyydyttävyys kertoo,  miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä kuten \textbf{käyttökelpoisuus} (\textit{engl. utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (\textit{engl. usefulness}). \parencite[]{usability-101}
+Ohjelman käyttöliittymän \textbf{käytettävyys} (\textit{engl. usability}) on laadullinen määre, joka voidaan jakaa viiteen laadulliseen osa-alueeseen: \textbf{opittavuus} (\textit{engl. learnability}), \textbf{tehokkuus} (\textit{engl. efficiency}), \textbf{muistettavuus} (\textit{engl. memorability}), \textbf{virhealttius} (\textit{engl. errors}) ja \textbf{tyydyttävyys} (\textit{engl. satisfaction}). 
+
+Opittavuus tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän tehokkuus määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. Muistettavuus on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. Virhealttiudella tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. Tyydyttävyys kertoo,  miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä kuten \textbf{käyttökelpoisuus} (\textit{engl. utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (\textit{engl. usefulness}). \parencite[]{usability-101}
 
 \colorbox{YellowGreen}{// TODO: opittavuus}
 Lyhyesti ilmaistuna, opittavuus tarkoittaa ohjelmiston kykyä opettaa käyttäjälleen oikea tapa käyttää ohjelmistoa. Opittavuutta vastaava termi on \textbf{löydettävyys} (\textit{engl. discoverability}). Opittavuutta lisääviä ominaisuuksia ovat muunmuassa muistettavuus, loogisuus, toistettavuus ja yhdenmukaisuus. Opittavuudeltaan hyvä ohjelma ilmaisee käyttäjälleen tehokkaasti mitä toiminnallisuuksia se sisältää, mitä eri toiminnot tarkoittavat ja kuinka eri toiminnallisuuksia käytetään. \parencite[]{improving-learnability}
@@ -215,21 +223,93 @@ Yksi jonkin verran tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihi
 \section{Ohjelmistotekninen näkökulma}
 
 - Ominaisuusvaatimukset:
+
   * korttipohjainen järjestelmä
+  
   * kuvien valitseminen kortilta viestiin
+  
   * viestin äänisynteesi
+  
   * korttien luominen ja poistaminen
+  
   * korttien koon määrittäminen
+  
   * kortin vaihtaminen
+  
   * kuvien valitseminen korteille valmiista kirjastosta
+  
   * kuvien valitseminen korteille kuvia ottamalla
+  
   * hallintapaneeli ja asetusten tallentaminen
 
-\colorbox{YellowGreen}{// TODO: Tekninen kuvaus ohjelmasta.}
+
+\section{Kehitysympäristö ja -työkalut}
+
+\colorbox{YellowGreen}{// TODO: Ionic CLI, Ionic Lab, npm, VS Code, ESLint}
+
+\colorbox{YellowGreen}{// TODO: Kirjoita tämä kappale yhtenäiseksi}
+
+\textbf{Ionic CLI} (Ionic Command Line Interface, \textit{suom. Ionic-komentorivikehoite}) on Ionicin tarjoama konsolisovellus, jolla voidaan nopeasti generoida, asentaa ja räätälöidä Ionic-sovellukseen liittyviä tiedostoja.
+
+Ionic-sovellusta voidaan ajaa paikallisena testiversiona neljällä eri tapaa. Selaimessa, iOS- tai Android-simulaattorilla, mobiililaitteen selaimessa tai itsenäisenä sovelluksena puhelimessa.
+
+Node.js on alustariippumaton runtime-ympäristö palvelinpuolen JavaScript-koodin suorittamiseen. Lähes kaikki JavaScript-pohjaiset kirjastot noajaavat Node.js:ään ja myös Ionic vaatii Node.js:n asennuksen. Node.js Package Manager eli \textbf{npm} on paketinhallintajärjestelmä JavaScript-kirjastoille.
+
+Visual Studio Code on Microsoftin kehittämä ja ylläpitämä avoimen lähdekoodin Electron-pohjainen ohjelmistoympäristö. Angularin käyttämä TypeScript-ohjelmointikieli on myös Microsoftin kehittämä, joten Visual Studio Coden TypeScript-tuki on tällä hetkellä erittäin hyvällä tasolla.
+
+ESLint on koodianalyysityökalu, joka käy läpi ohjelmistoympäristössä olevaa ohjelmakoodia ja auttaa ohjelmoijaa ohjelmoimaan koodianalyysityökaluun valittujen asetusten mukaista ohjelmakoodia.
+
+\section{Arkkitehtuuri}
+
+FreeAAC noudattaa Ionic-sovelluksien oletusrakennetta. Ionic-sovelluksissa kansiorakenteen ylimmälle tasolle sijoitetaan projektin asetuksia sisältävät tiedostot. Projektin asetustiedostoista ohjelmistokehitysprosessin kannalta tärkein on package.json. Package.json-tiedostossa listataan kaikki ohjelmiston käyttämät ulkopuoliset kirjastot ja Node.js:n paketinhallintajärjestelmä npm lataa sen perusteella oikeat versiot jokaisesta kirjastosta Ionic-sovelluksen käytettäväksi.
+
+Seuraavalla kansiotasolla Ionicin oletusrakenneteessa projekti jakautuu kahteen pääkansioon: Resources ja Src. Ohjelmiston pikakuvakkeiden ja käynnistysruudun tarvitsemat mediatiedostot ovat Resources-kansiossa.
+
+Src-kansiossa sijatsevat ohjelmiston lähdekoodia sisältävät tiedostot. Src-kansion päätasolla sijaitsevat index.html, manifest.json ja service-worker.js -tiedostot. Index.html on ensimmäinen HTML-tiedosto, jonka käynnistyvä Ionic-sovellus lukee. Se sisältää Ionic-sovelluksen juurikomponentin ja linkkejä sovelluksen yleisesti vaatimiin resursseihin kuten tyylitiedostoihin.
+
+\colorbox{YellowGreen}{// TODO: src/index.html}
+
+Src-kansiota alemmalla tasolla on oletusprojektissa viisi eri kansiota: Assets, Classes, Pages, Providers ja Theme.
+
+Assets-kansioon ohjelmiston kehittäjä voi sijoittaa kuva- ja äänitiedostoja, joita ohjelman toiminnallisuudet vaativat. FreeAAC-sovelluksen kuvakirjasto sijaitsee kansiossa.
+
+\colorbox{YellowGreen}{// TODO: Papunet-kuvakirjasto}
+
+Classes-kansiossa sijaitsevat ohjelmiston käyttämät luokat. FreeAAC-ohjelmistossa kaksi käytössä olevaa luokkaa ovat Card ja WordSymbol. Card-luokka vastaa kommunikointisovelluksissa käytettäviä kortteja. Se sisältää tiedon kortin nimestä, sen koosta ja kortin sisältämistä kuvista ja symboleista. WordSymbol-luokka taas on representaatio korteilla olevien kuvien ja symbolien tietomallista. Se sisältää kuvan tai symbolin nimen sekä viittauksen kuvatiedostoon.
+
+Ohjelmiston näkymät sijaitsevat Pages-kansiossa. FreeAAC-ohjelmistossa on 7 eri näkymää: Home, Main, CardCreate, CardDelete, Info, Options ja SelectSymbolModal. Angular-ohjelmistokehystä käyttävässä Ionic-sovelluksessa näkymät ovat HTML-tiedostoja, joihin on \textbf{sidottu} (\textit{engl. bind}) komponenttitiedostossa olevia muuttujia ja aliohjelmia. Lisäksi kansioon sijoitetaan yleensä moduulitiedosto, jossa sijaitsevat viittaukset tarvittaviin ulkopuolisiin kirjastoihin sekä muihin moduuleihin ja tyylitiedosto, jolla ohjelmiston ulkoasua voidaan säätää näkymäkohtaisesti.
+
+Ionicin näkymiä käsitellään pinona. Ionicin näkymästä toiseen siirrytään lisäämällä uusi näkymä pinon päällimmäiseksi käyttämällä Ionicin NavController-kontrolleriluokkaa. Näin näkymäsiirtymien historia säilyy ja käyttäjä voi palata edellisiin näkymiin helposti painamalla puhelimen edellinen-painiketta. Tällöin viimeksi pinoon lisätty näkymä poistetaan pinosta.
+
+Home-näkymä on FreeAAC-ohjelmiston ensimmäinen näkymä ja se sisältää ohjelmiston päävalikon. Päävalikossa sijaitsevat painikkeet, joita klikkaamalla käyttäjä pääsee keskustelunäkymään, asetusnäkymään tai infonäkymään. 
+\colorbox{YellowGreen}{// TODO: CardCreate}
+
+\colorbox{YellowGreen}{// TODO: CardDelete}
+
+\colorbox{YellowGreen}{// TODO: Main}
+
+\colorbox{YellowGreen}{// TODO: Info}
+
+
+\colorbox{YellowGreen}{// TODO: Options}
+
+\colorbox{YellowGreen}{// TODO: SelectSymbolModal}
+
+\colorbox{YellowGreen}{// TODO: src/app/providers}
+
+Providers-kansioon sijoitetaan ohjelmiston palveluluokat.
+
+\colorbox{YellowGreen}{// TODO: service-pattern, provider-pattern}
+
+\colorbox{YellowGreen}{// TODO: src/app/theme}
+
+Theme-kansiossa sijaitsevat ohjelmiston ulkoasuun vaikuttavat SCSS-tiedostot.
+
+\section{Ohjelmiston näkymät}
 
 Sovellus koostuu valikkorakenteesta, korttien luontinäkymistä ja kommunikaationäkymästä.
 
-\subsection{Valikot ja navigaatio}
+\subsection{Valikot}
 Valikot
 Ionicin standardielementeistä luotu.
 
@@ -251,7 +331,6 @@ Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käytt
 \colorbox{YellowGreen}{// Ohjepituus 15-20 sivua.}
 
 Kuvien käsittely ja tallentaminen haastavaa. Progressiiviset sovellukset kohtalaisen hyviä tähän käyttötarkoitukseen eli yksinkertaisiin mobiilikeskeisiin sovelluksiin.
-
 
 \chapter{Pohdinta}
 \colorbox{YellowGreen}{// Ohjepituus 5-10 sivua.}
