@@ -38,8 +38,8 @@
 \author{Roope Kivioja}
 \contactinformation{\texttt{roope.kivioja@gmail.com}}
 
-\supervisor{Jukka-Pekka Santanen}
 \supervisor{Jonne Itkonen}
+\supervisor{Jukka-Pekka Santanen}
 
 \maketitle
 
@@ -50,7 +50,8 @@
 \mainmatter
 
 \chapter{Johdanto}
-\colorbox{YellowGreen}{// Ohjepituus 5 sivua.}
+
+\colorbox{YellowGreen}{// Ohjepituus 5 sivua. (Varmaan oikeasti 1-3 sivua.)}
 
 \colorbox{YellowGreen}{// TODO: Tähän tulee johdanto.}
 
@@ -79,11 +80,15 @@ On olemassa useita eri sairauksia ja kehityshäiriöitä, joiden johdosta henkil
 
 Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan ja avusteiseen. \textbf{Avustamattomalla puhetta tukevalla ja korvaavalla kommunikaatiolla} tarkoitetaan kommunikaatiota, jossa ei tarvita apuvälineitä. Viittomakieli on yksi esimerkki avustamattomasta puhetta tukevasta ja korvaavasta kommunikaatiosta, mutta myös ihmisen elekieltä voidaan pitää avustamattomana puhetta tukevana ja korvaavana kommunikaationa. 
 
-\textbf{Avustettu puhetta tukevaa ja korvaava kommunikaatio} tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu puhetta tukevaa ja korvaava kommunikaatio voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian puhetta tukevaan ja korvaavaan kommunikaatioon. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista tyypeistä. \parencite[]{AAC-conditional-use}
+\textbf{Avustettu puhetta tukeva ja korvaava kommunikaatio} tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu puhetta tukevaa ja korvaava kommunikaatio voidaan jakaa vielä eteenpäin kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian puhetta tukevaan ja korvaavaan kommunikaatioon. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista tyypeistä. \parencite[]{AAC-conditional-use}
 
 Puhetta tukevaa ja korvaavaa kommunikaatiota voidaan tarjota puheen muodostamisen ongelmista kärsiville myös tietoteknisten sovellusten avulla, joiden kautta käyttäjä kirjoittaa joko suoraan tekstiä tai kommunikoi valitsemalla symboleja. Esimerkiksi autistisilla käyttäjillä on tyypillisesti hyvin henkilö- ja yksityiskohtaisia tarpeita puhetta tukevalle ja korvaavalle kommunikaatiolle, joten tietoteknisten sovellusten suhteellisen helppo muokattavuus puoltaa niiden käyttöä perinteisempien puhetta ja kommunikointia korvaavien apuvälineiden sijaan.
 
-Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin symboleja. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle luontevin tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa  \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenivät, kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle puhetta tukevalle ja korvaavalle kommunikaatiolle on siis sekä tutkimuspohjaista näyttöä, että käytännön kokemuksiin perustuvaa kannustetta.
+\label{AAC-cards}
+\colorbox{YellowGreen}{// TODO: korttipohjaiset järjestelmät}
+
+\label{AAC-symbols}
+Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin symboleja. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle luontevin tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa  \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenivät, kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle puhetta tukevalle ja korvaavalle kommunikaatiolle on siis sekä tutkimuspohjaista näyttöä että käytännön kokemuksiin perustuvaa kannustetta.
 
 Puhetta tukevaan ja korvaavaan kommunikointisovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista puhetta tukevassa ja korvaavassa kommunikointisovelluksessa. \parencite[]{AAC-interventions}
 
@@ -103,9 +108,9 @@ Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehit
 
 Googlen Chrome-selain on rakennettu avoimen lähdekoodin Chromium-selaimen päälle. Yksi merkittävimmistä Chromium-selaimeen pohjautuvista progressiivisten WWW-sovellusten kehitykseen tarkoitetuista kehyksistä on Electron. Electron on Microsoftin nykyisin omistaman GitHubin kehittämä ja ylläpitämä. Esimerkkejä Electron-sovelluksista ovat Discord, Slack ja Visual Studio Code. On mahdollista, että Microsoftin päätös muuttaa Edge-selain Chromium-pohjaiseksi johtui ainakin osittain progressiivisten WWW-sovellusten vaatimista ominaisuuksista kuten tehokkaammasta muistinhallinnasta.
 
-Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat olleet positiivisia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% per sessio, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta muistitilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että vuonna 2017 45\% sen sisällöstä ladattiin 2G-verkon läpi. \parencite[]{beginners-guide-pwa}
+Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat olleet positiivisia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% käyttäjäsessiota kohden, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta muistitilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että vuonna 2017 45\% sen sisällöstä ladattiin 2G-verkon läpi. \parencite[]{beginners-guide-pwa}
 
-AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. \parencite[]{beginners-guide-pwa} Edellä mainitut tulokset eivät kuitenkaan ole suoraan yleistettävissä yleisemmin progressiivisten sovellusten vaikutuksiin, sillä niiden otoskoko on erittäin pieni.
+AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. Edellä mainitut tulokset eivät kuitenkaan ole suoraan yleistettävissä yleisemmin progressiivisten sovellusten vaikutuksiin, sillä niiden otoskoko on erittäin pieni. \parencite[]{beginners-guide-pwa}
 
 Progressiivisten sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska progressiivisten WWW-sovellusten hyödyntämät teknologiset kehitysaskeleet ja niiden käyttöön kannustavat taloudelliset tekijät ovat verrattain tuoreita, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen ja kehysten käyttämistä kehitystyössä. Toinen merkittävä haaste voi olla tiedon tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu tietoturvan takia samoja oikeuksia kuin natiiveille sovelluksille. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. \parencite[]{pwa-design-challenges}
 
@@ -174,8 +179,10 @@ JavaScriptistä poiketen TypeScriptin tyypitys on myös vahvaa. Vahvalla tyypity
 
 Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka olemme suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Kommunikaatiossa avustavan sovelluksen suunnittelussa tulee olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
 
+\colorbox{YellowGreen}{// TODO: kappaleen toinen virke uusiksi}
 Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää useasti päivittäin. Avustettua kommunikaatiota käyttävillä ryhmillä on myös omia käytettävyystarpeita, joiden huomioimista varten täytyy ymmärtää käytettävyyttä tavallista laajemmassa kontekstissa.
 
+\label{general-usability-requirements}
 Ohjelman käyttöliittymän \textbf{käytettävyys} (\textit{engl. usability}) on laadullinen määre, joka voidaan jakaa viiteen laadulliseen osa-alueeseen: \textbf{opittavuus} (\textit{engl. learnability}), \textbf{tehokkuus} (\textit{engl. efficiency}), \textbf{muistettavuus} (\textit{engl. memorability}), \textbf{virhealttius} (\textit{engl. errors}) ja \textbf{tyydyttävyys} (\textit{engl. satisfaction}). 
 
 Opittavuus tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän tehokkuus määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. Muistettavuus on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. Virhealttiudella tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. Tyydyttävyys kertoo,  miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä kuten \textbf{käyttökelpoisuus} (\textit{engl. utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (\textit{engl. usefulness}). \parencite[]{usability-101}
@@ -199,20 +206,26 @@ Tyydyttävyyttä ymmärtääkseen täytyy tietää, että käyttöliittymä ja k
 
 Avusteiseen kommunikaatioon liittyy omia käytettävyyshaasteita. Tarve avusteiseen kommunikaatioon voi johtua useista eri syistä, joten käyttäjäkirjo ja käyttäjien henkilökohtaisten tarpeiden määrä on suuri. Jo pelkästään tämän havainnon perusteella voidaan olettaa ohjelmiston muokattavuuden olevan tärkeää.
 
-CP-vammaisten avusteista kommunikaatiota tutkineessa tutkimuksessa \parencite[]{classmate-aac-study} yksi merkittävä käytettävyystekijä on avusteista kommunikaatiota käyttävän henkilön hidas toiminta. Avusteista kommunikaatiota käyttävä henkilö ei välttämättä pysty reagoimaan nopeasti eri keskusteluaiheisiin tai muodostamaan riittävän paljon kommunikaatiota, joten keskustelukumppani joutuu arvaamaan mitä avusteista kommunikaatiota käyttävä henkilö yrittää sanoa. Käytettävyyden näkökulmasta on myös huomioitava, että käyttäjällä on riittävästi aikaa suorittaa valintoja käyttöliittymässä ilman, että näkymä vaihtuu tai käyttöliittymäelementit muuttuvat.
+CP-vammaisten avusteista kommunikaatiota tutkineessa tutkimuksessa \parencite[]{classmate-aac-study} yksi merkittävä käytettävyystekijä on avusteista kommunikaatiota käyttävän henkilön hidas toiminta. Avusteista kommunikaatiota käyttävä henkilö ei välttämättä pysty reagoimaan nopeasti eri keskusteluaiheisiin tai muodostamaan riittävän paljon kommunikaatiota, jolloin keskustelukumppani joutuu arvaamaan, mitä avusteista kommunikaatiota käyttävä henkilö yrittää sanoa. Käytettävyyden näkökulmasta on myös huomioitava, että käyttäjällä on riittävästi aikaa suorittaa valintoja käyttöliittymässä ilman, että näkymä vaihtuu tai käyttöliittymäelementit muuttuvat.
 
+\label{AAC-context-settings}
 Comunicador-nimistä espanjankielisille avusteisen kommunikaation käyttäjille tarkoitettua ohjelmistoa käsittelevässä tutkimuksessa \parencite[]{graphic-communicator} nostetaan esiin kontekstiriippuvaisten valintojen tärkeys. Koska kommunikointi on usein vaivalloista avusteisten kommunikaation sovellusten kautta, avusteisen kommunikaation sovelluksessa on hyvä olla mahdollisuus ryhmitellä esivalmistellut sanat tai kuvat tilanteiden mukaan. Esimerkiksi työ-, harrastus- ja arkitilanteissa tarvitaan usein hyvin erilaisia sanavarastoja. Kontekstin valitsemisen lisäksi sanoja tai kuvia täytyy myös pystyä ryhmittelemään ja järjestelemään kontekstiryhmien sisällä.
 
-Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen myötä kykyyn käyttää sovelluksia. Iso-Britannian The National Autistic Society listaa verkkosivuillaan autistisille ihmisille sopivien verkkosivujen visuaalisesta toteutuksen päävaatimukset \parencite[]{autism-friendly-websites}. Listauksessa painotetaan erityisesti visuaalisen ilmeen selkeyttä, staattisuutta ja yksiselitteisyyttä. Lisäksi koekäyttäjien roolia korostetaan.
+\label{AAC-staticity}
+Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen myötä kykyyn käyttää sovelluksia. Iso-Britannian The National Autistic Society listaa verkkosivuillaan \parencite[]{autism-friendly-websites} autistisille ihmisille sopivien verkkosivujen visuaalisesta toteutuksen päävaatimukset. Listauksessa painotetaan erityisesti visuaalisen ilmeen selkeyttä, staattisuutta ja yksiselitteisyyttä. Lisäksi koekäyttäjien roolia korostetaan.
 
-Ilmaiseksi tarjolla olevia avusteisen kommunikaation mobiilisovelluksia tutkineen tutkimuksen \parencite[]{autism-mobile-usability} mukaan autistisilla käyttäjillä on ominaisuus- ja käytettävyystarpeita, joita tarjolla olleissa sovelluksissa ei ole. Tutkimuksen mukaan mahdollisuus kuvien ottamiseen sekä äänen tallentamiseen on erittäin hyödyllinen ominaisuus avusteisia kommunikaatiosovelluksia käyttäville autisteille. Kuvat eri sijainneista ja ihmisistä auttavat päivittäisessä kommunikaatiossa huomattavasti. 
+Ilmaiseksi tarjolla olevia avusteisen kommunikaation mobiilisovelluksia tutkineen tutkimuksen \parencite[]{autism-mobile-usability} mukaan autistisilla käyttäjillä on ominaisuus- ja käytettävyystarpeita, joita tarjolla olleissa sovelluksissa ei ole. Tutkimuksen mukaan mahdollisuus kuvien ottamiseen sekä äänen tallentamiseen on erittäin hyödyllinen ominaisuus avusteisia kommunikaatiosovelluksia käyttäville autisteille. Kuvat eri sijainneista ja ihmisistä auttavat päivittäisessä kommunikaatiossa huomattavasti. \label{AAC-photos}
 
-Kommunikaatiosovelluksessa tulisi myös olla mahdollisuus säätää ohjelman asetuksia hallintapaneelin kautta. Hallintapaneelin tulisi olla salasanasuojattu, jotta käyttäjä ei pääse vahingossa poistamaan tärkeitä asetuksia tai kuvia sovelluksesta. Yhteen näyttöön ei saa mahduttaa liian paljon informaatiota, sillä autismiin liittyy usein aistiyliherkkyyttä, mikä heikentää autistin kykyä ymmärtää isoja määriä informaatiota kerrallaan. Tämän takia esimerkiksi kommunikaatiosovelluksen korteilla olevien kuvien määrää tulisi pystyä säätämään sovelluksen hallintapaneelista.
+\label{AAC-settings}
+Kommunikaatiosovelluksessa tulisi myös olla mahdollisuus säätää ohjelman asetuksia hallintapaneelin kautta. Hallintapaneelin tulisi olla salasanasuojattu, jotta käyttäjä ei pääse vahingossa poistamaan tärkeitä asetuksia tai kuvia sovelluksesta. Yhteen näyttöön ei saa mahduttaa liian paljon informaatiota, sillä autismiin liittyy usein aistiyliherkkyyttä, mikä heikentää autistin kykyä ymmärtää isoja määriä informaatiota kerrallaan. Tämän takia esimerkiksi kommunikaatiosovelluksen korteilla olevien kuvien määrää tulisi pystyä säätämään sovelluksen hallintapaneelista. \label{AAC-cardsize}
 
-Kommunikaatiosovellusten ääniominaisuus voi auttaa käyttäjää oppimaan sovelluksen käyttöä nopeammin. Äänisyntetisaattoreita Martin-nimisen pojan avulla tutkineessa tutkimuksessa \parencite[]{voca-efficacy} havaittiin, että Martin oppi muodostamaan uusia lauseita helpommin kun avusteisen kommunikaation sovellus luki kirjoitetun tekstin ääneen. Tutkimuksen luotettavuutta kuitenkin heikentää se, että tutkimuksessa tutkittiin vain yhden koehenkilön oppimistuloksia.
+\label{AAC-soundsynth}
+Kommunikaatiosovellusten ääniominaisuus voi auttaa käyttäjää oppimaan sovelluksen käyttöä nopeammin. Äänisyntetisaattoreita Martin-nimisen pojan avulla tutkineessa tutkimuksessa \parencite[]{voca-efficacy} havaittiin, että Martin oppi muodostamaan uusia lauseita helpommin, kun avusteisen kommunikaation sovellus luki kirjoitetun tekstin ääneen. Tutkimuksen luotettavuutta kuitenkin heikentää se, että tutkimuksessa tutkittiin vain yhden koehenkilön oppimistuloksia.
 
-Symbolien käyttöä sovelluksien käyttöliittymissä tekstin korvikkeena pidetään yleisesti hyvänä tapana säästää tilaa, vähentää lukemisen aiheuttamaa kognitiivista kuormaa sekä kiertää tarvetta tekstien kääntämiseen useille eri kielille. Autistisilla henkilöillä esiintyy kuitenkin useasti hahmotusongelmia, jotka haittaavat symbolien merkityksen ymmärtämistä. Autististen henkilöiden on keskimäärin haastavaa ymmärtää abstraktien ja vähän ikonisuutta sisältävien symbolien merkitystä. Esimerkiksi palloa esittävä symboli on autisteille helppo ymmärtää, mutta abstraktien asioiden kuten "mene"-verbin yhdistäminen nuoli-symboliin voi olla haastavaa. \parencite[]{symbol-acquisition-autism}
+\label{symbol-libraries}
+Symbolien käyttöä sovelluksien käyttöliittymissä tekstin korvikkeena pidetään yleisesti hyvänä tapana säästää tilaa, vähentää lukemisen aiheuttamaa kognitiivista kuormaa sekä kiertää tarvetta tekstien kääntämiseen useille eri kielille. Autistisilla henkilöillä esiintyy kuitenkin useasti hahmotusongelmia, jotka haittaavat symbolien merkityksen ymmärtämistä. Autististen henkilöiden on keskimäärin haastavaa ymmärtää abstraktien ja vähän ikonisuutta sisältävien symbolien merkitystä. \label{AAC-abstract-symbols} Esimerkiksi palloa esittävä symboli on autisteille helppo ymmärtää, mutta abstraktien asioiden kuten "mene"-verbin yhdistäminen nuoli-symboliin voi olla haastavaa. \parencite[]{symbol-acquisition-autism}
 
+\label{AAC-colors}
 Yksi jonkin verran tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihin. Grandgeorgen ja Masatakan \parencite[]{color-preference-autism} mukaan autistiset lapset vaikuttavat pitävän vihreästä väristä. Keltaista ja ruskeaa tulisi välttää. Edellä mainitun tutkimuksen otoskoko oli kuitenkin pieni, joten tuloksia ei voi yleistää. Grandgeorgen ja Masatakan mukaan lapset pitävät erityisesti pääväreistä.
 
 \chapter{Kommunikointisovelluksen suunnittelu ja toteutus}
@@ -220,27 +233,40 @@ Yksi jonkin verran tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihi
 
 \colorbox{YellowGreen}{// TODO: Siltaava kappale, jossa alustetaan aliotsikot}
 
+\colorbox{YellowGreen}{// TODO: Mikä on FreeAAC?}
+
+Tutkielmaa varten toteutettiin FreeAAC-niminen avusteisen kommunikaation sovellus.
+
 \section{Ohjelmistotekninen näkökulma}
 
 - Ominaisuusvaatimukset:
 
-  * korttipohjainen järjestelmä
+  * korttipohjainen järjestelmä 
+  \hyperref[AAC-cards]{''linkki''}
   
   * kuvien valitseminen kortilta viestiin
+  \hyperref[AAC-symbols]{''linkki''}
   
   * viestin äänisynteesi
+  \hyperref[AAC-soundsynth]{''linkki''}
   
   * korttien luominen ja poistaminen
+  \hyperref[label_name]{''linkki''}
   
   * korttien koon määrittäminen
+  \hyperref[AAC-cardsize]{''linkki''}
   
   * kortin vaihtaminen
+  \hyperref[label_name]{''linkki''}
   
   * kuvien valitseminen korteille valmiista kirjastosta
+  \hyperref[symbol-libraries]{''linkki''}
   
   * kuvien valitseminen korteille kuvia ottamalla
+  \hyperref[AAC-photos]{''linkki''}
   
   * hallintapaneeli ja asetusten tallentaminen
+  \hyperref[AAC-settings]{''linkki''}
 
 
 \section{Kehitysympäristö ja -työkalut}
@@ -259,76 +285,98 @@ Visual Studio Code on Microsoftin kehittämä ja ylläpitämä avoimen lähdekoo
 
 ESLint on koodianalyysityökalu, joka käy läpi ohjelmistoympäristössä olevaa ohjelmakoodia ja auttaa ohjelmoijaa ohjelmoimaan koodianalyysityökaluun valittujen asetusten mukaista ohjelmakoodia.
 
-\section{Arkkitehtuuri}
+\section{Rakenne}
 
-FreeAAC noudattaa Ionic-sovelluksien oletusrakennetta. Ionic-sovelluksissa kansiorakenteen ylimmälle tasolle sijoitetaan projektin asetuksia sisältävät tiedostot. Projektin asetustiedostoista ohjelmistokehitysprosessin kannalta tärkein on package.json. Package.json-tiedostossa listataan kaikki ohjelmiston käyttämät ulkopuoliset kirjastot ja Node.js:n paketinhallintajärjestelmä npm lataa sen perusteella oikeat versiot jokaisesta kirjastosta Ionic-sovelluksen käytettäväksi.
+FreeAAC noudattaa Ionic-sovelluksien oletusrakennetta. Ionic-sovelluksissa kansiorakenteen ylimmälle tasolle sijoitetaan projektin asetuksia sisältävät tiedostot. Projektin asetustiedostoista ohjelmistokehitysprosessin kannalta tärkein on \texttt{package.json}. Tiedostossa listataan kaikki ohjelmiston käyttämät ulkopuoliset kirjastot ja Node.js:n paketinhallintajärjestelmä npm lataa sen perusteella oikeat versiot jokaisesta kirjastosta Ionic-sovelluksen käytettäväksi.
 
-Seuraavalla kansiotasolla Ionicin oletusrakenneteessa projekti jakautuu kahteen pääkansioon: Resources ja Src. Ohjelmiston pikakuvakkeiden ja käynnistysruudun tarvitsemat mediatiedostot ovat Resources-kansiossa.
+Seuraavalla kansiotasolla Ionicin oletusrakenneteessa projekti jakautuu kahteen pääkansioon: \texttt{Resources} ja \texttt{Src}. Ohjelmiston pikakuvakkeiden ja käynnistysruudun tarvitsemat mediatiedostot ovat \texttt{Resources}-kansiossa.
 
-Src-kansiossa sijatsevat ohjelmiston lähdekoodia sisältävät tiedostot. Src-kansion päätasolla sijaitsevat index.html, manifest.json ja service-worker.js -tiedostot. Index.html on ensimmäinen HTML-tiedosto, jonka käynnistyvä Ionic-sovellus lukee. Se sisältää Ionic-sovelluksen juurikomponentin ja linkkejä sovelluksen yleisesti vaatimiin resursseihin kuten tyylitiedostoihin.
+\texttt{Src}-kansiossa sijatsevat ohjelmiston lähdekoodia sisältävät tiedostot. \texttt{Src}-kansion päätasolla sijaitsevat \texttt{index.html}, \texttt{manifest.json} ja \texttt{service-worker.js}-tiedostot. \texttt{Index.html} on ensimmäinen HTML-tiedosto, jonka käynnistyvä Ionic-sovellus lukee. Se sisältää Ionic-sovelluksen juurikomponentin ja linkkejä sovelluksen yleisesti vaatimiin resursseihin kuten tyylitiedostoihin.
 
-\colorbox{YellowGreen}{// TODO: src/index.html}
+\texttt{Src}-kansiota alemmalla tasolla on oletusprojektissa viisi eri kansiota: \texttt{Assets}, \texttt{Classes}, \texttt{Pages}, \texttt{Providers} ja \texttt{Theme}.
 
-Src-kansiota alemmalla tasolla on oletusprojektissa viisi eri kansiota: Assets, Classes, Pages, Providers ja Theme.
+\texttt{Assets}-kansioon ohjelmiston kehittäjä voi sijoittaa kuva- ja äänitiedostoja, joita ohjelman toiminnallisuudet vaativat. FreeAAC-sovelluksen kuvakirjasto sijaitsee kansiossa.
 
-Assets-kansioon ohjelmiston kehittäjä voi sijoittaa kuva- ja äänitiedostoja, joita ohjelman toiminnallisuudet vaativat. FreeAAC-sovelluksen kuvakirjasto sijaitsee kansiossa.
+\texttt{Classes}-kansiossa sijaitsevat ohjelmiston käyttämät luokat. FreeAAC-ohjelmistossa kaksi käytössä olevaa luokkaa ovat \texttt{Card} ja \texttt{WordSymbol}. \texttt{Card}-luokka vastaa kommunikointisovelluksissa käytettäviä kortteja. Se sisältää tiedon kortin nimestä, sen koosta ja kortin sisältämistä kuvista ja symboleista. \texttt{WordSymbol}-luokka taas on representaatio korteilla olevien kuvien ja symbolien tietomallista. Se sisältää kuvan tai symbolin nimen sekä viittauksen kuvatiedostoon.
 
-\colorbox{YellowGreen}{// TODO: Papunet-kuvakirjasto}
+Ohjelmiston näkymät sijaitsevat \texttt{Pages}-kansiossa. FreeAAC-ohjelmistossa on seitsemän eri näkymää: Home, Main, CardCreate, CardDelete, Info, Options ja SelectSymbolModal. Angular-ohjelmistokehystä käyttävässä Ionic-sovelluksessa näkymät ovat HTML-tiedostoja, joihin on \textbf{sidottu} (\textit{engl. bind}) komponenttitiedostossa olevia muuttujia ja aliohjelmia. Lisäksi kansioon sijoitetaan yleensä moduulitiedosto, jossa sijaitsevat viittaukset tarvittaviin ulkopuolisiin kirjastoihin sekä muihin moduuleihin ja tyylitiedosto, jolla ohjelmiston ulkoasua voidaan säätää näkymäkohtaisesti.
 
-Classes-kansiossa sijaitsevat ohjelmiston käyttämät luokat. FreeAAC-ohjelmistossa kaksi käytössä olevaa luokkaa ovat Card ja WordSymbol. Card-luokka vastaa kommunikointisovelluksissa käytettäviä kortteja. Se sisältää tiedon kortin nimestä, sen koosta ja kortin sisältämistä kuvista ja symboleista. WordSymbol-luokka taas on representaatio korteilla olevien kuvien ja symbolien tietomallista. Se sisältää kuvan tai symbolin nimen sekä viittauksen kuvatiedostoon.
+\texttt{Theme}-kansiossa sijaitsevat ohjelmiston ulkoasuun vaikuttavat SCSS-tiedostot. Ionicin oletusprojektissa se sisältää \texttt{variables.scss}-tiedoston, joka asettaa projektille Ionicin oletusteeman. Kehittäjä voi itse vapaasti säätää ohjelmiston päätason ulkoasua tätä kautta.
 
-Ohjelmiston näkymät sijaitsevat Pages-kansiossa. FreeAAC-ohjelmistossa on 7 eri näkymää: Home, Main, CardCreate, CardDelete, Info, Options ja SelectSymbolModal. Angular-ohjelmistokehystä käyttävässä Ionic-sovelluksessa näkymät ovat HTML-tiedostoja, joihin on \textbf{sidottu} (\textit{engl. bind}) komponenttitiedostossa olevia muuttujia ja aliohjelmia. Lisäksi kansioon sijoitetaan yleensä moduulitiedosto, jossa sijaitsevat viittaukset tarvittaviin ulkopuolisiin kirjastoihin sekä muihin moduuleihin ja tyylitiedosto, jolla ohjelmiston ulkoasua voidaan säätää näkymäkohtaisesti.
+\textbf{Riippuvuusinjektio} (engl. \textit{dependency injection}) on suunnittelumalli, jossa luokalle annetaan toinen luokka tai staattinen aliohjelma, joka tarjoaa luokalle uusia ominaisuuksia käyttöön. Riippuvuusinjektiossa luokka tai staattinen aliohjelma annetaan toiselle luokalle sen sijaan, että luokka itse hakisi luokan tai staattisen aliohjelman. Angular-ohjelmistokehyksessä riippuvuusinjektio toteutetaan tuomalla toinen luokka import-lauseella mukaan luokan lähdekoodiin ja julistamalla riippuvuusinjektio luokan konstruktorissa.
 
-Ionicin näkymiä käsitellään pinona. Ionicin näkymästä toiseen siirrytään lisäämällä uusi näkymä pinon päällimmäiseksi käyttämällä Ionicin NavController-kontrolleriluokkaa. Näin näkymäsiirtymien historia säilyy ja käyttäjä voi palata edellisiin näkymiin helposti painamalla puhelimen edellinen-painiketta. Tällöin viimeksi pinoon lisätty näkymä poistetaan pinosta.
+\texttt{Providers}-kansioon sijoitetaan ohjelmiston palveluluokat. \textbf{Palvelumalli} (engl. \textit{service pattern}) on suunnittelumalli, jossa useiden eri luokkien käyttämiä palveluita sijoitetaan samaan luokkaan yhdeksi palveluksi. Näin keskeisten palveluiden toteutus voidaan irroittaa itse luokkien toteutuksesta.
 
-Home-näkymä on FreeAAC-ohjelmiston ensimmäinen näkymä ja se sisältää ohjelmiston päävalikon. Päävalikossa sijaitsevat painikkeet, joita klikkaamalla käyttäjä pääsee keskustelunäkymään, asetusnäkymään tai infonäkymään. 
-\colorbox{YellowGreen}{// TODO: CardCreate}
-
-\colorbox{YellowGreen}{// TODO: CardDelete}
-
-\colorbox{YellowGreen}{// TODO: Main}
-
-\colorbox{YellowGreen}{// TODO: Info}
-
-
-\colorbox{YellowGreen}{// TODO: Options}
-
-\colorbox{YellowGreen}{// TODO: SelectSymbolModal}
-
-\colorbox{YellowGreen}{// TODO: src/app/providers}
-
-Providers-kansioon sijoitetaan ohjelmiston palveluluokat.
-
-\colorbox{YellowGreen}{// TODO: service-pattern, provider-pattern}
-
-\colorbox{YellowGreen}{// TODO: src/app/theme}
-
-Theme-kansiossa sijaitsevat ohjelmiston ulkoasuun vaikuttavat SCSS-tiedostot.
+\colorbox{YellowGreen}{// TODO: DI:stä ja palvelumallista lisää?}
 
 \section{Ohjelmiston näkymät}
 
-Sovellus koostuu valikkorakenteesta, korttien luontinäkymistä ja kommunikaationäkymästä.
+Ionicin näkymiä käsitellään pinona. Ionic-sovelluksessa näkymästä toiseen siirrytään lisäämällä uusi näkymä pinon päällimmäiseksi käyttämällä Ionicin \texttt{NavController}-kontrolleriluokkaa. Näin näkymäsiirtymien historia säilyy ja käyttäjä voi palata edellisiin näkymiin helposti painamalla mobiililaitteen edellinen-painiketta. Tällöin viimeksi pinoon lisätty näkymä poistetaan pinosta.
 
-\subsection{Valikot}
-Valikot
-Ionicin standardielementeistä luotu.
+\begin{figure}[h]\centering
+  \includegraphics[height=7cm,keepaspectratio]{FreeAACViews}
+  \caption[FreeAAC-sovelluksen näkymäpuu.]
+  {FreeAAC-sovelluksen näkymäpuu.}
+  \label{fig:FreeAACViews}
+\end{figure}
 
-\subsection{Korttien luontinäkymä}
-Korttien luontinäkymä
-Voidaan tehdä erikokoisia kortteja. Käytetään Papu.net-sivuston vapaata kuvapankkia.
+FreeAAC:n Ionic-näkymissä sisältö on jaettu kahden eri päätason HTML-elementin sisälle: \texttt{ion-header} ja \texttt{ion-content}. \texttt{Ion-header}-lohkossa sijaitsevat näkymän ylälaitaan tuleva teksti, joka kertoo missä näkymässä ollaan tällä hetkellä. Lisäksi sinne voidaan sijoittaa valikkotoimintoja. \texttt{Ion-content}-lohkossa sijaitsee näkymän varsinainen pääsisältö.
 
-\subsection{Kommunikaationäkymä}
-Kommunikaationäkymä
-Valitaan kortti. Kirjataan viesti symboleja painamalla.
+Home-näkymä on FreeAAC-ohjelmiston ensimmäinen näkymä ja se sisältää ohjelmiston päävalikon. Päävalikossa sijaitsevat painikkeet, joita klikkaamalla käyttäjä pääsee keskustelunäkymään (Main), asetusnäkymään (Options) tai infonäkymään (Info). Home-näkymän komponenttitiedostossa ei ole muita kuin näkymän vaihtamiseen liittyviä aliohjelmia.
+
+Ohjelmiston tärkein näkymä on Main-niminen näkymä, jossa sijaitsevat ohjelmiston varsinaiset kommunikointityökalut. Näkymä koostuu kolmesta eri komponentista: viestilaatikko, korttivalinta ja symbolivalinta. Viestilaatikkossa näkyvät käyttäjän valitsemat symbolit järjestyksessä. Käyttäjä voi poistaa symboleita yksi kerrallaan viimeisestä symbolista alkaen. Symbolikortti valitaan pudotusvalikosta, josta löytyvät käyttäjän kortinluonti-näkymässä tekemät kortit. Sivun alalaidassa näkyvät kortin symbolit, joista käyttäjä voi valita haluamansa symbolit viestilaatikkoon.
+
+Main-näkymän komponenttitiedosto sisältää viestilaatikon päivittämiseen sekä korttien tietojen lataamiseen tarvittavat aliohjelmat. Korttien lataamiseen käytetään \texttt{CardDataProvider}-luokkaa, joka on injektoitu mukaan komponenttiin sen konstruktorissa.
+
+Options-näkymä on kokoomanäkymä ohjelmiston hallintaa varten. Options-näkymän kautta käyttäjä pääsee siirtymään korttien luontinäkymään (CardCreate) ja korttien poistonäkymään (CardDelete). 
+
+Kortteja luodaan ohjelmiston CardCreate-näkymässä. CardCreate-näkymässä kortille voidaan valita nimi, koko ja liittää siihen kuvia kuvakirjastosta. Kaikki edellä mainitut ovat pakollisia ja käyttäjälle näytetään toast-virheilmoitus, jos jokin tieto puuttuu. Toast-virheilmoitukset käyttävät Ionicin \texttt{ToastController}-luokkaa. Kuvia valitaan erillisen modaalin kautta ja Ionic-sovelluksessa modaalien näyttämisestä vastaa \texttt{ModalController}-luokka.  Korttien tallentaminen tapahtuu \texttt{CardDataProvider}-luokan kautta.
+
+Kuvien valintaa varten aukeava modaali sisältää SelectSymbolModal-näkymän. Näkymässä kuvan voi valita eri kategorioista. Kategoria valitaan pudotusvalikosta. SelectSymbolModal-näkymän komponenttitiedosto sisältää kuvan tallentamiseen ja modaalin sulkemiseen liittyvät aliohjelmat. FreeAAC-ohjelmiston kuvakirjasto koostuu Papunet-sivuston tarjoamasta Creative Commons -lisenssin alaisesta kuvapankista.
+
+Kortteja voidaan poistaa erillisessä CardDelete-näkymässä. CardDelete-näkymä koostuu pudotusvalikosta, josta voidaan valita mikä kortti halutaan poistaa sekä vahvistuspainikkeesta. Korttilistaus ladataan \texttt{CardDataProvider}-luokan avulla ja myös poistokomento kulkee samaa reittiä pitkin.
+
+Info-näkymässä listataan FreeAAC-sovellukseen liittyviä tietoja. Info-näkymä on staattinen eikä siinä ole toiminallisuuksia.
+
+FreeAAC:lla on kaksi palveluluokkaa: \texttt{CardDataProvider} ja \texttt{ImageDataProvider}. \texttt{CardDataProvider}-luokan tehtävä on tarjota näkymäkomponenteille tietoa olemassa olevista korteista. \texttt{ImageDataProvider}-luokka huolehtii ohjelmiston kuvakirjaston eri kuvien toimittamisesta näkymäkomponenteille.
+
+\colorbox{YellowGreen}{// TODO: tallennustila}
 
 \section{Käytettävyysnäkökulma}
 
-\colorbox{YellowGreen}{// TODO: Kerrotaan käytettävyyden näkökulmasta. Erityisesti erikoisryhmien käytettävyys nostetaan esille.}
+- Ominaisuusvaatimukset:
+
+  * yleiset käytettävyysvaatimukset
+  \hyperref[general-usability-requirements]{''linkki''}
+
+  * selkeiden päävärien käyttö ja riittävästi kontrastia
+  \hyperref[AAC-colors]{''linkki''}
+  
+  * abstraktien symbolien välttäminen
+  \hyperref[AAC-abstract-symbols]{''linkki''}
+  
+  * mahdollisuus kontekstiin sopivien asetusten säätämiseen
+  \hyperref[AAC-context-settings]{''linkki''}
+  
+  * näkymien staattisuus ja yksinkertaisuus
+    \hyperref[AAC-staticity]{''linkki''}
+
+\colorbox{YellowGreen}{// TODO: Vaatimuslista.}
+
+\colorbox{YellowGreen}{// TODO: Yleiset käytettävyysratkaisut.}
+
+\colorbox{YellowGreen}{// TODO: Erikoisryhmien käytettävyysnäkökulma.}
 
 Tutkimuksessa toteutettu sovellus on tarkoitettu erityisesti autistisille käyttäjille.
 
+\colorbox{YellowGreen}{// TODO: Käytettävyys näkymittäin.}
+
 \chapter{Toteutuneen sovelluksen arviointi}
 \colorbox{YellowGreen}{// Ohjepituus 15-20 sivua.}
+
+\colorbox{YellowGreen}{// TODO: Ohjelmakoodin määrä (rivit).}
+
+\colorbox{YellowGreen}{// TODO: Muistinkäyttö.}
 
 Kuvien käsittely ja tallentaminen haastavaa. Progressiiviset sovellukset kohtalaisen hyviä tähän käyttötarkoitukseen eli yksinkertaisiin mobiilikeskeisiin sovelluksiin.
 
