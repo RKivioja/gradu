@@ -60,19 +60,21 @@
 
 \colorbox{YellowGreen}{// TODO: Lyhyt siltaava kappale johdannosta teoriakappaleeseen}
 
-\colorbox{YellowGreen}{// TODO: kirjoita omaksi kappaleeksi:}
+\colorbox{YellowGreen}{// TODO: Mieti tämän sijoittelua}
+
+Tutkielman tavoitteena oli tutkia progresiivisia WWW-sovelluksia ja niiden sopimista avusteisen kommunikaation mobiilisovellusten tuottamiseen sekä ohjelmistoteknisestä, että käytettävyysnäkökulmasta. Tutkielmaa varten luotiin suunnittelutieteellisen tutkimuksen (engl. \textit{design study}) periaatteiden mukaisesti artefakti, FreeAAC-ohjelmisto, jota verrattiin ohjelmistotekniikan ja käytettävyystutkimuksen heuristiikkoihin. Käytettävyystutkimuksessa otettiin huomioon erityisryhmien tarpeet ja etenkin autististen käyttäjien käytettävyyshaasteet. 
 
 - Taustat, tarpeet ja tavoitteet:
 
-- progressiivisten WWW-sovellusten tutkiminen
+* progressiivisten WWW-sovellusten tutkiminen
 
-- progressiivisten WWW-sovellusten sopiminen avusteisen kommunikaation mobiilisovelluksien tuottamiseen
+* progressiivisten WWW-sovellusten sopiminen avusteisen kommunikaation mobiilisovelluksien tuottamiseen
 
--> tavoite: Ionic-kehyksen toiminnan tutkiminen
+* tavoite: Ionic-kehyksen toiminnan tutkiminen
 
--> tavoite: Ionic-kehyksen avulla tehdyn avusteisen kommunikaation sovelluksen vertaaminen ohjelmistoteknisiin ja käytettävyyspohjaisiin suosituksiin kehittäjän näkökulmasta
+* tavoite: Ionic-kehyksen avulla tehdyn avusteisen kommunikaation sovelluksen vertaaminen ohjelmistoteknisiin ja käytettävyyspohjaisiin suosituksiin kehittäjän näkökulmasta
 
--> tavoite: Ionic-kehyksen avulla tehdyn avusteisen kommunikaation sovelluksen soveltuminen autistien kätettävyystarpeisiin suosituksien pohjalta
+* tavoite: Ionic-kehyksen avulla tehdyn avusteisen kommunikaation sovelluksen soveltuminen autistien kätettävyystarpeisiin suosituksien pohjalta
 
 \section{Avusteinen kommunikaatio}
 
@@ -89,8 +91,6 @@ Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin sy
 
 Puhetta tukevaan ja korvaavaan kommunikointisovellukseen voidaan liittää myös symboleita lukeva ääniominaisuus. Ääniominaisuus mahdollistaa kommunikoinnin näköyhteyden ulkopuolelle, vähentää symbolien tulkitsijan läsnäolon pakollisuutta ja helpottaa pidempien viestien rakentamista puhetta tukevassa ja korvaavassa kommunikointisovelluksessa. \parencite[]{AAC-interventions}
 
-\colorbox{YellowGreen}{// TODO: ankkuroi edellinen kappale paremmin tekstiin}
-
 Esimerkiksi ääniominaisuuden lisäämisellä avustetusta puhetta tukevasta ja korvaavasta kommunikaatiosta voidaan tehdä \textbf{monimodaalista}. Monimodaalisuus tarkoittaa usean eri kommunikaatiotavan kautta tapahtuvaa kommunikaatiota. Monimodaalinen kommunikaatio voi tapahtua eri tapojen kautta yhtäaikaisesti tai peräkkäin. Puhetta tukevasta ja korvaavasta kommunikaatiosta kannattaa tehdä monimodaalista useista eri syistä. Ensinnäkin, suurin osa kaikesta kommunikaatiosta on monimodaalista, sillä toiselle ihmiselle puhuttaessa on tavallista selkeyttää sanomaa ilmein ja elein. Toiseksi, puhetta tukevaa ja korvaavaa kommunikaatiota käyttävä henkilön tulee useasti kommunikoida muiden puhetta tukevaa ja korvaavaa kommunikaatiota käyttävien henkilöiden kanssa, jolloin vaihtoehdoista on hyötyä. Kolmas merkittävä syy on se, että eri puhetta tukevissa ja korvaavissa kommuunikaatiotavoissa on vahvuuksia ja heikkouksia, joten eri kommunikaatiotapoja sekoittamalla voidaan korvata yksittäisen kommunikaatiotavan heikkouksia. \parencite[]{AAC-conditional-use}
 
 \colorbox{YellowGreen}{// TODO: mitä ongelmia} 
@@ -99,7 +99,7 @@ Esimerkiksi ääniominaisuuden lisäämisellä avustetusta puhetta tukevasta ja 
 
 \textbf{Progressiiviset sovellukset} (engl. \textit{Progressive Web Applications, lyh. PWAs}) ovat selaimessa ajettavia WWW-sovelluksia, joiden ulkoasu määrittyy alustakohtaisesti niin, että niiden ulkoasu on mahdollisimman yhdenmukainen laitteen natiivien sovellusten kanssa. Selainpohjaisuuden takia progressiiviset sovellukset pystyvät käyttämään tarjolla olevia sovellusympäristön resursseja joustavasti sen sijaan, että ne itse määrittäisivät vaatimukset. Termi on verrattain tuore ja vakiintumaton, sillä esimerkiksi Ionic-kehyksen dokumentaatiossa käytetään myös termiä \textbf{hybridisovellus} (engl. \textit{hybrid application}).
 
-Progressiivisten sovellusten ilmeisin hyöty on alustariippumattomuus. Samaa sovellusta voidaan käyttää kaikissa ympäristöissä, jotka tukevat WWW-selaimia. Eri versioita samasta sovelluksesta ei tarvitse kehittää ja ylläpitää erikseen, joten progressiivisten sovellusten avulla voidaan säästää kalliita työresursseja. Hyvä esimerkki progressiivisten sovellusten käyttöä tukevasta markkinatilanteesta on nykyisten älytelevisioiden kirjava tarjonta, sillä valmistajien omien käyttöjärjestelmien lisäksi muunmuassa Apple, Amazon ja Roku kehittävät televisioon liitettäviä laitteita, joiden avulla käyttäjä voi ajaa erilaisia sovelluksia. Näiden kaikkien laitteiden tukeminen olisi hyvin vaikeaa perinteisten sovellusten avulla. \parencite[]{frankston-pwa}
+Progressiivisten sovellusten ilmeisin hyöty on alustariippumattomuus. Samaa sovellusta voidaan käyttää kaikissa ympäristöissä, jotka tukevat moderneja WWW-selaimia. Eri versioita samasta sovelluksesta ei tarvitse kehittää ja ylläpitää erikseen, joten progressiivisten sovellusten avulla voidaan säästää kalliita työresursseja. Hyvä esimerkki progressiivisten sovellusten käyttöä tukevasta markkinatilanteesta on nykyisten älytelevisioiden kirjava tarjonta, sillä valmistajien omien käyttöjärjestelmien lisäksi muunmuassa Apple, Amazon ja Roku kehittävät televisioon liitettäviä laitteita, joiden avulla käyttäjä voi ajaa erilaisia sovelluksia. Näiden kaikkien laitteiden tukeminen olisi hyvin vaikeaa perinteisten sovellusten avulla. \parencite[]{frankston-pwa}
 
 Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen \parencite[]{google-pwa-marketing} mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Yrityksen mukaan luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Google myös väittää, että progressiivisten sovellusten kohdalla käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä ja sovellusmaisuus puolestaan parantaa käyttäjän immersiota.
 
@@ -146,11 +146,11 @@ AngularJS perustuu MVC-arkkitehtuuriin, kun taas uudempi Angular on komponenttip
 
 Angularin komponenttipohjainen rakenne perustuu kolmeen hiljattain ilmestyneeseen teknologiaan: Web-komponentteihin (engl. \textit{Web Components}), JavaScriptin ES2015-standardiin ja TypeScript-ohjelmointikieleen.
 
-\textbf{Web-komponentit} on laaja-alainen termi, jolla tarkoitetaan neljää WWW-selaimissa yleistyvää standardia: \textbf{kustomoitavat elementit} (engl. \textit{custom elements}), \textbf{varjo-DOM} (engl. \textit{shadow DOM}), \textbf{mallit} (engl. \textit{templates}) ja \textbf{HTML-tuonti} (engl. \textit{HTML imports}). 
+\textbf{Web-komponentit} on laaja-alainen termi, jolla tarkoitetaan neljää WWW-selaimissa yleistyvää standardia: \textbf{kustomoitavat elementit} (engl. \textit{custom elements}), \textbf{varjo-dokumenttioliomalli} (engl. \textit{shadow DOM}), \textbf{mallit} (engl. \textit{templates}) ja \textbf{HTML-tuonti} (engl. \textit{HTML imports}). 
 
-Kustomoitavat HTML-elementit ovat HTML-standardielementtien ulkopuolisia elementtejä, joita voidaan käyttää standardielementtien seassa. Kustomoitava HTML-elementti irroittaa komponentin sivun muista osista, joten se mahdollistaa komponentin eristämisen. Varjo-DOM on piiloitettu osa sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille. Varjo-DOM:in elementit ja tyylit eivät vaikuta varjo-DOM:in ulkopuolisiin alueisiin ja vastavuoroisesti muut sivun elementit ja tyylit eivät vaikuta varjo-DOM:in alaisiin osiin. Komponentti voi täten käyttää tätä eristettyä aluetta renderöintiin. 
+Kustomoitavat HTML-elementit ovat HTML-standardielementtien ulkopuolisia elementtejä, joita voidaan käyttää standardielementtien seassa. Kustomoitava HTML-elementti irroittaa komponentin sivun muista osista, joten se mahdollistaa komponentin eristämisen. Varjo-dokumenttioliomalli on piiloitettu osa sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille. Varjo-dokumenttioliomallin elementit ja tyylit eivät vaikuta varjo-dokumenttioliomallin ulkopuolisiin alueisiin ja vastavuoroisesti muut sivun elementit ja tyylit eivät vaikuta varjo-dokumenttioliomallin alaisiin osiin. Tätä eristettyä aluetta voidaan täten käyttää komponentin piirtämiseen. 
 
-Mallit ovat HTML-palasia, jotka eivät lataudu välittömästi HTML-sivun auetessa vaan ne voidaan aktivoida JavaScriptillä myöhemmin. Malleista on useita toteutuksia eri kehyksissä, mutta Web-komponentit standardisoivat mallien rakentamisen ja tarjoavat suoran tuen niiden hyödyntämiselle selaimessa. Malleja käyttämällä varjo-DOM:iin piilotetusta sisällöstä voidaan tehdä dynaamista. Viimeinen Web-komponenttien osa on HTML-tuonti. HTML-tuonnin avulla HTML-, CSS- ja JavaScript-tiedostoja voidaan ladata yhtenäisinä osina. Angular ei käytä HTML-tuontia, vaan se käyttää JavaScriptin moduulilatausta. \parencite[]{angular-6-by-example}
+Mallit ovat HTML-palasia, jotka eivät lataudu välittömästi HTML-sivun auetessa vaan ne voidaan aktivoida JavaScriptillä myöhemmin. Malleista on useita toteutuksia eri kehyksissä, mutta Web-komponentit standardisoivat mallien rakentamisen ja tarjoavat suoran tuen niiden hyödyntämiselle selaimessa. Malleja käyttämällä varjo-dokumenttioliomalliin piilotetusta sisällöstä voidaan tehdä dynaamista. Viimeinen Web-komponenttien osa on HTML-tuonti. HTML-tuonnin avulla HTML-, CSS- ja JavaScript-tiedostoja voidaan ladata yhtenäisinä osina. Angular ei käytä HTML-tuontia, vaan se käyttää JavaScriptin moduulilatausta. \parencite[]{angular-6-by-example}
 
 \subsection{TypeScript}
 
@@ -162,17 +162,15 @@ Ohjelmointikielen \textbf{modulaarisuudella} tarkoitetaan sitä, että muuttujat
 
 Perinteisesti JavaScript on käyttänyt uudestikäytettävien komponenttien rakentamiseen funktioita ja prototyyppipohjaista perintää. Iso osa nykyohjelmoijista ei kuitenkaan ole tottunut käyttämään edellä mainittuja keinoja, vaan nykyisin suosituin lähestymistapa uudelleenkäytettävyyteen on luokkien käyttäminen. Myös JavaScriptin oliotukea on pyritty parantelemaan sen viimeisimmissä versioissa. \parencite[]{typescript-classes}
 
-Uudelleenkäytettävyyden lisäksi TypeScriptin luokkien avulla aikaan modulaarisia komponentteja, joita on helpompi ylläpitää ja skaalata. Virheiden löytämistä helpottaa se, että luokkien avulla ohjelmakoodin rajoista saadaan selkeämpiä. Skaalautuvuutta varten täytyy monesti pystyä korvaamaan vanhoja komponentteja uusilla ja luokkia käyttämällä myös tämä on helpompaa.
+Uudelleenkäytettävyyden lisäksi TypeScriptin luokkien avulla saadaan aikaan modulaarisia komponentteja, joita on helpompi ylläpitää ja skaalata. Virheiden löytämistä helpottaa se, että luokkien avulla ohjelmakoodin rajoista saadaan selkeämpiä. Skaalautuvuutta varten täytyy monesti pystyä korvaamaan vanhoja komponentteja uusilla ja luokkia käyttämällä myös tämä on helpompaa.
 
 \textbf{Rajapintoja} käytetään kuvaamaan luokkien ominaisuuksia. TypeScriptissä rajapintoja käytetään tyyppien nimeämiseen ja niiden avulla voidaan tehdä olioiden välisiä sopimuksia ohjelmoijan itse laatiman ohjelmistokoodin sisällä sekä myös ohjelmoijan oman ohjelmistokoodin ja muiden kehittämien kirjastojen välillä. \parencite[]{typescript-interfaces} Esimerkiksi Swagger-niminen työkalu generoi .NET-palvelinkoodista valmiita rajapintoja, joita TypeScript-pohjaisen WWW-sovelluksen on helpompi käyttää. Rajapinnat ovat luonnollinen osa luokkiin perustuvaa ohjelmointia. Niiden avulla luokan toteutus voidaan eroittaa sen ulkopuolelle näkyvistä osista ja jakaa luokkia ryhmiin. Kuten luokkienkin kohdalla, rajapintojen käyttäminen voi parantaa ohjelman ylläpidettävyyttä, skaalautuvuutta ja osien uudelleenkäytettävyyttä.
 
 JavaScriptistä poiketen TypeScriptin on staattisesti tyypitetty kieli. Tyypitys tarkoittaa sitä, että muuttujien ja olioiden tyypit täytyy määritellä ohjelmakoodissa. Dynaamisesti tyypitetyissä kielissä kuten JavaScriptissä muuttujien ja olioiden tyypit päätellään käännöksen aikana. Staattisen tyypityksen avulla ohjelmoijan on helpompi nähdä suoraan, että ohjelman tieto on oikean tyyppistä sitä käsitellessä. Iso osa tyyppivirheistä jää tällöin kiinni jo ennen kääntämistä kun taas JavaScriptilla ohjelmoidun ohjelman kohdalla näin ei käy. Toisaalta vahva tyypitys aiheuttaa lisätyötä tyyppimuunnosten takia.
 
-\colorbox{YellowGreen}{// TODO: tyypityksestä lisää?}
-
 \section{Käytettävyyden perusteet}
 
-Kaikki ihmisen tuottamat esineet ja asiat täytyy suunnitella. Vaikka olemme suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Kommunikaatiossa avustavan sovelluksen suunnittelussa tulee olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
+Kaikkiin ihmisen tuottamiin esineisiin ja asiohin liittyy tiedostettu tai tiedostamaton suunnitteluprosessi. Vaikka olemme suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Joka päiväisessä kommunikaatiossa avustavan sovelluksen suunnittelussa tulee olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
 
 Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää arkisissa tilanteissa, jotka vaativat reaaliaikaista reagointia muiden ihmisten kommunikointiin. Avustettua kommunikaatiota käyttävillä ryhmillä on myös omia käytettävyystarpeita, joiden huomioimista varten täytyy ymmärtää käytettävyyttä tavallista laajemmassa kontekstissa.
 
@@ -181,20 +179,15 @@ Ohjelman käyttöliittymän \textbf{käytettävyys} (\textit{engl. usability}) o
 
 Opittavuus tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän tehokkuus määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. Muistettavuus on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. Virhealttiudella tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. Tyydyttävyys kertoo,  miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä kuten \textbf{käyttökelpoisuus} (\textit{engl. utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (\textit{engl. usefulness}). \parencite[]{usability-101}
 
-\colorbox{YellowGreen}{// TODO: opittavuus}
 Lyhyesti ilmaistuna, opittavuus tarkoittaa ohjelmiston kykyä opettaa käyttäjälleen oikea tapa käyttää ohjelmistoa. Opittavuutta vastaava termi on \textbf{löydettävyys} (\textit{engl. discoverability}). Opittavuutta lisääviä ominaisuuksia ovat muunmuassa muistettavuus, loogisuus, toistettavuus ja yhdenmukaisuus. Opittavuudeltaan hyvä ohjelma ilmaisee käyttäjälleen tehokkaasti mitä toiminnallisuuksia se sisältää, mitä eri toiminnot tarkoittavat ja kuinka eri toiminnallisuuksia käytetään. \parencite[]{improving-learnability}
 
-\colorbox{YellowGreen}{// TODO: tehokkuus}
 Tehokkuus on määritelmä tai mitta siitä, miten helposti ja nopeasti haluttu toiminto voidaan suorittaa tuttua käyttöliittymää käyttämällä. Tehokkuutta voidaan suoraan mitata esimerkiksi kulunutta aikaa tai välivaiheiden määrää mittaamalla. 
 
-\colorbox{YellowGreen}{// TODO: muistettavuus}
 Muistettavuus mittaa sitä miten helppo käyttäjän on käyttää ohjelmistoa sen jälkeen kun ohjelmiston edellisestä käyttökerrasta on kulunut aikaa. Muistettavuutta on hankala mitata suoraan tyypillisten käyttäjätutkimusmetodien avulla, mutta esimerkiksi Affordable Usability -sivuston \parencite[]{affordable-usability} mukaan sitä voidaan WWW-sovellusten yhteydessä tutkia erilaisten verkkosivuanalytiikkatyökalujen avulla.
 
-\colorbox{YellowGreen}{// TODO: virhealttius}
 Käyttäjien tekemien virheiden määrän minimointi on yksi käyttettävyyssuunnittelun tärkeimmistä tavoitteista. Don Normanin mukaan \parencite[]{norman-doet} käyttäjää ei juuri koskaan pitäisi syyttää tekemistään virheistä vaan suurin osa käyttövirheistä johtuu huonosta suunnittelusta.
 
-\colorbox{YellowGreen}{// TODO: tyydyttävyys}
-Tyydyttävyyttä ymmärtääkseen täytyy tietää, että käyttöliittymä ja käyttäjäkokemus ovat kaksi eri asiaa. Käyttäjäkokemus ja sen tyydyttävyys tai tyydyttämyys on seurausta useasta eri tekijästä. Visuaalinen ulkoasu on osatekijä käyttöliittymän tyydyttävyyttä arvioidessa, mutta jos käyttäjä ei löydä haluamiaan toimintoja, osa halutuista ominaisuuksista puuttuu tai ne on hankalta löytyää, ohjelmiston tyydyttävyys on matala. Tyydyttävyys on viidestä edellä listatusta käytettävyystekijästä kaikista subjektiivisin.
+Tyydyttävyys mittaa käyttöliittymän tuottamaa mielihyvää käyttäjässä. Tyydyttävyyttä ymmärtääkseen täytyy tietää, että käyttöliittymä ja käyttäjäkokemus ovat kaksi eri asiaa. Käyttäjäkokemus ja sen tyydyttävyys tai tyydyttämättömyys on seurausta useasta eri tekijästä. Visuaalinen ulkoasu on osatekijä käyttöliittymän tyydyttävyyttä arvioidessa, mutta myös halutuilla ominaisuuksilla ja niiden toimivuudella on merkitystä tyydyttävyyteen. Jos käyttäjä ei löydä haluamiaan toimintoja, osa halutuista ominaisuuksista puuttuu tai ne on hankalta löytää, ohjelmiston tyydyttävyys on matala. Tyydyttävyys on viidestä edellä listatusta käytettävyystekijästä kaikista subjektiivisin.
 
 \subsection{Käytettävyys ja avusteinen kommunikaatio}
 
@@ -240,6 +233,7 @@ Itse kommunikaationäkymässä pitäisi olla mahdollisuus valita eri kortteja no
 Kortteja ja muita asetuksia pitäisi päästä hallitsemaan hallintapaneelista. Hallintapaneelin tulisi olla salasanalla lukittava, jotta erityisryhmään kuuluva käyttäjä ei vahingossa säätäisi korttien tai muiden ohjelmiston osien asetuksia vääränlaisiksi \hyperref[AAC-settings]{''7''}. 
 
 \colorbox{YellowGreen}{// TODO: Kenties liitteeksi loppuun?}
+
 - Ominaisuusvaatimukset:
 
   * kommunikaatiokortit
@@ -274,7 +268,7 @@ Ionic-sovellusta voidaan ajaa paikallisena testiversiona neljällä eri tapaa. S
 
 FreeAAC-ohjelmiston kehittämiseen käytettiin \textbf{Visual Studio Code} -nimistä ohjelmistoympäristöä. Visual Studio Code on Microsoftin kehittämä ja ylläpitämä avoimen lähdekoodin Electron-pohjainen ohjelmistoympäristö. Angularin käyttämä TypeScript-ohjelmointikieli on myös Microsoftin kehittämä, joten Visual Studio Coden TypeScript-tukeen on panostettu. Visual Studio Code:n tukena käytettiin myös liitännäisiä kuten ESLint-analyysityökalua.
 
-\textbf{ESLint} on koodianalyysityökalu, joka käy läpi ohjelmistoympäristössä olevaa ohjelmakoodia ja auttaa ohjelmoijaa ohjelmoimaan koodianalyysityökaluun valittujen asetusten mukaista ohjelmakoodia.
+\textbf{ESLint} on koodianalyysityökalu, joka käy läpi ohjelmistoympäristössä olevaa ohjelmakoodia ja auttaa ohjelmoijaa ohjelmoimaan koodianalyysityökaluun valittujen asetusten mukaisesti.
 
 \section{Rakenne}
 
@@ -284,7 +278,7 @@ Seuraavalla kansiotasolla Ionicin oletusrakenneteessa projekti jakautuu kahteen 
 
 \texttt{Src}-kansiossa sijatsevat ohjelmiston lähdekoodia sisältävät tiedostot. \texttt{Src}-kansion päätasolla sijaitsevat \texttt{index.html}, \texttt{manifest.json} ja \texttt{service-worker.js}-tiedostot. \texttt{Index.html} on ensimmäinen HTML-tiedosto, jonka käynnistyvä Ionic-sovellus lukee. Se sisältää Ionic-sovelluksen juurikomponentin ja linkkejä sovelluksen yleisesti vaatimiin resursseihin kuten tyylitiedostoihin.
 
-\texttt{Src}-kansiota alemmalla tasolla on oletusprojektissa viisi eri kansiota: \texttt{Assets}, \texttt{Classes}, \texttt{Pages}, \texttt{Providers} ja \texttt{Theme}.
+\texttt{Src}-kansiota alemmalla tasolla on Ionic-sovelluksen oletusrakenteessa viisi eri kansiota: \texttt{Assets}, \texttt{Classes}, \texttt{Pages}, \texttt{Providers} ja \texttt{Theme}.
 
 \texttt{Assets}-kansioon ohjelmiston kehittäjä voi sijoittaa kuva- ja äänitiedostoja, joita ohjelman toiminnallisuudet vaativat. FreeAAC-sovelluksen kuvakirjasto sijaitsee kansiossa.
 
@@ -294,7 +288,7 @@ Ohjelmiston näkymät sijaitsevat \texttt{Pages}-kansiossa. FreeAAC-ohjelmistoss
 
 \texttt{Theme}-kansiossa sijaitsevat ohjelmiston ulkoasuun vaikuttavat SCSS-tiedostot. Ionicin oletusprojektissa se sisältää \texttt{variables.scss}-tiedoston, joka asettaa projektille Ionicin oletusteeman. Kehittäjä voi itse vapaasti säätää ohjelmiston päätason ulkoasua tätä kautta.
 
-\textbf{Riippuvuusinjektio} (engl. \textit{dependency injection}) on suunnittelumalli, jossa luokalle annetaan toinen luokka tai staattinen aliohjelma, joka tarjoaa luokalle uusia ominaisuuksia käyttöön. Riippuvuusinjektiossa luokka tai staattinen aliohjelma annetaan toiselle luokalle sen sijaan, että luokka itse hakisi luokan tai staattisen aliohjelman. Angular-ohjelmistokehyksessä riippuvuusinjektio toteutetaan tuomalla toinen luokka import-lauseella mukaan luokan lähdekoodiin ja julistamalla riippuvuusinjektio luokan konstruktorissa.
+\textbf{Riippuvuusinjektio} (engl. \textit{dependency injection}) on suunnittelumalli, jossa luokalle annetaan toinen luokka tai staattinen aliohjelma, joka tarjoaa luokan käyttöön uusia ominaisuuksia. Riippuvuusinjektiossa luokka tai staattinen aliohjelma annetaan toiselle luokalle sen sijaan, että luokka itse hakisi luokan tai staattisen aliohjelman. Angular-ohjelmistokehyksessä riippuvuusinjektio toteutetaan tuomalla toinen luokka import-lauseella mukaan luokan lähdekoodiin ja julistamalla riippuvuusinjektio luokan konstruktorissa.
 
 \texttt{Providers}-kansioon sijoitetaan ohjelmiston palveluluokat. \textbf{Palvelumalli} (engl. \textit{service pattern}) on suunnittelumalli, jossa useiden eri luokkien käyttämiä palveluita sijoitetaan samaan luokkaan yhdeksi palveluksi. Näin keskeisten palveluiden toteutus voidaan irroittaa itse luokkien toteutuksesta.
 
@@ -341,9 +335,13 @@ Abstraktien symbolien käyttämistä tulisi välttää, sillä autistiset käytt
 - Ominaisuusvaatimukset:
 
   * yleiset käytettävyysvaatimukset
+  
   * selkeiden päävärien käyttö ja riittävästi kontrastia
+  
   * abstraktien symbolien välttäminen
+  
   * mahdollisuus kontekstiin sopivien asetusten säätämiseen
+  
   * näkymien staattisuus ja yksinkertaisuus
 
 \colorbox{YellowGreen}{// TODO: Yleiset käytettävyysratkaisut.}
@@ -361,32 +359,144 @@ Valikkonäkymien lisäksi käytettävyysratkaisuja on tehty erityisesti kommunik
 
 Korttien asetusnäkymät on erotettu toisistaan näkymien yksinkertaistamisen takia.
 
-
 \chapter{Toteutuneen sovelluksen arviointi}
 \colorbox{YellowGreen}{// Ohjepituus 15-20 sivua.}
 
-\colorbox{YellowGreen}{// TODO: Pitäisikö yhdistää edelliseen osaan?}
-
 FreeAAC-ohjelmiston prototyyppi sisältää suurimman osan tarpeellisista ominaisuuksista ja siitä pystyttiin toteuttamaan toimiva sekä koekäyttöön sopiva versio tämän tutkielman aikarajoitteiden puitteissa. Voidaan todeta, että ainakin perustasolla progressiiviset WWW-sovellukset vaikuttavat lupaavalta ja riittävän kypsältä teknologialta yksinkertaisten mobiilisovellusten toteuttamiseen.
 
-FreeAAC-ohjelmiston ohjelmakoodin määrä on maltillinen verrattuna ominaisuusvaatimuksiin, mikä parantaa ohjelmiston ylläpidettävyyttä ja testattavuutta. Ohjelmistossa on myös hyvin vähän sisäisiä riippuvuuksia, koska Angular-ohjelmistokehyksen sekä TypeScript-ohjelmointikielen avulla ohjelmistosta saatiin helposti tehtyä modulaarinen. 
+FreeAAC-ohjelmiston ohjelmakoodin määrä on maltillinen verrattuna ominaisuusvaatimuksiin, mikä parantaa ohjelmiston ylläpidettävyyttä ja testattavuutta. Ohjelmistossa on myös hyvin vähän sisäisiä riippuvuuksia, koska Angular-ohjelmistokehyksen sekä TypeScript-ohjelmointikielen avulla ohjelmistosta saatiin helposti tehtyä modulaarinen. FreeAAC-ohjelmiston tiedostojen tekstirivien prosenttiosuudet FreeAAC-ohjelmistossa ovat: TypeScript 57,6 \%, HTML 28,0 \%, CSS 11,7 \% ja JavaScript 2,7 \%.
 
-\colorbox{YellowGreen}{// TODO: Ohjelmakoodin määrä (rivit, metodit, luokat?), Halstead tms. ohjelmistometriikka?}
+Rivimäärien käyttäminen ohjelmiston arviointiin ei ole täysin ongelmatonta, mutta eri tiedostojen rivimääriä analysoimalla voidaan saada perustason tietämystä ohjelmiston rakenteesta ja oleellisista osista. Edes ohjelmakoodin rivin määrite ei ole täysin yksiselitteinen asia, sillä yksi ohjelmakoodin looginen osa voidaan rivittää eri ohjelmointiperiaatteiden perusteella useille riveille. Lisäksi ohjelmakoodin rivimäärään vaikuttavat muutkin luettavuusmääritteet kuten tyhjien rivien käyttö sekä kommenttien määrä.
+
+\colorbox{YellowGreen}{// TODO: Pitäisikö koodirivijutut siirtää edelliseen osaan?}
+
+FreeAAC-ohjelmiston arviointiin valittiin rivien kokonaismäärä ilman tyhjien tai kommenttirivien vähentämistä kokonaismäärästä.
+
+Rivien kokonaismäärä on 8848. Tiedostojen rivien lukumäärät:
+\begin{center}
+    \begin{tabular}{ | l | l |}
+    \hline
+    Tiedosto & Rivien lukumäärä \\ \hline
+    package-lock.json & 7528 \\ \hline
+    cardcreate.ts & 112 \\ \hline
+    variables.scss & 88 \\ \hline
+    config.xml & 86 \\ \hline
+    app.module.ts & 73 \\ \hline
+    package.json & 66 \\ \hline
+    image-data.ts & 53 \\ \hline
+    main.ts & 52 \\ \hline
+    index.html & 50 \\ \hline
+    main.html & 41 \\ \hline
+    cardcreate.html & 40 \\ \hline
+    card.ts & 39 \\ \hline
+    .gitignore & 36 \\ \hline
+    app.component.ts & 36 \\ \hline
+    card-data.ts & 36 \\ \hline
+    app.scss & 32 \\ \hline
+    selectsymbolmodal.ts & 32 \\ \hline
+    service-worker.js & 31 \\ \hline
+    home.ts & 29 \\ \hline
+    carddelete.ts & 28 \\ \hline
+    selectsymbolmodal.html & 28 \\ \hline
+    tsconfig.json & 28 \\ \hline
+    options.ts & 27 \\ \hline
+    wordsymbol.ts & 26 \\ \hline
+    options.html & 21 \\ \hline
+    info.html & 20 \\ \hline
+    home.html & 19 \\ \hline
+    app.html & 18 \\ \hline
+    .editorconfig & 16 \\ \hline
+    info.ts & 14 \\
+    \hline
+    \end{tabular}
+\end{center}
+
+Tiedostojen rivien lukumäärät:
+\begin{center}
+    \begin{tabular}{ | l | l |}
+    \hline
+    Tiedosto & Rivien lukumäärä \\ \hline
+    cardcreate.module.ts & 13 \\ \hline
+    carddelete.html & 13 \\ \hline
+    carddelete.module.ts & 13 \\ \hline
+    info.module.ts & 13 \\ \hline
+    options.module.ts & 13 \\ \hline
+    selectsymbolmodal.module.ts & 13 \\ \hline
+    manifest.json & 12 \\ \hline
+    tslint.json & 13 \\ \hline
+    README.md & 8 \\ \hline
+    ionic.config.json & 8 \\ \hline
+    main.ts & 8 \\ \hline
+    cardcreate.scss & 3 \\ \hline
+    carddelete.scss & 3 \\ \hline
+    home.scss & 3 \\ \hline
+    info.scss & 3 \\ \hline
+    options.scss & 3 \\ \hline
+    selectsymbolmodal.scss & 3 \\ \hline
+    main.scss & 0 \\
+    \hline
+    \end{tabular}
+\end{center}
+
+FreeAAC-ohjelmistossa ylivoimaisesti eniten rivejä sisältävät \texttt{package.json}- ja \texttt{package-lock.json}-tiedostot. \texttt{Package.json} on JSON-tiedosto, joka sisältää NodeJS-alustan automaattisesti generoiman kuvauksen ohjelmiston perustiedoista ja riippuvuuksista npm-paketteihin versioineen. \texttt{package-lock.json}-tiedosto taas käytännössä pyrkii varmistamaan, että jokaisesta npm-paketista on käytössä oikea versio ja paketit ovat ehjiä. Sen tarkoitus on varmistaa, että jokainen asennettu ohjelmisto on mahdollisimman samankaltainen ja toimiva. Tämä edesauttaa alustariippumattomuutta.
+
+Toinen merkittävän määrän rivejä sisältävä generoitu tiedosto on config.xml, joka on Apache Cordovan käyttämä koko ohjelmiston laajuinen asetustiedosto. Asetustiedostossa on lähinnä Android- ja iOS -käyttöjärjestelmissä ajettavien ohjelmistoversioiden räätälöimiseen tähtääviä asetuksia.
+
+Ohjelmiston ainoa JavaScript-tiedosto on \texttt{service-worker.js}. \texttt{service-worker.js} on oleellinen osa progressiivisen WWW-sovelluksen toimintaa sillä se mahdollistaa toimintoja, jotka ovat aiemmin olleet mahdollisia vain natiiveille sovelluksille. Se on itsenäinen komentosarja, joka voi suorittaa toimintoja, joihin ei tarvita käyttäjän aktiivista osallistumista. Tällaisia ovat muunmuassa Internetiin yhteydessä olevasta sovelluksesta palvelimelle lähtevien kutsujen perille menemisen varmistaminen ja push-ilmoitusten näyttäminen.
+
+Suurin osa riveistä sijaitsee ohjelmistokehittäjän itse tuottamissa mallitiedostoissa ja näitä hallinnoivissa komponenttitiedostoissa. Näissä tiedostoissa olevien rivien määrä on 783. Jos 7528 riviä sisältävä \texttt{package.json}-tiedosto otetaan pois laskuista, on ohjelmiston kokonaisrivimäärä 1320 ja ohjelmistokehittäjän pääasiallisesti tuottamat tiedostot sisältävät noin 59,32\% ohjelmiston kokonaisrivimäärästä.
+
+\colorbox{YellowGreen}{// TODO: Halstead tms. ohjelmistometriikka?}
+
 \colorbox{YellowGreen}{// TODO: Sisäiset riippuvuudet.}
 
 \colorbox{YellowGreen}{// TODO: Mittaa muistinkäyttöä ja vertaa johonkin.}
 
-Näkymien HTML-formaatti ei juurikaan aiheuttanut ohjelmistoteknisiä haasteita tai käytettävyysongelmia. Ainoastaan symbolien vapaa asemointi kortilla osoittautui sen verran haastavaksi tehtäväksi, että sitä ei toteutettu. HTML-kieli on alunperin tarkoitettu dokumenttien hierarkkiseksi ja rakenteeliseksi kuvauskieleksi, joten HTML-elementtien kelluvaa asemointia toisiinsa nähden ei ole helpoin toteuttaa sen avulla. Kelluvien elementtien toteuttaminen on kyllä mahdollista oikeanlaisten CSS-määritysten avulla, mutta tämä vaatisi erillisen asemointipalvelun rakentamista ohjelmistoon sekä CSS-luokkien lisäilyä ja poistamista reaaliajassa. Perinteisessä mobiilisovelluksessa elementtien vapaa asemointi saattaisi olla helpompaa.
+Näkymien HTML-formaatti ei juurikaan aiheuttanut ohjelmistoteknisiä haasteita tai käytettävyysongelmia. Ainoastaan symbolien vapaa asemointi kortilla osoittautui sen verran haastavaksi tehtäväksi, että sitä ei toteutettu. HTML-kieli on alunperin tarkoitettu dokumenttien hierarkkiseksi ja rakenteeliseksi kuvauskieleksi, joten HTML-elementtien kelluvaa asemointia toisiinsa nähden ei ole helpoin toteuttaa sen avulla. Kelluvien elementtien toteuttaminen on kyllä mahdollista oikeanlaisten CSS-määritysten avulla, mutta tämä vaatisi erillisen asemointipalvelun rakentamista ohjelmistoon sekä CSS-luokkien lisäilyä ja poistamista reaaliajassa. Perinteisessä mobiilisovelluksessa elementtien vapaa asemointi olisi todennäköisesti helpompaa.
 
 \colorbox{YellowGreen}{// TODO: Tarkenna tallennustilaan liittyvät asiat.}
 Kenties haastavin osuus FreeAAC-ohjelmiston toteuttamisessa oli tietojen tallentaminen. Kuten luvussa xx todettiin, progressiivisille WWW-sovelluksille ei ole luontevaa tallennustilaa, sillä selainten oikeuksien määrä on hyvin tarkasti rajoitettua tietoturvasyistä. Kuvat voidaan liittää mukaan sovellukseen, mutta korttien asetuksien tallentaminen ei ole yksinkertaista. Natiivisovelluksilla on suora pääsy rajattuun massamuistitilaan, mutta WWW-sovelluksissa tiedot tulee tallentaa muualle.
 
+Käytettävyyden perusvaatimusten osalta FreeAAC-ohjelmiston toteutuksessa ei ilmennyt suuria haasteita. Ionicin tarjoama oletusteema on tehty yleisten käytettävyysvaatimusten mukaisesti, joten suurin osa ohjelmistosta pystyy käyttämään sitä suoraan ilman muutoksia.
+
+\colorbox{YellowGreen}{// TODO: Opittavuus.}
+FreeAAC-ohjelmiston opittavuutta helpottaa se, että näkymät muistuttavat paljolti toisiaan. FreeAAC-ohjelmistossa ei ole moodeja eikä samoja toimintoja voi suorittaa usealla eri tavalla. Tämä lisää sekä opittavuutta, että muistettavuutta.
+
+Tehokkuus on määre, jota parhaiten voidaan mitata suorittamalla käyttäjätutkimus, jossa käyttäjälle annetaan tehtävä, johon kulunutta aikaa tai välivaiheiden määrää mitataan. Koska tässä tutkielmassa ei suoritettu käyttäjätutkimusta vaan suunnittelutieteelinen tutkimus, on tehokkuutta tutkittava heuristiikkojen perusteella.
+\colorbox{YellowGreen}{// TODO: Tehokkuuden mittaaminen jollain tavalla.}
+\colorbox{YellowGreen}{// TODO: Tehokkuuden mittaamiseen sekvenssikaavio vaatimuslistauksen mukaisista tehtävistä?}
+
+\colorbox{YellowGreen}{// TODO: Muistettavuus.}
+
+\colorbox{YellowGreen}{// TODO: Virhealttius.}
+FreeAAC-ohjelmiston virhealttiutta vähentää se, että käyttäjän syötemahdollisuuksia on rajattu. Käyttäjä ei yleensä voi päätyä tilanteisiin, jossa tapahtuu jotain peruuttamatonta. Ainoastaan symbolin poistaminen kortilta tai kortin poistaminen kokonaisuudessaan voi aiheuttaa käyttäjälle tilanteen, jossa menetetään paljon tehtyä työtä. Nämä ominaisuudet on kuitenkin piilotettu erilliseen salasanasuojattuun näkymään, joten riski peruuttamattomaan virheeseen on minimoitu.
+
+\colorbox{YellowGreen}{// TODO: Tyydyttävyys.}
+Tyydyttävyyttä on hankala mitata ilman koekäyttäjiä, mutta yleisten käytettävyysheuristiikkojen noudattaminen lisää tyydyttävyyttä. Voidaan esimerkiksi olettaa, että ohjelmiston yhtenäinen ulkoasu lisää opittavuuden ja tehokkuuden lisäksi myös tyydyttävyyttä.
+
+\colorbox{YellowGreen}{// TODO: Muut käytettävyysvaatimukset.}
+FreeAAC-ohjelmistolle listattiin myös joukko erityisryhmien käytettävyysvaatimuksia. Etenkin autististen käyttäjien tarpeet pyrittiin ottamaan huomioon.
+
+  * selkeiden päävärien käyttö ja riittävästi kontrastia
+  
+  * abstraktien symbolien välttäminen
+  
+  * mahdollisuus kontekstiin sopivien asetusten säätämiseen
+  
+  * näkymien staattisuus ja yksinkertaisuus
+
 \chapter{Pohdinta}
 \colorbox{YellowGreen}{// Ohjepituus 5-10 sivua.}
 
-\colorbox{YellowGreen}{-- Mitä aineistoanalyysi kertoo tutkimushypoteesista? Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä? Vastasiko tutkimusmetodi odotuksia? Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?
+\colorbox{YellowGreen}{// TODO: Mitä aineistoanalyysi kertoo tutkimushypoteesista?}
 
-Pohdintaluvussa harjoitetaan itsenäistä ajattelua. Sen voi periaatteessa kirjoittaa ilman lähdekirjallisuutta, sillä tarkastelun kohteena on aiemmin kirjoitettamasi materiaali. Nyt tutkimuksen tuloksia on aika arvioida kriittisesti. Niitä verrataan aiempaan tutkimukseen ja pohditaan, mitä uutta tutkimus paljastaa aiheesta ja miten tulokset suhteutuvat aiempaan tutkimukseen – tukevatko vai ovatko ristiriidassa? Jos analyysivaiheessa on ollut vaikeuksia, niitä ei pidä lakaista maton alle; niiden puntaroiminen kertoo tutkimuksen läpinäkyvyydestä ja tulosten luotettavuudesta. --}
+\colorbox{YellowGreen}{// TODO: Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä?}
+
+\colorbox{YellowGreen}{// TODO: Vastasiko tutkimusmetodi odotuksia?}
+
+\colorbox{YellowGreen}{// TODO: Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?}
+
+\colorbox{YellowGreen}{-- Pohdintaluvussa harjoitetaan itsenäistä ajattelua. Sen voi periaatteessa kirjoittaa ilman lähdekirjallisuutta, sillä tarkastelun kohteena on aiemmin kirjoitettamasi materiaali. Nyt tutkimuksen tuloksia on aika arvioida kriittisesti. Niitä verrataan aiempaan tutkimukseen ja pohditaan, mitä uutta tutkimus paljastaa aiheesta ja miten tulokset suhteutuvat aiempaan tutkimukseen – tukevatko vai ovatko ristiriidassa? Jos analyysivaiheessa on ollut vaikeuksia, niitä ei pidä lakaista maton alle; niiden puntaroiminen kertoo tutkimuksen läpinäkyvyydestä ja tulosten luotettavuudesta. --}
 
 \chapter{Yhteenveto}
 \colorbox{YellowGreen}{// Ohjepituus 3-5 sivua.}
