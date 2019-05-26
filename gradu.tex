@@ -51,19 +51,17 @@
 
 \chapter{Johdanto}
 
-\colorbox{YellowGreen}{// Ohjepituus 5 sivua. (Varmaan oikeasti 1-3 sivua.)}
+Idea tähän pro gradu -työhön syntyi kun osallistuin Keski-Suomen Autismiliiton kokoontumisen järjestämiseen vuonna 2015. Vapaamuotoisessa kokoontumisessa pääsin näkemään miten autistiset nuoret käyttävät erilaisia apuvälineitä muiden ihmisten kanssa kommunikointiin. Osa nuorista käytti kommunikointiin paperisia apuvälineitä sekä henkilökohtaisen avustajan tukea, mutta osa pystyi kommunikoimaan itsenäisesti tablettitietokoneen avulla.
 
-\colorbox{YellowGreen}{// TODO: Tähän tulee johdanto.}
+Toinen tämän pro gradu -työn aiheeseen vaikuttanut tapahtuma oli Adafy Oy:lle tekemäni projekti, jossa käytin Ionic-ohjelmistokehystä. Tuosta projektista minulle jäi vahva tunne, että progressiivisten WWW-sovellusten suosio tulee lähivuosina kasvamaan ja ne ovat käyttökelpoinen tapa toteuttaa yksinkertaisia ohjelmistoja. Viime vuosina näin on myöskin käynyt, sillä erittäin suositut monialustaiset ohjelmistot kuten Visual Studio Code, Slack ja Discord ovat kaikki Electron-ohjelmistokehyksen päälle rakennettuja.
 
 \chapter{Tutkimuksen taustat}
 
 Tutkimuksen tavoitteena oli suunnittelutieteellisen tutkimuksen (engl. \textit{design study}) periaatteiden pohjalta muodostaa kuva progressiivisten WWW-sovellusten ja Ionic-kehyksen nykytilasta, eduista ja haasteista. Lisäksi tutkimuksessa perehdyttiin avusteiseen kommunikaatioon ja avusteisen kommunikaation mobiilisovellusten kehittämiseen sekä ohjelmistoteknisestä, että käytettävyysnäkökulmasta. Käytettävyystutkimuksessa otettiin huomioon erityisryhmien tarpeet ja etenkin autististen käyttäjien käytettävyyshaasteet.
 
-Suunnittelutieteellisessä tutkimuksessa tutkimuksen kohteena ovat ihmisen tuotokset eli artefaktit. Suunnittelutieteellisessä tutkimuksessa arvioidaan palvelevatko artefaktit niille asetettuja tarkoituksia, ovatko ne hyödyllisiä ja toimivia sekä miten ne vertautuvat muihin artefakteihin.
+Suunnittelutieteellisessä tutkimuksessa tutkimuksen kohteena ovat ihmisen tuotokset eli artefaktit. Suunnittelutieteellisessä tutkimuksessa arvioidaan palvelevatko artefaktit niille asetettuja tarkoituksia, ovatko ne hyödyllisiä ja toimivia sekä miten ne vertautuvat muihin artefakteihin. Suunnittelutieteellinen tutkimus on täten soveltavaa tutkimusta.
 
-Tutkielmaa varten luotiin suunnittelutieteellisen tutkimuksen periaatteiden mukaisesti artefakti, \textbf{FreeAAC-ohjelmisto}. FreeAAC-ohjelmistolle asetettiin olemassa olevan tutkimuksen perusteella avusteiseen kommunikaatioon liittyviä ohjelmistoteknisiä ja käytettävyystieteellisiä tavoitteita. Näitä täydennettiin yleisillä ohjelmistoteknisillä ja käytettävyyspohjaisilla laatuvaatimuksilla.
-
-\colorbox{YellowGreen}{// TODO: Laatutekijät/heuristiikat yms. arviointimenetelmät.}
+Tutkielmaa varten luotiin suunnittelutieteellisen tutkimuksen periaatteiden mukaisesti artefakti, \textbf{FreeAAC-ohjelmisto}. FreeAAC-ohjelmistolle asetettiin olemassa olevan tutkimuksen perusteella avusteiseen kommunikaatioon liittyviä ohjelmistoteknisiä ja käytettävyystieteellisiä tavoitteita. Näitä täydennettiin yleisillä ohjelmistoteknisillä ja käytettävyyspohjaisilla laatuvaatimuksilla. Näiden tavoitteiden ja laatuvaatimusten perusteella pyrittiin lopuksi arvioimaan toteutuneen artefaktin ominaisuuksia.
 
 \chapter{Kommunikointisovelluksen rakentamiseen tarvittavia taustatietoja ja menetelmiä}
 
@@ -283,7 +281,7 @@ Ionicin näkymiä käsitellään pinona. Ionic-sovelluksessa näkymästä toisee
 \begin{figure}[h]\centering
   \includegraphics[height=7cm,keepaspectratio]{FreeAACViews}
   \caption[FreeAAC-sovelluksen näkymäpuu.]
-  {FreeAAC-sovelluksen näkymäpuu.}
+  {FreeAAC-ohjelmiston näkymäpuu.}
   \label{fig:FreeAACViews}
 \end{figure}
 
@@ -291,11 +289,32 @@ FreeAAC:n Ionic-näkymissä sisältö on jaettu kahden eri päätason HTML-eleme
 
 \texttt{Home}-näkymä on FreeAAC-ohjelmiston ensimmäinen näkymä ja se sisältää ohjelmiston päävalikon. Päävalikossa sijaitsevat painikkeet, joita klikkaamalla käyttäjä pääsee keskustelunäkymään (\texttt{Main}), asetusnäkymään (\texttt{Options}) tai infonäkymään (\texttt{Info}). \texttt{Home}-näkymän komponenttitiedostossa ei ole muita kuin näkymän vaihtamiseen liittyviä aliohjelmia.
 
+\begin{figure}[h]\centering
+  \includegraphics[height=10cm,keepaspectratio]{main-view-layout}
+  \caption[FreeAAC-ohjelmiston kommunikointinäkymä.]
+  {FreeAAC-ohjelmiston kommunikointinäkymä.}
+  \label{fig:main-view-layout}
+\end{figure}
+
 Ohjelmiston tärkein näkymä on \texttt{Main}-niminen näkymä, jossa sijaitsevat ohjelmiston varsinaiset kommunikointityökalut. \texttt{Main}-näkymän komponenttitiedosto sisältää viestilaatikon päivittämiseen sekä korttien tietojen lataamiseen tarvittavat aliohjelmat. Korttien lataamiseen käytetään \texttt{CardDataProvider}-luokkaa, joka on injektoitu mukaan komponenttiin sen konstruktorissa.
 
-\texttt{Options}-näkymä on kokoomanäkymä ohjelmiston hallintaa varten. \texttt{Options}-näkymän kautta käyttäjä pääsee siirtymään korttien luontinäkymään (\texttt{CardCreate}) ja korttien poistonäkymään (\texttt{CardDelete}). 
+\texttt{Options}-näkymä on kokoomanäkymä ohjelmiston hallintaa varten. \texttt{Options}-näkymän kautta käyttäjä pääsee siirtymään korttien luontinäkymään (\texttt{CardCreate}) ja korttien poistonäkymään (\texttt{CardDelete}).
+
+\begin{figure}[h]\centering
+  \includegraphics[height=9cm,keepaspectratio]{card-create-layout}
+  \caption[FreeAAC-ohjelmiston korttien luontinäkymä.]
+  {FreeAAC-ohjelmiston korttien luontinäkymä.}
+  \label{fig:card-create-layout}
+\end{figure}
 
 Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreate}-näkymässä kortille voidaan valita nimi, koko ja liittää siihen kuvia kuvakirjastosta. Kaikki edellä mainitut ovat pakollisia ja käyttäjälle näytetään \texttt{toast}-virheilmoitus, jos jokin tieto puuttuu. \texttt{Toast}-virheilmoitukset käyttävät Ionicin \texttt{ToastController}-luokkaa. Kuvia valitaan erillisen modaalin kautta ja Ionic-sovelluksessa modaalien näyttämisestä vastaa \texttt{ModalController}-luokka.  Korttien tallentaminen tapahtuu \texttt{CardDataProvider}-luokan kautta.
+
+\begin{figure}[h]\centering
+  \includegraphics[height=10cm,keepaspectratio]{select-symbol-modal-layout}
+  \caption[FreeAAC-ohjelmiston korttisymbolien valintanäkymä.]
+  {FreeAAC-ohjelmiston korttisymbolien valintanäkymä.}
+  \label{fig:select-symbol-modal-layout}
+\end{figure}
 
 Kuvien valintaa varten aukeava modaali sisältää \texttt{SelectSymbolModal}-näkymän. Näkymässä kuvan voi valita eri kategorioista. Kategoria valitaan pudotusvalikosta. \texttt{SelectSymbolModal}-näkymän komponenttitiedosto sisältää kuvan tallentamiseen ja modaalin sulkemiseen liittyvät aliohjelmat. FreeAAC-ohjelmiston kuvakirjasto koostuu Papunet-sivuston tarjoamasta Creative Commons -lisenssin alaisesta kuvapankista.
 
@@ -326,18 +345,11 @@ FreeAAC-ohjelmiston käytettävyysvaatimukset johdettiin yleisten suositusten pe
 \colorbox{YellowGreen}{// TODO: Yleiset käytettävyysratkaisut.}
 FreeAAC-sovellus käyttää Ionicin oletuselementtejä ja oletusteemaa. Ionicin mukaan oletuselementit ja oletusteema noudattavat Applen iOS-designperiaatteita sekä Googlen Material Design -määrityksiä.  
 
-FreeAAC-sovelluksen elementit ovat riittävän isoja, jotta niiden valitseminen ja toiminnallisuuksien ymmärtäminen on helpompaa kun ohjelmistoa ajetaan pieninäyttöisillä mobiililaitteilla. Suuret elementit myös rajoittavat yhteen näkymään mahtuvien ominaisuuksien määrää, mikä auttaa pitämään näkymät riittävän yksinkertaisina käyttäjälle.
-
-Sovelluksen käyttämiseen ei tarvita eritysryhmille mahdollisesti motorisesti haastavia eleitä kuten pyyhkäisyjä. Erityisesti autisteilla on usein ongelmia hienomotoristen liikkeiden suorittamisessa, vaikka autististen käyttäjien yksilökohtaiset erot ovat tässäkin suuria \parencite[]{motor-skills-autism}.
-
-FreeAAC-ohjelmiston valikot on toteutettu perinteisellä tavalla painikkeita hyödyntämällä. Monessa mobiilisovelluksessa navigointi tapahtuu niin sanotun \textit{hampurilaisvalikon} avulla, mutta autistisille käyttäjille tarkoitetussa ohjelmistossa abstraktien symbolien käyttö voi olla ongelmallista, joten ohjelmistossa ei käytetä tätä yleistä ratkaisua.
-
-\colorbox{YellowGreen}{// TODO: Käytettävyys näkymittäin.}
 Valikkonäkymien lisäksi käytettävyysratkaisuja on tehty erityisesti kommunikaationäkymässä (\texttt{Main}) ja korttien asetusnäkymissä (\texttt{CardCreate} ja \texttt{CardDelete}). Kommunikaationäkymä koostuu kolmesta eri komponentista: viestilaatikko, korttivalinta ja symbolivalinta. Viestilaatikkossa näkyvät käyttäjän valitsemat symbolit järjestyksessä. Käyttäjä voi poistaa symboleita yksi kerrallaan viimeisestä symbolista alkaen. Symbolikortti valitaan pudotusvalikosta, josta löytyvät käyttäjän kortinluonti-näkymässä tekemät kortit. Sivun alalaidassa näkyvät kortin symbolit, joista käyttäjä voi valita haluamansa symbolit viestilaatikkoon.
 
 Korttien asetusnäkymät on erotettu toisistaan näkymien yksinkertaistamisen takia.
 
-\colorbox{YellowGreen}{// TODO: Kuvakaappauksia FreeAAC-näkymistä.}
+\colorbox{YellowGreen}{// TODO: Kuvakaappausten esittely.}
 
 \chapter{Toteutuneen sovelluksen arviointi}
 \colorbox{YellowGreen}{// Ohjepituus 15-20 sivua.}
@@ -404,11 +416,41 @@ Monimutkaisuusmetriikoiden arvot FreeAAC-ohjelmistolle:
     \end{tabular}
 \end{center}
 
-\colorbox{YellowGreen}{// TODO: Halstead taulukoiden tulosten analysointi.}
+\colorbox{YellowGreen}{// TODO: Halstead-taulukoiden tulosten analysointi.}
 
-\colorbox{YellowGreen}{// TODO: Sisäiset riippuvuudet. Kuva.}
+\begin{figure}[h]\centering
+  \includegraphics[height=6cm,keepaspectratio]{memory-use-idle}
+  \caption[FreeAAC-sovelluksen muistinkäyttö lepotilassa.]
+  {FreeAAC-sovelluksen muistinkäyttö lepotilassa.}
+  \label{fig:memory-use-idle}
+\end{figure}
 
-\colorbox{YellowGreen}{// TODO: Mittaa muistinkäyttöä ja vertaa johonkin.}
+\begin{figure}[h]\centering
+  \includegraphics[height=4cm,keepaspectratio]{chromium-memory-use-idle}
+  \caption[FreeAAC-sovelluksen muistinkäyttö lepotilassa graafina.]
+  {FreeAAC-sovelluksen muistinkäyttö lepotilassa.}
+  \label{fig:chromium-memory-use-idle}
+\end{figure}
+
+\begin{figure}[h]\centering
+  \includegraphics[height=6cm,keepaspectratio]{memory-use-stress}
+  \caption[FreeAAC-sovelluksen muistinkäyttö käytön aikana.]
+  {FreeAAC-sovelluksen muistinkäyttö käytön aikana.}
+  \label{fig:memory-use-stress}
+\end{figure}
+
+\begin{figure}[h]\centering
+  \includegraphics[height=4cm,keepaspectratio]{chromium-memory-use-stress}
+  \caption[FreeAAC-sovelluksen muistinkäyttö käytön aikana graafina.]
+  {FreeAAC-sovelluksen muistinkäyttö käytön aikana.}
+  \label{fig:chromium-memory-use-stress}
+\end{figure}
+
+\colorbox{YellowGreen}{// TODO: Tarkenna muistinkäyttöön liittyvät asiat.}
+
+Progressiivisten WWW-sovellusten muistinkäyttöä arvioitiin kappaleessa xx. Muistinkäyttöä mitattiin Firefox-selaimen kehitystyökaluilla ottamalla mittauksia sekä ohjelman alkutilassa \ref{fig:memory-use-idle} sekä käytön aikana \ref{fig:memory-use-stress}. Lisäksi muistinkäyttöä seurattiin samalla tavoin Chromium-selaimen kehitystyökaluilla ohjelman alkutilassa \ref{fig:chromium-memory-use-idle} sekä käytön aikana \ref{fig:chromium-memory-use-stress}. 
+
+Korkein mitattu muistinkäyttö rasitukseessa oli 37MB. Liitteissä C ja D on listattu joukko yleisten tablettitietokoneiden ja matkapuhelinten muistinkäyttörajoja ohjelmistoille. Ainoat listatut laitteet, joiden muistinkäyttörajan FreeAAC-ohjelmisto ylittää ovat HTC:n valmistamia matkapuhelimia vuosilta 2010 ja 2011. Muistinkäyttö nousee prosentuaalisesti varsin ison määrän käytön aikana, mutta kokonaismäärä ei aiheuta ongelmia millekään nykyaikaiselle mobiililaitteelle. 
 
 FreeAAC-ohjelmiston ohjelmakoodin määrä on maltillinen verrattuna ominaisuusvaatimuksiin, mikä parantaa ohjelmiston ylläpidettävyyttä ja testattavuutta. Ohjelmistossa on myös hyvin vähän sisäisiä riippuvuuksia, koska Angular-ohjelmistokehyksen sekä TypeScript-ohjelmointikielen avulla ohjelmistosta saatiin helposti tehtyä modulaarinen. 
 
@@ -418,17 +460,34 @@ Näkymien HTML-formaatti ei juurikaan aiheuttanut ohjelmistoteknisiä haasteita 
 
 Kenties haastavin osuus FreeAAC-ohjelmiston toteuttamisessa oli tietojen tallentaminen. Kuten luvussa xx todettiin, progressiivisille WWW-sovelluksille ei ole luontevaa tallennustilaa, sillä selainten oikeuksien määrä on hyvin tarkasti rajoitettua tietoturvasyistä. Kuvat voidaan liittää mukaan sovellukseen, mutta korttien asetuksien tallentaminen ei ole yksinkertaista. Natiivisovelluksilla on suora pääsy rajattuun massamuistitilaan, mutta WWW-sovelluksissa tiedot tulee tallentaa muualle.
 
+\section{Käytettävyysnäkökulma}
+
 Käytettävyyden perusvaatimusten osalta FreeAAC-ohjelmiston toteutuksessa ei ilmennyt suuria haasteita. Ionicin tarjoama oletusteema on tehty yleisten käytettävyysvaatimusten mukaisesti käyttämällä erityisesti Googlen ja Applen mobiilikäyttöjärjestelmien käytettävyysohjeita, joten suurin osa ohjelmistosta pystyy käyttämään sitä suoraan ilman muutoksia. Tämä nopeuttaa ohjelmiston kehittämistä ja parantaa ohjelmiston ulkoasun käytettävyyttä sekä yhtenäisyyttä.
+
+FreeAAC-sovelluksen elementit ovat riittävän isoja, jotta niiden valitseminen ja toiminnallisuuksien ymmärtäminen on helpompaa kun ohjelmistoa ajetaan pieninäyttöisillä mobiililaitteilla. Suuret elementit myös rajoittavat yhteen näkymään mahtuvien ominaisuuksien määrää, mikä auttaa pitämään näkymät riittävän yksinkertaisina käyttäjälle.
+
+Sovelluksen käyttämiseen ei tarvita eritysryhmille mahdollisesti motorisesti haastavia eleitä kuten pyyhkäisyjä. Erityisesti autisteilla on usein ongelmia hienomotoristen liikkeiden suorittamisessa, vaikka autististen käyttäjien yksilökohtaiset erot ovat tässäkin suuria \parencite[]{motor-skills-autism}.
+
+FreeAAC-ohjelmiston valikot on toteutettu perinteisellä tavalla painikkeita hyödyntämällä. Monessa mobiilisovelluksessa navigointi tapahtuu niin sanotun \textit{hampurilaisvalikon} avulla, mutta autistisille käyttäjille tarkoitetussa ohjelmistossa abstraktien symbolien käyttö voi olla ongelmallista, joten ohjelmistossa ei käytetä tätä yleistä ratkaisua.
 
 \colorbox{YellowGreen}{// TODO: Opittavuus.}
 
 FreeAAC-ohjelmiston opittavuutta helpottaa se, että näkymät muistuttavat paljolti toisiaan. FreeAAC-ohjelmistossa ei ole moodeja eikä samoja toimintoja voi suorittaa usealla eri tavalla. Tämä lisää sekä opittavuutta, että muistettavuutta.
 
-Tehokkuus on määre, jota parhaiten voidaan mitata suorittamalla käyttäjätutkimus, jossa käyttäjälle annetaan tehtävä, johon kulunutta aikaa tai välivaiheiden määrää mitataan. Koska tutkielmassa ei suoritettu käyttäjätutkimusta vaan suunnittelutieteelinen tutkimus, on tehokkuutta tutkittava heuristiikkojen perusteella.
+Tehokkuus on määre, jota parhaiten voidaan mitata suorittamalla käyttäjätutkimus, jossa käyttäjälle annettuun tehtävään käytettyä aikaa sekä siinä ilmenneitä haasteita pyritään mittaamaan. Koska tutkielmassa ei suoritettu käyttäjätutkimusta vaan suunnittelutieteellinen tutkimus, on tehokkuutta tutkittava muiden keinojen avulla. Yksi tapa arvioida tehokkuutta on muodostaa lista yleisimpiin toimintoihin vaadittavien välivaiheiden määristä ja arvioida tehokkuutta välivaiheiden määrän perusteella.
 
-\colorbox{YellowGreen}{// TODO: Tehokkuuden mittaaminen jollain tavalla.}
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    \textbf{Toiminto} & \textbf{Välivaiheiden määrä} \\ \hline
+    Kommunikointinäkymään siirtyminen alkutilasta & 1  \\ \hline
+    Viestin kirjoittaminen & 4 + (x * symbolien lisääminen viestiin)\\ \hline
+    Kortin luonti & 5 + (x * symbolien lisääminen kortille) \\ \hline
+    Kortin poisto & 3  \\ \hline
+    \end{tabular}
+\end{center}
 
-\colorbox{YellowGreen}{// TODO: Tehokkuuden mittaamiseen sekvenssikaavio vaatimuslistauksen mukaisista tehtävistä?}
+Välivaiheiden määräästä ei voi suoraan muodostaa täyttä kuvaa ohjelmiston tehokkuudesta. Voidaan kuitenkin 
 
 \colorbox{YellowGreen}{// TODO: Muistettavuus.}
 
@@ -452,13 +511,15 @@ FreeAAC-ohjelmistolle listattiin myös joukko erityisryhmien käytettävyysvaati
 \chapter{Pohdinta}
 \colorbox{YellowGreen}{// Ohjepituus 5-10 sivua.}
 
-FreeAAC-ohjelmiston prototyyppi sisältää suurimman osan tarpeellisista ominaisuuksista ja siitä pystyttiin toteuttamaan toimiva sekä mahdolliseen koekäyttöön sopiva versio tutkielman aikarajoitteiden puitteissa. Tämän perusteella voidaan todeta, että ainakin perustasolla progressiiviset WWW-sovellukset vaikuttavat lupaavalta ja riittävän kypsältä teknologialta yksinkertaisten mobiilisovellusten toteuttamiseen.
-
 \colorbox{YellowGreen}{// TODO: Mitä aineistoanalyysi kertoo tutkimushypoteesista?}
 
 \colorbox{YellowGreen}{// TODO: Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä?}
+Olemassa olevan tutkimuksen pohjalta luotujen vaatimusten noudattaminen ei tuottanut ongelmia. 
 
 \colorbox{YellowGreen}{// TODO: Vastasiko tutkimusmetodi odotuksia?}
+Suunnittelutieteellisen tutkimuksen käyttäminen progressiivisten WWW-sovellusten ohjelmistoteknisen puolen tutkimiseen oli toimiva tapa saada aikaan perustietoa tutkimuksessa esitetyn käyttötapauksen vaatimuksista ja niiden toteuttamisen haasteista. Progressiiviset WWW-sovellukset ovat edelleen niin tuore ilmiö, että olemassa olevaa tutkimusta oli haastavaa löytää. Tämän takia artefaktin kehittäminen oli tärkeää, sillä sen avulla saatiin paljon ensikäden perustietoa progressiivisten WWW-sovellusten toiminnasta ilman nojaamista olemassa olevaan tutkimukseen.
+
+Käytettävyystutkimuksen näkökulmasta suunnittelutieteellisen tutkimusmetodin käyttäminen oli haastavampaa. Oli tärkeää ottaa huomioon käytettävyystekijät artefaktin suunnitteluvaiheessa, mutta varmempien johtopäätösten vetäminen valmiista artefaktista olisi kenties vaatinut käyttäjätutkimuksen tekemistä. Tästä syystä valmiin artefaktin tutkiminen käytettävyysnäkökulmasta jäi ehkä hieman pintapuoliseksi.
 
 \colorbox{YellowGreen}{// TODO: Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?}
 
@@ -473,13 +534,13 @@ Jos Yhteenveto alkaa pitkittyä, se kannattaa jakaa kahtia niin, että tulosten 
 
 Yhteenvedon jälkeen tulee \string\printbibliography-komennolla laadittu lähdeluettelo ja sen jälkeen mahdolliset liitteet. --}
 
-\colorbox{YellowGreen}{// TODO: Mahdollinen jatkotutkimus: progressiivisten WWW-sovellusten tallennustila}
+FreeAAC-ohjelmiston prototyyppi sisältää suurimman osan tarpeellisista ominaisuuksista ja siitä pystyttiin toteuttamaan toimiva sekä mahdolliseen koekäyttöön sopiva versio tutkielman aikarajoitteiden puitteissa. Tämän perusteella voidaan todeta, että ainakin perustasolla progressiiviset WWW-sovellukset vaikuttavat lupaavalta ja riittävän kypsältä teknologialta yksinkertaisten mobiilisovellusten toteuttamiseen.
 
-\colorbox{YellowGreen}{// TODO: Mahdollinen jatkotutkimus: WWW-sovellusten sanasto}
+Tämän tutkimuksen pohjalta syntyi useita mahdollisia jatkotutkimuksen aiheita. Yksi FreeAAC-ohjelmiston toteutuksen ulkopuolelle jäänyt perusominaisuus oli massamuistitilan käyttö käyttäjän asetusten ja luotujen korttien pysyvään tallennukseen. Tämän ominaisuuden karsimista perusteltiin Ionic-ohjelmistokehyksen massamuistitallennuksen monimutkaisuudella ja vaihtoehtojen paljoudella. Voisi siis olla kannattavaa tutkia progressiivisten WWW-sovellusten massamuistitallennusvaihtoehtojen hyviä ja huonoja puolia erilaisissa tilanteissa.
 
-\colorbox{YellowGreen}{// TODO: Mahdollinen jatkotutkimus: erikoisryhmien käytettävyystutkimukset (kosketusnäytöt, eri erikoisryhmät...)}
+Toinen tutkimuksen aikana esiin noussut puute oli eri erikoisryhmien parissa tehtyjen käytettävyystutkimuksien vähyys. Erityisesti modernien mobiililaitteiden ja kosketusnäyttöjen käytettävyyttä ei ole juurikaan ehditty tutkimaan näiden erityisryhmien näkökulmasta.
 
-\colorbox{YellowGreen}{// TODO: Mahdollinen jatkotutkimus: graafisesti vaativat progressiiviset WWW-sovellukset}
+Progressiivisten WWW-sovellusten muistinkäyttö oli yksi tässä tutkimuksessa tarkasteltu asia. Muistinkäyttö ei osoittautunut ongelmaksi tässä nimenomaisessa käyttötapauksessa, mutta tutkimuksen aihepiiriin ei kuulunut suuria määriä muistia vaativien progressiivisten WWW-sovellusten tutkiminen. FreeAAC-ohjelmiston toiminnallisuudet eivät vaadi suuria määriä laskentatehoa tai massiivisia muistiallokaatioita, joten täyttä kuvaa Ionic-ohjelmistokehyksen tai progressiivisten WWW-sovellusten suorituskyvystä ei saatu.
 
 %\printbibliography{gradubibtex}
 
@@ -575,6 +636,88 @@ Lähdemateriaalista johdetut ominaisuusvaatimukset FreeAAC-ohjelmistolle:
     main.scss & 0 \\ \hline
     \textbf{Yhteensä} & 8848 \\
     \hline
+    \end{tabular}
+\end{center}
+
+\section{Muistinkäyttörajat yksittäiselle ohjelmistolle iOS-laitteissa}
+
+Tablettitietokoneet lihavoitu.
+
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    \textbf{Malli} & \textbf{Muistinkäyttöraja} \\ \hline
+    \textbf{iPad1} & 127MB  \\ \hline
+    \textbf{iPad2} & 275MB \\ \hline
+    \textbf{iPad3} & 645MB \\ \hline
+    \textbf{iPad4} & 585MB \\ \hline
+    \textbf{iPad Mini} & 297MB \\ \hline
+    \textbf{iPad Mini retina} & 696MB \\ \hline
+    \textbf{iPad Air} & 697MB \\ \hline
+    \textbf{iPad Air 2} & 1383MB \\ \hline
+    \textbf{iPad Pro 9.7"} & 1395MB  \\ \hline
+    \textbf{iPad Pro 10.5”} & 3057MB \\ \hline
+    \textbf{iPad Pro 12.9” (2015)} & 3058MB \\ \hline
+    \textbf{iPad Pro 12.9” (2017)} & 3057MB \\ \hline
+    \textbf{iPad Pro 11.0” (2018)} & 2858MB \\ \hline
+    \textbf{iPad Pro 12.9” (2018)} & 4598MB \\ \hline
+    iPhone4 & 325MB \\ \hline
+    iPhone4s & 286MB \\ \hline
+    iPhone5 & 645MB \\ \hline
+    iPhone5s & 646MB \\ \hline
+    iPhone6 & 645MB \\ \hline
+    iPhone6+ & 645MB \\ \hline
+    iPhone6s & 1396MB \\ \hline
+    iPhone6s+ & 1392MB \\ \hline
+    iPhoneSE & 1395MB \\ \hline
+    iPhone7 & 1395MB \\ \hline
+    iPhone7+ & 2040MB \\ \hline
+    iPhone8 & 1364MB \\ \hline 
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    iPhone X & 1392MB \\ \hline
+    iPhone XS & 2040MB \\ \hline
+    iPhone XS Max & 2039MB \\ \hline
+    iPhone XR & 1792MB \\ \hline   
+    \end{tabular}
+\end{center}
+
+
+\section{Muistinkäyttörajat yksittäiselle ohjelmistolle Android-laitteissa}
+
+Tablettitietokoneet lihavoitu.
+
+\begin{center}
+    \begin{tabular}{| l | l |}
+    \hline
+    \textbf{Malli} & \textbf{Muistinkäyttöraja} \\ \hline
+    \textbf{Samsung Galaxy Tab GT-P1000} & 48MB  \\ \hline
+    \textbf{Samsung Galaxy Tab 8.9 GT-P7300} & 64MB \\ \hline
+    \textbf{Samsung Galaxy Tab 10.1 GT-P7500} & 64MB \\ \hline
+    \textbf{Samsung Galaxy Tab 3 10.1 GT-P5200} & 96MB \\ \hline
+    \textbf{Acer Iconia A500} & 48MB \\ \hline
+    \textbf{Kindle Fire HD 7"} & 48MB \\ \hline
+    \textbf{Asus Transformer Prime TF201} & 48MB \\ \hline
+    \textbf{Nexus 10} & 192MB \\ \hline
+    HTC Wildfire & 16MB \\ \hline
+    HTC Wildfire S & 20MB \\ \hline
+    HTC Salsa & 20MB \\ \hline
+    HTC Desire & 32MB \\ \hline
+    HTC Desire S & 32MB \\ \hline
+    Samsung Galaxy S GT-I9000 & 48MB \\ \hline
+    Samsung Galaxy R GT-I9103 & 64MB \\ \hline
+    Samsung Galaxy Y GT-S5360 & 64MB \\ \hline
+    Samsung Galaxy Note N7000 & 64MB \\ \hline
+    Samsung Galaxy S3 GT-I9300 & 64MB \\ \hline
+    Samsung Galaxy S4 GT-I9505 & 128MB \\ \hline
+    Google Galaxy Nexus & 96MB \\ \hline
+    Google Nexus 4 & 192MB \\ \hline
+    Google Nexus 5 GT-I9300 & 192MB \\ \hline
+    Samsung Galaxy S6 SM-G920W8 & 256MB \\ \hline
     \end{tabular}
 \end{center}
 
