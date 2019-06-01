@@ -55,13 +55,24 @@ Idea tähän pro gradu -työhön syntyi kun osallistuin Keski-Suomen Autismiliit
 
 Toinen tämän pro gradu -työn aiheeseen vaikuttanut tapahtuma oli Adafy Oy:lle tekemäni projekti, jossa käytin Ionic-ohjelmistokehystä. Tuosta projektista minulle jäi vahva tunne, että progressiivisten WWW-sovellusten suosio tulee lähivuosina kasvamaan ja ne ovat käyttökelpoinen tapa toteuttaa yksinkertaisia ohjelmistoja. Viime vuosina näin on myöskin käynyt, sillä erittäin suositut monialustaiset ohjelmistot kuten Visual Studio Code, Slack ja Discord ovat kaikki Electron-ohjelmistokehyksen päälle rakennettuja.
 
+
 \chapter{Tutkimuksen taustat}
 
-Tutkimuksen tavoitteena oli suunnittelutieteellisen tutkimuksen (engl. \textit{design study}) periaatteiden pohjalta muodostaa kuva progressiivisten WWW-sovellusten ja Ionic-kehyksen nykytilasta, eduista ja haasteista. Lisäksi tutkimuksessa perehdyttiin avusteiseen kommunikaatioon ja avusteisen kommunikaation mobiilisovellusten kehittämiseen sekä ohjelmistoteknisestä, että käytettävyysnäkökulmasta. Käytettävyystutkimuksessa otettiin huomioon erityisryhmien tarpeet ja etenkin autististen käyttäjien käytettävyyshaasteet.
+Pro gradu -työn tavoitteena oli suunnittelutieteellisen tutkimuksen (engl. \textit{design study}) periaatteiden pohjalta muodostaa kuva progressiivisten WWW-sovellusten ja Ionic-kehyksen nykytilasta, eduista ja haasteista. Lisäksi tutkimuksessa perehdyttiin avusteiseen kommunikaatioon ja avusteisen kommunikaation mobiilisovellusten kehittämiseen sekä ohjelmistoteknisestä, että käytettävyysnäkökulmasta. Käytettävyystutkimuksessa otettiin huomioon erityisryhmien tarpeet ja etenkin autististen käyttäjien käytettävyyshaasteet.
 
 Suunnittelutieteellisessä tutkimuksessa tutkimuksen kohteena ovat ihmisen tuotokset eli artefaktit. Suunnittelutieteellisessä tutkimuksessa arvioidaan palvelevatko artefaktit niille asetettuja tarkoituksia, ovatko ne hyödyllisiä ja toimivia sekä miten ne vertautuvat muihin artefakteihin. Suunnittelutieteellinen tutkimus on täten soveltavaa tutkimusta.
 
 Tutkielmaa varten luotiin suunnittelutieteellisen tutkimuksen periaatteiden mukaisesti artefakti, \textbf{FreeAAC-ohjelmisto}. FreeAAC-ohjelmistolle asetettiin olemassa olevan tutkimuksen perusteella avusteiseen kommunikaatioon liittyviä ohjelmistoteknisiä ja käytettävyystieteellisiä tavoitteita. Näitä täydennettiin yleisillä ohjelmistoteknisillä ja käytettävyyspohjaisilla laatuvaatimuksilla. Näiden tavoitteiden ja laatuvaatimusten perusteella pyrittiin lopuksi arvioimaan toteutuneen artefaktin ominaisuuksia.
+
+\colorbox{YellowGreen}{// TODO: Kohdealueen ja kohderyhmien tarpeet eli miksi tutkielmassa halutaan käsitellä kyseisiä asioita. Mitä tarpeita on kohderyhmillä (kai käyttäjät ja kehittäjät) sekä/tai mitä kohdealueen tai kohderyhmien ongelmia tutkielman tuloksilla pyritään ratkaisemaan?}
+
+\colorbox{YellowGreen}{// TODO: -> Tarpeista ja ongelmista tulee johtaa tutkielman tavoitteet. Tavoitteita johdettaessa yleensä myös rajataan perustellen joitain tarpeita tai ongelmia tutkielman käsittelyn ulkopuolelle.}
+
+Pro gradu -työn kohderyhmänä olivat sekä kehittäjät, että loppukäyttäjät. Kehittäjien näkökulmasta työssä keskeisiä tarpeita ja tavoitteita oli saada tietoa siitä miten Ionic-ohjelmistokehys soveltuu kommunikointisovelluksen kehittämiseen sekä saamaan selville miten progressiiviset WWW-sovellukset rakentuvat ja mitkä ovat niiden etuja ja haasteita. Loppukäyttäjien eli autismin takia avustettua kommunikaatiota tarvitsevien henkilöiden näkökulmasta keskeisiä tarpeita olivat 
+
+Tutkimustyypin ja näiden kahden ryhmän tarpeiden perusteella voidaan johtaa joukko tavoitteita. Työssä haluttiin selvittää avusteisen kommunikaation ohjelmiston toiminnallisten ja käytettävyyden laatutekijät lähdemateriaalin perusteella. Näiden laatutekijöiden pohjalta muodostettiin joukko vaatimuksia, joiden pohjalta kehitettiin ohjelmisto ja pyrittiin arvioimaan sitä sekä rakenteellisesti, että edellä mainttujen laatutekijöiden ja vaatimusten toteutumiseen. Lisäksi haluttiin selvittää miten hyvin Ionic-ohjelmistokehys yleisesti sopii progressiivisten WWW-sovellusten kehittämiseen.
+
+Pro gradu -työn ulkopuolelle rajattiin varsinainen käyttäjätutkimus sekä vertaileva tutkimus muihin tarjolla oleviin avusteisen kommunikaation ohjelmistoihin. Aikarajoitteiden vuoksi ohjelmistosta toteutettiin vain prototyyppiversio, joten käyttäjätutkimuksen toteuttaminen keskeneräisen ohjelmiston pohjalta olisi ollut haastavaa. Lisäksi autististen koekäyttäjien kanssa toiminen vaatii erikoisjärjestelyjä, jotka haluttiin rajata tämän työn ulkopuolella. Prototyypin vertailu muihin tarjolla oleviin valmiisiin kaupallisiin ohjelmistoihin ei olisi tuottanut riittävän tarkkoja tuloksia johtopäätösten tekemiseen.
 
 \chapter{Kommunikointisovelluksen rakentamiseen tarvittavia taustatietoja ja menetelmiä}
 
@@ -172,7 +183,7 @@ Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää k�
 \label{general-usability-requirements}
 Ohjelman käyttöliittymän \textbf{käytettävyys} (engl. \textit{usability}) on laadullinen määre, joka voidaan jakaa viiteen laadulliseen osa-alueeseen: opittavuus (engl. \textit{learnability}), tehokkuus (engl. \textit{efficiency}), muistettavuus (engl. \textit{memorability}), virhealttius (engl. \textit{errors}) ja tyydyttävyys (engl. \textit{satisfaction}). 
 
-\textbf{Opittavuus} tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän \textbf{tehokkuus} määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. \textbf{Muistettavuus} on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. \textbf{Virhealttiudella} tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. \textbf{Tyydyttävyys} kertoo, miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä, kuten \textbf{käyttökelpoisuus} (engl. \textit{utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (engl. \textit{ usefulness}). \parencite[]{usability-101}
+\textbf{Opittavuus} tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän \textbf{tehokkuus} määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. \textbf{Muistettavuus} on määrite, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. \textbf{Virhealttiudella} tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. \textbf{Tyydyttävyys} kertoo, miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä, kuten \textbf{käyttökelpoisuus} (engl. \textit{utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (engl. \textit{usefulness}). \parencite[]{usability-101}
 
 Lyhyesti ilmaistuna, opittavuus tarkoittaa ohjelmiston kykyä opettaa käyttäjälleen oikea tapa käyttää ohjelmistoa. Opittavuutta vastaava termi on \textbf{löydettävyys} (engl. \textit{discoverability}). Opittavuutta lisääviä ominaisuuksia ovat muunmuassa muistettavuus, loogisuus, toistettavuus ja yhdenmukaisuus. Opittavuudeltaan hyvä ohjelma ilmaisee käyttäjälleen tehokkaasti mitä toiminnallisuuksia se sisältää, mitä eri toiminnot tarkoittavat ja kuinka eri toiminnallisuuksia käytetään. \parencite[]{improving-learnability}
 
@@ -214,21 +225,21 @@ Yksi jonkin verran tutkittu seikka on autismin vaikutus ihmisen suosikkiväreihi
 
 Tutkielmaa varten toteutettiin FreeAAC-niminen avusteisen kommunikaation ohjelmisto. FreeAAC-ohjelmiston ominaisuusvaatimukset johdettiin edellisissä kappaleissa mainittujen ominaisuuksien perusteella.
 
-\hyperref[AAC-cards]{1.} \textit{Edellisissä kappaleissa lainattujen tutkimusten perusteella kommunikointisovelluksen tulisi olla korttipohjainen.}
+1. \textit{Edellisissä kappaleissa lainattujen tutkimusten perusteella kommunikointisovelluksen tulisi olla korttipohjainen.} \hyperref[AAC-cards]{(Luku 3.1, s. 4)}
 
-\hyperref[AAC-symbols]{2.} \textit{Korttien tulisi koostua kuvista ja symboleista. }
+2. \textit{Korttien tulisi koostua kuvista ja symboleista.} \hyperref[AAC-symbols]{(Luku 3.1, s. 4)}
 
-\hyperref[symbol-libraries]{3.} \textit{Kuvia tulisi olla mahdollista valita valmiista kuvapankista.}
+3. \textit{Kuvia tulisi olla mahdollista valita valmiista kuvapankista.} \hyperref[symbol-libraries]{(Luku 3.4.1, s. 15)}
 
-\hyperref[AAC-photos]{4.} \textit{Kuvia tulisi olla mahdollista ottaa itse laitteen kameralla.}
+4. \textit{Kuvia tulisi olla mahdollista ottaa itse laitteen kameralla.} \hyperref[AAC-photos]{(Luku 3.4.1, s. 16)}
 
-\hyperref[AAC-cardsize]{5.} \textit{Korttien kokoa tulisi olla mahdollista säätää käyttäjäkohtaisesti.}
+5. \textit{Korttien kokoa tulisi olla mahdollista säätää käyttäjäkohtaisesti.} \hyperref[AAC-cardsize]{(Luku 3.4.1, s. 16)}
 
-\hyperref[AAC-cardsize]{6.} \textit{Kommunikaationäkymässä pitäisi olla mahdollisuus valita eri kortteja nopeasti ja helposti kontekstiin sopivaksi.}
+6. \textit{Kommunikaationäkymässä pitäisi olla mahdollisuus valita eri kortteja nopeasti ja helposti kontekstiin sopivaksi.} \hyperref[AAC-cardsize]{(Luku 3.4.1, s. 16)}
 
-\hyperref[AAC-soundsynth]{7.} \textit{Ohjelmiston pitäisi pystyä lukemaan symboleilla ja kuvilla kirjoitettu viesti ääneen.}
+7. \textit{Ohjelmiston pitäisi pystyä lukemaan symboleilla ja kuvilla kirjoitettu viesti ääneen.} \hyperref[AAC-soundsynth]{(Luku 3.4.1, s. 16)}
 
-\hyperref[AAC-settings]{8.} \textit{Kortteja ja muita asetuksia pitäisi päästä hallitsemaan hallintapaneelista. Hallintapaneelin tulisi olla salasanalla lukittava, jotta erityisryhmään kuuluva käyttäjä ei vahingossa säätäisi korttien tai muiden ohjelmiston osien asetuksia vääränlaisiksi.}
+8. \textit{Kortteja ja muita asetuksia pitäisi päästä hallitsemaan hallintapaneelista. Hallintapaneelin tulisi olla salasanalla lukittava, jotta erityisryhmään kuuluva käyttäjä ei vahingossa säätäisi korttien tai muiden ohjelmiston osien asetuksia vääränlaisiksi.} \hyperref[AAC-settings]{(Luku 3.4.1, s. 16)}
 
 \section{Kehitysympäristö ja -työkalut}
 
@@ -296,7 +307,7 @@ FreeAAC:n Ionic-näkymissä sisältö on jaettu kahden eri päätason HTML-eleme
   \label{fig:main-view-layout}
 \end{figure}
 
-Ohjelmiston tärkein näkymä on \texttt{Main}-niminen näkymä, jossa sijaitsevat ohjelmiston varsinaiset kommunikointityökalut. \texttt{Main}-näkymän komponenttitiedosto sisältää viestilaatikon päivittämiseen sekä korttien tietojen lataamiseen tarvittavat aliohjelmat. Korttien lataamiseen käytetään \texttt{CardDataProvider}-luokkaa, joka on injektoitu mukaan komponenttiin sen konstruktorissa.
+Ohjelmiston tärkein näkymä on kommunikointinäkymä eli \texttt{Main}-niminen näkymä, jossa sijaitsevat ohjelmiston varsinaiset kommunikointityökalut. \texttt{Main}-näkymä on kuvassa \ref{fig:main-view-layout}. \texttt{Main}-näkymän komponenttitiedosto sisältää viestilaatikon päivittämiseen sekä korttien tietojen lataamiseen tarvittavat aliohjelmat. Korttien lataamiseen käytetään \texttt{CardDataProvider}-luokkaa, joka on injektoitu mukaan komponenttiin sen konstruktorissa.
 
 \texttt{Options}-näkymä on kokoomanäkymä ohjelmiston hallintaa varten. \texttt{Options}-näkymän kautta käyttäjä pääsee siirtymään korttien luontinäkymään (\texttt{CardCreate}) ja korttien poistonäkymään (\texttt{CardDelete}).
 
@@ -307,7 +318,7 @@ Ohjelmiston tärkein näkymä on \texttt{Main}-niminen näkymä, jossa sijaitsev
   \label{fig:card-create-layout}
 \end{figure}
 
-Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreate}-näkymässä kortille voidaan valita nimi, koko ja liittää siihen kuvia kuvakirjastosta. Kaikki edellä mainitut ovat pakollisia ja käyttäjälle näytetään \texttt{toast}-virheilmoitus, jos jokin tieto puuttuu. \texttt{Toast}-virheilmoitukset käyttävät Ionicin \texttt{ToastController}-luokkaa. Kuvia valitaan erillisen modaalin kautta ja Ionic-sovelluksessa modaalien näyttämisestä vastaa \texttt{ModalController}-luokka.  Korttien tallentaminen tapahtuu \texttt{CardDataProvider}-luokan kautta.
+Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreate}-näkymä on kuvassa \ref{fig:card-create-layout}. \texttt{CardCreate}-näkymässä kortille voidaan valita nimi, koko ja liittää siihen kuvia kuvakirjastosta. Kaikki edellä mainitut ovat pakollisia ja käyttäjälle näytetään \texttt{toast}-virheilmoitus, jos jokin tieto puuttuu. \texttt{Toast}-virheilmoitukset käyttävät Ionicin \texttt{ToastController}-luokkaa. Kuvia valitaan erillisen modaalin kautta ja Ionic-sovelluksessa modaalien näyttämisestä vastaa \texttt{ModalController}-luokka. Korttien tallentaminen tapahtuu \texttt{CardDataProvider}-luokan kautta.
 
 \begin{figure}[h]\centering
   \includegraphics[height=10cm,keepaspectratio]{select-symbol-modal-layout}
@@ -316,7 +327,7 @@ Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreat
   \label{fig:select-symbol-modal-layout}
 \end{figure}
 
-Kuvien valintaa varten aukeava modaali sisältää \texttt{SelectSymbolModal}-näkymän. Näkymässä kuvan voi valita eri kategorioista. Kategoria valitaan pudotusvalikosta. \texttt{SelectSymbolModal}-näkymän komponenttitiedosto sisältää kuvan tallentamiseen ja modaalin sulkemiseen liittyvät aliohjelmat. FreeAAC-ohjelmiston kuvakirjasto koostuu Papunet-sivuston tarjoamasta Creative Commons -lisenssin alaisesta kuvapankista.
+Kuvien valintaa varten aukeava modaali sisältää \texttt{SelectSymbolModal}-näkymän. \texttt{SelectSymbolModal}-näkymän sisältävä modaali on kuvassa \ref{fig:select-symbol-modal-layout}. Näkymässä kuvan voi valita eri kategorioista. Kategoria valitaan pudotusvalikosta. \texttt{SelectSymbolModal}-näkymän komponenttitiedosto sisältää kuvan tallentamiseen ja modaalin sulkemiseen liittyvät aliohjelmat. FreeAAC-ohjelmiston kuvakirjasto koostuu Papunet-sivuston tarjoamasta Creative Commons -lisenssin alaisesta kuvapankista.
 
 Kortteja voidaan poistaa erillisessä CardDelete-näkymässä. CardDelete-näkymä koostuu pudotusvalikosta, josta voidaan valita mikä kortti halutaan poistaa sekä vahvistuspainikkeesta. Korttilistaus ladataan \texttt{CardDataProvider}-luokan avulla ja myös poistokomento kulkee samaa reittiä pitkin.
 
@@ -330,19 +341,20 @@ Ionic tarjoaa ohjelmistokehittäjän käyttöön \texttt{Ionic Storage} -nimisen
 
 \section{Käytettävyysnäkökulma}
 
+\colorbox{YellowGreen}{// TODO: Pura tämä luku ja liitä näkymistä kertovaan osuuteen ja arvioivaan osuuteen}
+
 FreeAAC-ohjelmiston käytettävyysvaatimukset johdettiin yleisten suositusten perusteella sekä edellisissä kappaleissa mainittujen ominaisuuksien perusteella.
 
-\hyperref[general-usability-requirements]{1.} \textit{FreeAAC-ohjelmiston tulisi noudattaa yleisiä käytettävyysvaatimuksia, mutta myös sen lisäksi ottaa huomioon erityisryhmien, erityisesti autististen käyttäjien, käytettävyysvaatimukset huomioon.}
+1. \textit{FreeAAC-ohjelmiston tulisi noudattaa yleisiä käytettävyysvaatimuksia, mutta myös sen lisäksi ottaa huomioon erityisryhmien, erityisesti autististen käyttäjien, käytettävyysvaatimukset huomioon.} \hyperref[general-usability-requirements]{(Luku 3.4.1, s. 15)}
 
-\hyperref[AAC-colors]{2.} \textit{FreeAAC-ohjelmiston värityksen tulisi olla pääväreihin perustuva, selkeä ja sen näkymissä tulisi olla riittävästi kontrastia. }
+2. \textit{FreeAAC-ohjelmiston värityksen tulisi olla pääväreihin perustuva, selkeä ja sen näkymissä tulisi olla riittävästi kontrastia.} \hyperref[AAC-colors]{(Luku 3.4.1, s. 17)}
 
-\hyperref[AAC-abstract-symbols]{3.} \textit{Abstraktien symbolien käyttämistä tulisi välttää, sillä autistiset käyttäjät eivät välttämättä ymmärrä niiden merkitystä samalla tavalla kuin eritysryhmiin kuulumattomat käyttäjät}
+3. \textit{Abstraktien symbolien käyttämistä tulisi välttää, sillä autistiset käyttäjät eivät välttämättä ymmärrä niiden merkitystä samalla tavalla kuin eritysryhmiin kuulumattomat käyttäjät.} \hyperref[AAC-abstract-symbols]{(Luku 3.4.1, s. 17)}
 
-\hyperref[AAC-context-settings]{4.} \textit{FreeAAC-ohjelmiston käytettävyyttä tosielämän nopeaa reagointia vaativissa tilanteissa lisäisi mahdollisimman perinpohjainen mahdollisuus räätälöintiin}
+4. \textit{FreeAAC-ohjelmiston käytettävyyttä arkielämän nopeaa reagointia vaativissa tilanteissa lisäisi mahdollisimman perinpohjainen mahdollisuus räätälöintiin.} \hyperref[AAC-context-settings]{(Luku 3.4.1, s. 15)}
 
-\hyperref[AAC-staticity]{5.} \textit{FreeAAC-ohjelmiston käytettävyyttä tosielämän nopeaa reagointia vaativissa tilanteissa lisäisi mahdollisimman perinpohjainen mahdollisuus räätälöintiin}
+5. \textit{Käyttäjien mahdollisten motoristen haasteiden vuoksi näkymien tulisi olla pääosin staattisia ja niissä ei saisi olla nopeaa reagointia vaativia tapahtumia.} \hyperref[AAC-staticity]{(Luku 3.4.1, s. 15)}
 
-\colorbox{YellowGreen}{// TODO: Yleiset käytettävyysratkaisut.}
 FreeAAC-sovellus käyttää Ionicin oletuselementtejä ja oletusteemaa. Ionicin mukaan oletuselementit ja oletusteema noudattavat Applen iOS-designperiaatteita sekä Googlen Material Design -määrityksiä.  
 
 Valikkonäkymien lisäksi käytettävyysratkaisuja on tehty erityisesti kommunikaationäkymässä (\texttt{Main}) ja korttien asetusnäkymissä (\texttt{CardCreate} ja \texttt{CardDelete}). Kommunikaationäkymä koostuu kolmesta eri komponentista: viestilaatikko, korttivalinta ja symbolivalinta. Viestilaatikkossa näkyvät käyttäjän valitsemat symbolit järjestyksessä. Käyttäjä voi poistaa symboleita yksi kerrallaan viimeisestä symbolista alkaen. Symbolikortti valitaan pudotusvalikosta, josta löytyvät käyttäjän kortinluonti-näkymässä tekemät kortit. Sivun alalaidassa näkyvät kortin symbolit, joista käyttäjä voi valita haluamansa symbolit viestilaatikkoon.
@@ -352,7 +364,6 @@ Korttien asetusnäkymät on erotettu toisistaan näkymien yksinkertaistamisen ta
 \colorbox{YellowGreen}{// TODO: Kuvakaappausten esittely.}
 
 \chapter{Toteutuneen sovelluksen arviointi}
-\colorbox{YellowGreen}{// Ohjepituus 15-20 sivua.}
 
 Rivimäärien käyttäminen ohjelmiston arviointiin ei ole täysin ongelmatonta, mutta eri tiedostojen rivimääriä analysoimalla voidaan saada perustason tietämystä ohjelmiston rakenteesta ja oleellisista osista. Edes ohjelmakoodin rivin määrite ei ole täysin yksiselitteinen asia, sillä yksi ohjelmakoodin looginen osa voidaan rivittää eri ohjelmointiperiaatteiden perusteella useille riveille. Lisäksi ohjelmakoodin rivimäärään vaikuttavat muutkin luettavuusmääritteet kuten tyhjien rivien käyttö sekä kommenttien määrä. FreeAAC-ohjelmiston rivien kokonaismäärä laskettiin ilman tyhjien tai kommenttirivien vähentämistä kokonaismäärästä.
 
@@ -382,17 +393,17 @@ Perusmuuttujien arvot FreeAAC-ohjelmistolle:
     \begin{tabular}{| l | l | l | l | l |}
     \hline
     \textbf{Tiedosto} & \textbf{$n_1$} & \textbf{$n_2$} & \textbf{$N_1$} & \textbf{$N_2$} \\ \hline
+    MainPage & 65 & 55 & 213 & 92 \\ \hline
     CardCreatePage & 62 & 53 & 192 & 88 \\ \hline
     SelectSymbolModalPage & 27 & 20 & 50 & 22 \\ \hline
     HomePage & 26 & 16 & 56 & 31 \\ \hline
-    CardDeletePage & 21 & 17 & 42 & 20 \\ \hline
     OptionsPage & 24 & 16 & 39 & 14 \\ \hline
-    MainPage & 65 & 55 & 213 & 92 \\ \hline
-    InfoPage & 13 & 10 & 26 & 10 \\ \hline
-    ImageDataProvider & 22 & 14 & 52 & 16 \\ \hline
     CardDataProvider & 23 & 15 & 55 & 63 \\ \hline
-    WordSymbol & 16 & 14 & 47 & 16 \\ \hline
+    ImageDataProvider & 22 & 14 & 52 & 16 \\ \hline
+    CardDeletePage & 21 & 17 & 42 & 20 \\ \hline
     Card & 17 & 22 & 55 & 63 \\ \hline
+    WordSymbol & 16 & 14 & 47 & 16 \\ \hline
+    InfoPage & 13 & 10 & 26 & 10 \\ \hline
     \end{tabular}
 \end{center}
 
@@ -402,21 +413,37 @@ Monimutkaisuusmetriikoiden arvot FreeAAC-ohjelmistolle:
     \begin{tabular}{| l | l | l | l | l | l | l | l |}
     \hline
     \textbf{Tiedosto} & \textbf{$n$} & \textbf{$N$} & \textbf{$V$} & \textbf{$D$} & \textbf{$E$} & \textbf{$B$} & \textbf{$T$} \\ \hline
-    CardCreatePage & 115 & 280 & 1314.33... & 51.47... & 67651.01... & 0.44... & 3758.39... \\ \hline
-    SelectSymbolModalPage & 47 & 72 & 277.73... & 14.85... & 4124.28... & 0.09... & 229.13... \\ \hline
-    HomePage & 42 & 87 & 301.97... & 25.19... & 7605.86... & 0.10 & 422.55... \\ \hline
-    CardDeletePage & 38 & 62 & 220.41... & 12.35... & 2722.75... & 0.07... & 151.26...   \\ \hline
-    OptionsPage & 38 & 62 & 220.41... & 12.35... & 2722.75... & 0.07... & 151.26...  \\ \hline
-    MainPage & 120 & 305 & 1471.17... & 54.36... & 79978.03... & 0.49... & 4443.22...  \\ \hline
-    InfoPage & 23 & 36 & 117.61... & 6.50... & 764.48... & 0.04... & 42.47...  \\ \hline
-    ImageDataProvider & 36 & 68 & 268.84... & 12.57... & 3379.65... & 0.09... & 187.76... \\ \hline
-    CardDataProvider & 38 & 118 & 288.64... & 48.30... & 13941.12... & 0.10... & 774.51...  \\ \hline
-    WordSymbol & 30 & 63 & 230.62... & 9.14... & 2108.56... & 0.08... & 117.14...  \\ \hline
-    Card & 39 & 118 & 290.70... & 24.34... & 7075.83... & 0.10... & 393.10...  \\ \hline
+    MainPage & 120 & 305 & 1471.17... & 54.36... & 79978.03... & 0.49... & ~4443s  \\ \hline
+    CardCreatePage & 115 & 280 & 1314.33... & 51.47... & 67651.01... & 0.44... & ~3758s \\ \hline
+    SelectSymbolModalPage & 47 & 72 & 277.73... & 14.85... & 4124.28... & 0.09... & ~229s \\ \hline
+    HomePage & 42 & 87 & 301.97... & 25.19... & 7605.86... & 0.10 & ~423s \\ \hline
+    Card & 39 & 118 & 290.70... & 24.34... & 7075.83... & 0.10... & ~393s  \\ \hline
+    CardDeletePage & 38 & 62 & 220.41... & 12.35... & 2722.75... & 0.07... & ~151s   \\ \hline
+    OptionsPage & 38 & 62 & 220.41... & 12.35... & 2722.75... & 0.07... & ~151s  \\ \hline
+    CardDataProvider & 38 & 118 & 288.64... & 48.30... & 13941.12... & 0.10... & ~775s  \\ \hline
+    ImageDataProvider & 36 & 68 & 268.84... & 12.57... & 3379.65... & 0.09... & ~188s \\ \hline
+    WordSymbol & 30 & 63 & 230.62... & 9.14... & 2108.56... & 0.08... & ~117s  \\ \hline
+    InfoPage & 23 & 36 & 117.61... & 6.50... & 764.48... & 0.04... & ~42s  \\ \hline
     \end{tabular}
 \end{center}
 
 \colorbox{YellowGreen}{// TODO: Halstead-taulukoiden tulosten analysointi.}
+
+Sanastometriikan (n) perusteella FreeAAC-ohjelmiston kaksi sanastoltaan selkeästi laajinta tiedostoa ovat \texttt{MainPage} ja \texttt{CardCreatePage}. Muut tiedostot ovat laajuudeltaan suunnilleen samankokoisia keskenään. Ainoastaan InfoPage-tiedosto on selkeästi muita pienempi.
+
+Kokometriikka (N) noudattaa pitkälti samoja linjoja, mutta \texttt{Card}- ja \texttt{CardDataProvider}-tiedostojen koko on suhteellisesti suurempi sanastometriikkaan verrattuna kuin muiden tiedostojen. Tämä kertoo näissä tiedostoissa olevien luokkien muista suuremmasta toisteisuudesta. Ne sisältävät useita pieniä metodeja, jotka ovat kytkeytyneet korttien käsittelyyn ja yksittäisen kortin tietojen tarjoamiseen muille luokille.
+
+Testausyritys Verifysoftin mukaan (lainaus) tiedoston määrämetriikan (V) tulisi olla vähintään 100 ja korkeintaan 8000. Kaikki FreeAAC-ohjelmiston tiedostot pysyvät näiden rajojen sisällä. Tiedostojen keskinäisissä määrämetriikoissa ei ole mitään edellisistä metriikoista poikkeavaa.
+
+Haastavuusmetriikka (D) pyrkii mittaamaan tiedoston virhealttiutta. Laajimpien \texttt{MainPage}- ja \texttt{CardCreatePage}-tiedostojen lisäksi korkea haastavuusmetriikka on myös \texttt{CardDataProvider}-tiedostolla.
+
+Tiedostojen työmäärät (E) noudattavat samoja linjoja kuin haastavuusmetriikka. Vaikka \texttt{CardDataProvider} ei ole sanastoltaan tai kooltaan yhtä suuri kuin kaksi suurinta tiedostoa, sisältää se kuitenkin sellaisia rakenteita, jotka nostavat sen kuitenkin yhtä merkittäväksi osaksi ohjelmaa.
+
+Virhemetriikka (B) on arvio tiedostossa esiintyvien ohjelmistovirheiden määrästä. Verifysoftin mukaan tiedoston virhemetriikan arvon tulisi olla alle 2. Jokainen FreeAAC-ohjelmiston tiedosto alittaa tämän arvon.
+
+Viimeinen tässä pro gradu -työssä tarkasteltava metriikka on testausaika (T). Sillä pyritään arvioimaan tiedostoon testaamisen kuluvaa aikaa sekunneissa. Testausaikametriikka tuottaa muiden metriikoiden mukaisia arvoja. Testausajan laskemiseen käytetään arvoa \textit{k}, joka määrittyy monen tekijän perusteella. Arvoon vaikuttavat asiat kuten testaajien kokemus ja tiedoston kriittisyys ohjelman toimivuuden kannalta, joten tämän pro gradu -työn puitteissa testausaikametriikasta ei juurikaan saada lisäarvoa FreeAAC-ohjelmiston arviointiin.
+
+FreeAAC-ohjelmisto ei ylitä Halsteadin monimutkaisuusmetriikoiden ohjearvoja ja eri tiedostojen arvot eri metriikoiden kohdalla ovat johdonmukaisia keskenään. FreeAAC-ohjelmisto täten noudattaa Halsteadin monimutkaisuusmetriikoiden perusteella hyvän ja ehjän ohjelmiston rakennetta. Halsteadin monimutkaisuusmetriikoiden todistusvoima ei kuitenkaan ole aukoton ja parempia tuloksia saataisiin aikaan vertaamalla FreeAAC-ohjelmiston monimutkaisuusmetriikoiden arvoja muiden vastaavien ohjelmistojen arvoihin.
 
 \begin{figure}[h]\centering
   \includegraphics[height=6cm,keepaspectratio]{memory-use-idle}
@@ -495,7 +522,9 @@ Välivaiheiden määräästä ei voi suoraan muodostaa täyttä kuvaa ohjelmisto
 FreeAAC-ohjelmiston virhealttiutta vähentää se, että käyttäjän syötemahdollisuuksia on rajattu. Käyttäjä ei yleensä voi päätyä tilanteisiin, jossa tapahtuu jotain peruuttamatonta. Ainoastaan symbolin poistaminen kortilta tai kortin poistaminen kokonaisuudessaan voi aiheuttaa käyttäjälle tilanteen, jossa menetetään paljon tehtyä työtä. Nämä ominaisuudet on kuitenkin piilotettu erilliseen salasanasuojattuun näkymään, joten riski peruuttamattomaan virheeseen on minimoitu.
 
 \colorbox{YellowGreen}{// TODO: Tyydyttävyys.}
-Tyydyttävyyttä on hankala mitata ilman koekäyttäjiä, mutta yleisten käytettävyysheuristiikkojen noudattaminen lisää tyydyttävyyttä. Voidaan esimerkiksi olettaa, että ohjelmiston yhtenäinen ulkoasu lisää opittavuuden ja tehokkuuden lisäksi myös tyydyttävyyttä.
+
+\colorbox{YellowGreen}{// TODO: Heuristiikkaviittaus pois.}
+Tyydyttävyyttä on hankala mitata ilman koekäyttäjiä, mutta yleisten laatutekijöiden huomioon ottaminen lisää tyydyttävyyttä. Voidaan esimerkiksi olettaa, että ohjelmiston yhtenäinen ulkoasu lisää opittavuuden ja tehokkuuden lisäksi myös tyydyttävyyttä.
 
 \colorbox{YellowGreen}{// TODO: Muut käytettävyysvaatimukset.}
 FreeAAC-ohjelmistolle listattiin myös joukko erityisryhmien käytettävyysvaatimuksia. Etenkin autististen käyttäjien tarpeet pyrittiin ottamaan huomioon.
