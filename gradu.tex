@@ -13,26 +13,36 @@
 
 \begin{document}
 
-\title{Puheen ongelmista kärsiville tarkoitetun kommunikointisovelluksen toteuttaminen Ionic-kehyksellä}
-\translatedtitle{Puheen ongelmista kärsiville tarkoitetun kommunikointisovelluksen toteuttaminen Ionic-kehyksellä}
+\title{Avusteisen kommunikaation ohjelmiston toteuttaminen progressiivisena WWW-sovelluksena}
+\translatedtitle{Augmentative and Alternative Communication Through a Progressive Web Application}
 \studyline{Ohjelmistotekniikka}
 \avainsanat{%
   Ionic,
-  AAC,
   progressiiviset WWW-sovellukset,
+  Angular,
+  TypeScript,
+  avusteinen kommunikaatio,
+  autismi,
   käytettävyys
 }
 \keywords{%
   Ionic,
-  AAC,
   progressive web applications,
+  Angular,
+  TypeScript,
+  augmentative and alternative communication,
+  autism,
   usability
 }
 \tiivistelma{%
-  Tutkielman tiivistelmä on tyypillisesti lyhyt esitys, jossa kerrotaan tutkielman taustoista, tavoitteesta, tutkimusmenetelmistä, saavutetuista tuloksista, tulosten tulkinnasta ja johtopäätöksistä. Tiivistelmän tulee olla niin lyhyt, että se, englanninkielinen abstrakti ja muut metatiedot mahtuvat kaikki samalle sivulle.
+  Progressiiviset WWW-sovellukset ovat verrattain tuore, mutta nopeasti suosituksi noussut tapa kehittää ohjelmistoja erilaisiin tarpeisiin. Tässä pro gradu -työssä Ionic-ohjelmistokehyksellä kehitettyä progressiivista WWW-sovellusta käytettiin tutkimaan avusteisen kommunikaation vaatimuksia, haasteita ja erikoispiirteitä sekä ohjelmistoteknisestä, että käytettävyysnäkökulmasta. Lisäksi tämän suunnittelutieteellisen tutkimuksen myötä pyrittiin saamaan kehittäjille yleistä tietoa progressiivisten WWW-sovellusten rakenteesta ja ominaisuuksista.
+  
+  Olemassa olevan tutkimustiedon pohjalta tehtyjen vaatimusten noudattaminen ei tuottanut ongelmia tutkimusartefaktin tuottamisessa ja voidaan todeta, että progressiiviset WWW-sovellukset sopivat avusteisen kommunikaation sovellusten tuottamiseen.
 }
 \abstract{%
-  Tiivistelmä englanniksi.
+  Progressive web applications are a recent, but very popular way to create applications for different needs. In this master's thesis, a progressive web application developed with the Ionic framework was examined to understand the needs of augmentative and alternative communication. This was done from a software engineering and a usability viewpoint. In addition, this master's thesis tries to offer general insights about the structure and features of progressive web applications.
+  
+  Progressive web applications seem to be an effective way to fulfill the requirements of a AAC-application since no significant problems were encountered in following the requirements for the artifact.
 }
 
 \author{Roope Kivioja}
@@ -359,17 +369,13 @@ FreeAAC-sovellus käyttää Ionicin oletuselementtejä ja oletusteemaa. Ionicin 
 
 Valikkonäkymien lisäksi käytettävyysratkaisuja on tehty erityisesti kommunikaationäkymässä (\texttt{Main}) ja korttien asetusnäkymissä (\texttt{CardCreate} ja \texttt{CardDelete}). Kommunikaationäkymä koostuu kolmesta eri komponentista: viestilaatikko, korttivalinta ja symbolivalinta. Viestilaatikkossa näkyvät käyttäjän valitsemat symbolit järjestyksessä. Käyttäjä voi poistaa symboleita yksi kerrallaan viimeisestä symbolista alkaen. Symbolikortti valitaan pudotusvalikosta, josta löytyvät käyttäjän kortinluonti-näkymässä tekemät kortit. Sivun alalaidassa näkyvät kortin symbolit, joista käyttäjä voi valita haluamansa symbolit viestilaatikkoon.
 
-Korttien asetusnäkymät on erotettu toisistaan näkymien yksinkertaistamisen takia.
-
-\colorbox{YellowGreen}{// TODO: Kuvakaappausten esittely.}
-
 \chapter{Toteutuneen sovelluksen arviointi}
 
 Rivimäärien käyttäminen ohjelmiston arviointiin ei ole täysin ongelmatonta, mutta eri tiedostojen rivimääriä analysoimalla voidaan saada perustason tietämystä ohjelmiston rakenteesta ja oleellisista osista. Edes ohjelmakoodin rivin määrite ei ole täysin yksiselitteinen asia, sillä yksi ohjelmakoodin looginen osa voidaan rivittää eri ohjelmointiperiaatteiden perusteella useille riveille. Lisäksi ohjelmakoodin rivimäärään vaikuttavat muutkin luettavuusmääritteet kuten tyhjien rivien käyttö sekä kommenttien määrä. FreeAAC-ohjelmiston rivien kokonaismäärä laskettiin ilman tyhjien tai kommenttirivien vähentämistä kokonaismäärästä.
 
 Suurin osa riveistä sijaitsee ohjelmistokehittäjän itse laatimissa mallitiedostoissa ja näitä hallinnoivissa komponenttitiedostoissa. Näissä tiedostoissa olevien rivien määrä on 783. Jos 7528 riviä sisältävä \texttt{package-lock.json}-tiedosto otetaan pois laskuista, on ohjelmiston kokonaisrivimäärä 1320 ja ohjelmistokehittäjän pääasiallisesti tuottamat tiedostot sisältävät noin 59,32\% ohjelmiston kokonaisrivimäärästä.
 
-Koska rivimäärien laskeminen ei anna kovin hyvää kuvaa ohjelmistosta, on ohjelmistojen analysoimiseen kehitetty edistyneempiä menetelmiä. Halsteadin monimutkaisuusmittarit ovat tapoja mitata ohjelman ominaisuuksia. Maurice Howard Halstead pyrki niiden avulla muodostamaan tavan mitata ohjelman ominaisuuksia vertailukelpoisesti. Halsteadin monimutkaisuusmittarien muodostamista varten tarvitaan neljä perusmuuttujaa: uniikkien operaattorien määrä ($n_1$), uniikkien operandien määrä ($n_2$), operaattorien kokonaismäärä ($N_1$) ja operandien kokonaismäärä ($N_2$).
+Koska rivimäärien laskeminen ei anna kovin hyvää kuvaa ohjelmistosta, on ohjelmistojen analysoimiseen kehitetty edistyneempiä menetelmiä. Halsteadin monimutkaisuusmetriikat ovat tapoja mitata ohjelman ominaisuuksia. Maurice Howard Halstead pyrki niiden avulla muodostamaan tavan mitata ohjelman ominaisuuksia vertailukelpoisesti. Halsteadin monimutkaisuusmetriikoiden muodostamista varten tarvitaan neljä perusmuuttujaa: uniikkien operaattorien määrä ($n_1$), uniikkien operandien määrä ($n_2$), operaattorien kokonaismäärä ($N_1$) ja operandien kokonaismäärä ($N_2$).
 
 Näiden neljän perusmuuttujan pohjalta voidaan johtaa useita eri monimutkaisuusmetriikoita:
 
@@ -427,8 +433,6 @@ Monimutkaisuusmetriikoiden arvot FreeAAC-ohjelmistolle:
     \end{tabular}
 \end{center}
 
-\colorbox{YellowGreen}{// TODO: Halstead-taulukoiden tulosten analysointi.}
-
 Sanastometriikan (n) perusteella FreeAAC-ohjelmiston kaksi sanastoltaan selkeästi laajinta tiedostoa ovat \texttt{MainPage} ja \texttt{CardCreatePage}. Muut tiedostot ovat laajuudeltaan suunnilleen samankokoisia keskenään. Ainoastaan InfoPage-tiedosto on selkeästi muita pienempi.
 
 Kokometriikka (N) noudattaa pitkälti samoja linjoja, mutta \texttt{Card}- ja \texttt{CardDataProvider}-tiedostojen koko on suhteellisesti suurempi sanastometriikkaan verrattuna kuin muiden tiedostojen. Tämä kertoo näissä tiedostoissa olevien luokkien muista suuremmasta toisteisuudesta. Ne sisältävät useita pieniä metodeja, jotka ovat kytkeytyneet korttien käsittelyyn ja yksittäisen kortin tietojen tarjoamiseen muille luokille.
@@ -443,7 +447,7 @@ Virhemetriikka (B) on arvio tiedostossa esiintyvien ohjelmistovirheiden määrä
 
 Viimeinen tässä pro gradu -työssä tarkasteltava metriikka on testausaika (T). Sillä pyritään arvioimaan tiedostoon testaamisen kuluvaa aikaa sekunneissa. Testausaikametriikka tuottaa muiden metriikoiden mukaisia arvoja. Testausajan laskemiseen käytetään arvoa \textit{k}, joka määrittyy monen tekijän perusteella. Arvoon vaikuttavat asiat kuten testaajien kokemus ja tiedoston kriittisyys ohjelman toimivuuden kannalta, joten tämän pro gradu -työn puitteissa testausaikametriikasta ei juurikaan saada lisäarvoa FreeAAC-ohjelmiston arviointiin.
 
-FreeAAC-ohjelmisto ei ylitä Halsteadin monimutkaisuusmetriikoiden ohjearvoja ja eri tiedostojen arvot eri metriikoiden kohdalla ovat johdonmukaisia keskenään. FreeAAC-ohjelmisto täten noudattaa Halsteadin monimutkaisuusmetriikoiden perusteella hyvän ja ehjän ohjelmiston rakennetta. Halsteadin monimutkaisuusmetriikoiden todistusvoima ei kuitenkaan ole aukoton ja parempia tuloksia saataisiin aikaan vertaamalla FreeAAC-ohjelmiston monimutkaisuusmetriikoiden arvoja muiden vastaavien ohjelmistojen arvoihin.
+FreeAAC-ohjelmisto ei ylitä Halsteadin monimutkaisuusmetriikoiden ohjearvoja ja eri tiedostojen arvot eri metriikoiden kohdalla ovat johdonmukaisia keskenään. FreeAAC-ohjelmisto täten noudattaa Halsteadin monimutkaisuusmetriikoiden perusteella hyvän ja ehjän ohjelmiston rakennetta. Halsteadin monimutkaisuusmetriikoiden todistusvoima ei kuitenkaan ole aukoton ja parempia tuloksia saataisiin aikaan vertaamalla FreeAAC-ohjelmiston monimutkaisuusmetriikoiden arvoja muiden vastaavien ohjelmistojen arvoihin. Vertaileva tutkimus muihin avusteisen kommunikaation sovelluksiin on kuitenkin rajattu tämän pro gradu -työn ulkopuolelle, sillä suurin osa avusteisen kommunikaation sovelluksista on kehitetty kaupalliseen käyttöön ja avoimen lähdekoodin sovelluksia ei juurikaan ole tarjolla.
 
 \begin{figure}[h]\centering
   \includegraphics[height=6cm,keepaspectratio]{memory-use-idle}
@@ -473,19 +477,17 @@ FreeAAC-ohjelmisto ei ylitä Halsteadin monimutkaisuusmetriikoiden ohjearvoja ja
   \label{fig:chromium-memory-use-stress}
 \end{figure}
 
-\colorbox{YellowGreen}{// TODO: Tarkenna muistinkäyttöön liittyvät asiat.}
+Progressiivisten WWW-sovellusten muistinkäyttöä arvioitiin kappaleessa 3.2. FreeAAC-ohjelmiston muistinkäyttöä mitattiin Firefox-selaimen kehitystyökaluilla ottamalla mittauksia sekä ohjelman alkutilassa \ref{fig:memory-use-idle} sekä käytön aikana \ref{fig:memory-use-stress}. Lisäksi muistinkäyttöä seurattiin samalla tavoin Chromium-selaimen kehitystyökaluilla ohjelman alkutilassa \ref{fig:chromium-memory-use-idle} sekä käytön aikana \ref{fig:chromium-memory-use-stress}. 
 
-Progressiivisten WWW-sovellusten muistinkäyttöä arvioitiin kappaleessa xx. Muistinkäyttöä mitattiin Firefox-selaimen kehitystyökaluilla ottamalla mittauksia sekä ohjelman alkutilassa \ref{fig:memory-use-idle} sekä käytön aikana \ref{fig:memory-use-stress}. Lisäksi muistinkäyttöä seurattiin samalla tavoin Chromium-selaimen kehitystyökaluilla ohjelman alkutilassa \ref{fig:chromium-memory-use-idle} sekä käytön aikana \ref{fig:chromium-memory-use-stress}. 
+Korkein mitattu muistinkäyttö rasitukseessa oli 37MB. Liitteissä C ja D on listattu joukko yleisten tablettitietokoneiden ja matkapuhelinten muistinkäyttörajoja ohjelmistoille. Ainoat listatut laitteet, joiden muistinkäyttörajan FreeAAC-ohjelmisto ylittää ovat HTC:n valmistamia matkapuhelimia vuosilta 2010 ja 2011. Muistinkäyttö nousee prosentuaalisesti varsin ison määrän käytön aikana, mutta kokonaismäärä ei aiheuta ongelmia millekään nykyaikaiselle mobiililaitteelle.
 
-Korkein mitattu muistinkäyttö rasitukseessa oli 37MB. Liitteissä C ja D on listattu joukko yleisten tablettitietokoneiden ja matkapuhelinten muistinkäyttörajoja ohjelmistoille. Ainoat listatut laitteet, joiden muistinkäyttörajan FreeAAC-ohjelmisto ylittää ovat HTC:n valmistamia matkapuhelimia vuosilta 2010 ja 2011. Muistinkäyttö nousee prosentuaalisesti varsin ison määrän käytön aikana, mutta kokonaismäärä ei aiheuta ongelmia millekään nykyaikaiselle mobiililaitteelle. 
+Muistinkäyttökäyriä tutkimalla nähdään, että ohjelman käynnistyessä muistinkäyttö nousee hetkellisesti, mutta ensimmäisen roskienkeruun jälkeen muistinkäyttö putoaa heti käynnistyksen jälkeistä tilannetta huomattavasti matalammaksi. Näin käy sekä ilman käyttäjän syötettä, että aktiivisen käytön aikana. Ilman käyttäjän syötteitä FreeAAC-ohjelmiston muistinkäyttö ei nouse ollenkaan. Ohjelmistossa ei ole toimintoja, jotka käyttäisivät muistia silloin kun käyttäjä ei aktiivisesti käytä ohjelmistoa. Tämä on tärkeää, sillä avusteisen kommunikaation sovellusta käytetään useasti vain hetkellisesti. Käytön aikana muistinkäyttö nousee hitaasti ja 5 minuutin testikäytön aikana ei saatu aikaan suuria hyppäyksiä ylöspäin. FreeAAC-ohjelmiston muistinkäyttö vaikuttaa tasaiselta.
 
 FreeAAC-ohjelmiston ohjelmakoodin määrä on maltillinen verrattuna ominaisuusvaatimuksiin, mikä parantaa ohjelmiston ylläpidettävyyttä ja testattavuutta. Ohjelmistossa on myös hyvin vähän sisäisiä riippuvuuksia, koska Angular-ohjelmistokehyksen sekä TypeScript-ohjelmointikielen avulla ohjelmistosta saatiin helposti tehtyä modulaarinen. 
 
 Näkymien HTML-formaatti ei juurikaan aiheuttanut ohjelmistoteknisiä haasteita tai käytettävyysongelmia. Ainoastaan symbolien vapaa asemointi kortilla osoittautui sen verran haastavaksi tehtäväksi, että sitä ei toteutettu. HTML-kieli on alunperin tarkoitettu dokumenttien hierarkkiseksi ja rakenteelliseksi kuvauskieleksi, joten HTML-elementtien kelluvaa asemointia toisiinsa nähden ei ole helpoin toteuttaa sen avulla. Kelluvien elementtien toteuttaminen on kyllä mahdollista oikeanlaisten CSS-määritysten avulla, mutta tämä vaatisi erillisen asemointipalvelun rakentamista ohjelmistoon sekä CSS-luokkien lisäilyä ja poistamista reaaliajassa. Perinteisessä mobiilisovelluksessa elementtien vapaa asemointi olisi todennäköisesti helpompaa.
 
-\colorbox{YellowGreen}{// TODO: Tarkenna tallennustilaan liittyvät asiat.}
-
-Kenties haastavin osuus FreeAAC-ohjelmiston toteuttamisessa oli tietojen tallentaminen. Kuten luvussa xx todettiin, progressiivisille WWW-sovelluksille ei ole luontevaa tallennustilaa, sillä selainten oikeuksien määrä on hyvin tarkasti rajoitettua tietoturvasyistä. Kuvat voidaan liittää mukaan sovellukseen, mutta korttien asetuksien tallentaminen ei ole yksinkertaista. Natiivisovelluksilla on suora pääsy rajattuun massamuistitilaan, mutta WWW-sovelluksissa tiedot tulee tallentaa muualle.
+Kenties haastavin osuus FreeAAC-ohjelmiston toteuttamisessa oli tietojen tallentaminen. Kuten luvussa 4.3 todettiin, progressiivisille WWW-sovelluksille ei ole luontevaa tallennustilaa, sillä selainten oikeuksien määrä on hyvin tarkasti rajoitettua tietoturvasyistä. Kuvat voidaan liittää mukaan sovellukseen, mutta korttien asetuksien tallentaminen ei ole yksinkertaista. Natiivisovelluksilla on suora pääsy rajattuun massamuistitilaan, mutta WWW-sovelluksissa tiedot tulee tallentaa muualle. Täten massamuistiin liittyvät operaatiot jätettiin tämän pro gradu -työn ulkopuolelle.
 
 \section{Käytettävyysnäkökulma}
 
@@ -493,13 +495,7 @@ Käytettävyyden perusvaatimusten osalta FreeAAC-ohjelmiston toteutuksessa ei il
 
 FreeAAC-sovelluksen elementit ovat riittävän isoja, jotta niiden valitseminen ja toiminnallisuuksien ymmärtäminen on helpompaa kun ohjelmistoa ajetaan pieninäyttöisillä mobiililaitteilla. Suuret elementit myös rajoittavat yhteen näkymään mahtuvien ominaisuuksien määrää, mikä auttaa pitämään näkymät riittävän yksinkertaisina käyttäjälle.
 
-Sovelluksen käyttämiseen ei tarvita eritysryhmille mahdollisesti motorisesti haastavia eleitä kuten pyyhkäisyjä. Erityisesti autisteilla on usein ongelmia hienomotoristen liikkeiden suorittamisessa, vaikka autististen käyttäjien yksilökohtaiset erot ovat tässäkin suuria \parencite[]{motor-skills-autism}.
-
-FreeAAC-ohjelmiston valikot on toteutettu perinteisellä tavalla painikkeita hyödyntämällä. Monessa mobiilisovelluksessa navigointi tapahtuu niin sanotun \textit{hampurilaisvalikon} avulla, mutta autistisille käyttäjille tarkoitetussa ohjelmistossa abstraktien symbolien käyttö voi olla ongelmallista, joten ohjelmistossa ei käytetä tätä yleistä ratkaisua.
-
-\colorbox{YellowGreen}{// TODO: Opittavuus.}
-
-FreeAAC-ohjelmiston opittavuutta helpottaa se, että näkymät muistuttavat paljolti toisiaan. FreeAAC-ohjelmistossa ei ole moodeja eikä samoja toimintoja voi suorittaa usealla eri tavalla. Tämä lisää sekä opittavuutta, että muistettavuutta.
+FreeAAC-ohjelmiston opittavuutta helpottaa se, että näkymät muistuttavat paljolti toisiaan. FreeAAC-ohjelmistossa ei ole moodeja eikä samoja toimintoja voi suorittaa usealla eri tavalla. Tämä lisää sekä opittavuutta, että muistettavuutta. 
 
 Tehokkuus on määre, jota parhaiten voidaan mitata suorittamalla käyttäjätutkimus, jossa käyttäjälle annettuun tehtävään käytettyä aikaa sekä siinä ilmenneitä haasteita pyritään mittaamaan. Koska tutkielmassa ei suoritettu käyttäjätutkimusta vaan suunnittelutieteellinen tutkimus, on tehokkuutta tutkittava muiden keinojen avulla. Yksi tapa arvioida tehokkuutta on muodostaa lista yleisimpiin toimintoihin vaadittavien välivaiheiden määristä ja arvioida tehokkuutta välivaiheiden määrän perusteella.
 
@@ -508,68 +504,58 @@ Tehokkuus on määre, jota parhaiten voidaan mitata suorittamalla käyttäjätut
     \hline
     \textbf{Toiminto} & \textbf{Välivaiheiden määrä} \\ \hline
     Kommunikointinäkymään siirtyminen alkutilasta & 1  \\ \hline
-    Viestin kirjoittaminen & 4 + (x * symbolien lisääminen viestiin)\\ \hline
+    Viestin kirjoittaminen & 3 + (x * symbolien lisääminen viestiin)\\ \hline
     Kortin luonti & 5 + (x * symbolien lisääminen kortille) \\ \hline
     Kortin poisto & 3  \\ \hline
     \end{tabular}
 \end{center}
 
-Välivaiheiden määräästä ei voi suoraan muodostaa täyttä kuvaa ohjelmiston tehokkuudesta. Voidaan kuitenkin 
+Välivaiheiden määrästä ei voi suoraan muodostaa täyttä kuvaa ohjelmiston tehokkuudesta tai muista laadullisista tekijöistä, mutta niitä voidaan verrata psykologisiin tutkimuksiin ihmisten lyhytkestoisesta muistista. Yksi kaikkien aikojen eniten lainatuista psykologian tutkimuksista \parencite[]{most-quoted-psych} on George A. Millerin \textit{The Magical Number Seven, Plus or Minus Two} \parencite[]{magical-number-seven}, jonka keskeiset havannot liittyvät ihmisen kykyyn muistaa tiettyjä määriä perusalkioita kerrallaan.
 
-\colorbox{YellowGreen}{// TODO: Muistettavuus.}
+Millerin mukaan ihminen pystyy muistamaan $7 \pm 2$ perusalkiota lyhytkestoista muistia käyttämällä. Lisäksi Millerin mukaan ihminen käsittelee näitä alkiota kahden tai kolmen alkion ryppäissä. Yksikään FreeAAC-ohjelmiston perustoiminto ei ylitä tätä Millerin laiksikin kutsuttua perusoletusta. Täten FreeAAC-ohjelmiston perustoimintojen käyttö on ainakin teoreettisella tasolla ihmisen lyhytkestoisen muistin rajojen sisällä. Tämä parantaa ohjelmiston tehokkuutta, muistettavuutta ja vähentää käyttäjän tekemien virheiden määrää.
 
-\colorbox{YellowGreen}{// TODO: Virhealttius.}
-FreeAAC-ohjelmiston virhealttiutta vähentää se, että käyttäjän syötemahdollisuuksia on rajattu. Käyttäjä ei yleensä voi päätyä tilanteisiin, jossa tapahtuu jotain peruuttamatonta. Ainoastaan symbolin poistaminen kortilta tai kortin poistaminen kokonaisuudessaan voi aiheuttaa käyttäjälle tilanteen, jossa menetetään paljon tehtyä työtä. Nämä ominaisuudet on kuitenkin piilotettu erilliseen salasanasuojattuun näkymään, joten riski peruuttamattomaan virheeseen on minimoitu.
+FreeAAC-ohjelmiston virhealttiutta vähentää myös se, että käyttäjän syötemahdollisuuksia on rajattu. Käyttäjä ei yleensä voi päätyä tilanteisiin, jossa tapahtuu jotain peruuttamatonta. Ainoastaan symbolin poistaminen kortilta tai kortin poistaminen kokonaisuudessaan voi aiheuttaa käyttäjälle tilanteen, jossa menetetään paljon tehtyä työtä. Nämä ominaisuudet on kuitenkin piilotettu erilliseen salasanasuojattuun näkymään, joten riski peruuttamattomaan virheeseen on minimoitu.
 
-\colorbox{YellowGreen}{// TODO: Tyydyttävyys.}
-
-\colorbox{YellowGreen}{// TODO: Heuristiikkaviittaus pois.}
-Tyydyttävyyttä on hankala mitata ilman koekäyttäjiä, mutta yleisten laatutekijöiden huomioon ottaminen lisää tyydyttävyyttä. Voidaan esimerkiksi olettaa, että ohjelmiston yhtenäinen ulkoasu lisää opittavuuden ja tehokkuuden lisäksi myös tyydyttävyyttä.
+Tyydyttävyyttä on hankala mitata ilman koekäyttäjiä, mutta yleisten laatutekijöiden arviointi ja huomioon ottaminen ohjelmiston toteutuksessa lisää tyydyttävyyttä. Voidaan esimerkiksi olettaa, että ohjelmiston yhtenäinen ulkoasu lisää opittavuuden ja tehokkuuden lisäksi myös tyydyttävyyttä.
 
 \colorbox{YellowGreen}{// TODO: Muut käytettävyysvaatimukset.}
 FreeAAC-ohjelmistolle listattiin myös joukko erityisryhmien käytettävyysvaatimuksia. Etenkin autististen käyttäjien tarpeet pyrittiin ottamaan huomioon.
 
-\colorbox{YellowGreen}{// TODO: Abstraktien symbolien välttäminen. }
+Sovelluksen käyttämiseen ei tarvita eritysryhmille mahdollisesti motorisesti haastavia eleitä kuten pyyhkäisyjä. Erityisesti autisteilla on usein ongelmia hienomotoristen liikkeiden suorittamisessa, vaikka autististen käyttäjien yksilökohtaiset erot ovat tässäkin suuria \parencite[]{motor-skills-autism}.
+
+FreeAAC-ohjelmiston valikot on toteutettu perinteisellä tavalla painikkeita hyödyntämällä. Monessa mobiilisovelluksessa navigointi tapahtuu niin sanotun \textit{hampurilaisvalikon} avulla, mutta autistisille käyttäjille tarkoitetussa ohjelmistossa abstraktien symbolien käyttö voi olla ongelmallista (lähde), joten ohjelmistossa ei käytetä tätä yleistä ratkaisua.
 
 \colorbox{YellowGreen}{// TODO: Selkeiden päävärien käyttö ja riittävästi kontrastia.}
-  
+FreeAAC:n ulkoasusta tehtiin mustavalkoinen, jotta symbolit ja käyttäjän mahdollisesti ottamat kuvat erottuvat paremmin muista elementeistä.
+
 \colorbox{YellowGreen}{// TODO: Mahdollisuus kontekstiin sopivien asetusten säätämiseen.}
   
 \colorbox{YellowGreen}{// TODO: Näkymien staattisuus ja yksinkertaisuus.}
+FreeAAC-ohjelmiston näkymissä ei ole toimintoja tai elementtejä, joiden käyttäminen vaatii nopeaa reagointia. Näkymistä on pyritty rakentamaan mahdollisimman yksinkertaisia ja tämän esimerkiksi korttien luontinäkymä ja korttien poistonäkymä on erotettu toisistaan.
 
 \chapter{Pohdinta}
-\colorbox{YellowGreen}{// Ohjepituus 5-10 sivua.}
 
-\colorbox{YellowGreen}{// TODO: Mitä aineistoanalyysi kertoo tutkimushypoteesista?}
+Pro gradu -työn tärkein tulos oli se, että olemassa olevan tutkimuksen pohjalta luotujen vaatimusten noudattaminen ei tuottanut ongelmia. Progressiiviset WWW-sovellukset ja tarkemmin rajattuna Ionic-kehys sopii avusteisen kommunikaation sovelluksen kehittämiseen sekä ohjelmistoteknisestä, että käytettävyysnäkökulmasta. Lisäksi saatiin kattavasti tietoa siitä, mitä laatutekijöitä avusteisen kommunikaation ohjelmiston kehittämiseen liittyy.
 
-\colorbox{YellowGreen}{// TODO: Tukevatko tulokset teorialuvussa esitettyjä näkemyksiä?}
-Olemassa olevan tutkimuksen pohjalta luotujen vaatimusten noudattaminen ei tuottanut ongelmia. 
-
-\colorbox{YellowGreen}{// TODO: Vastasiko tutkimusmetodi odotuksia?}
 Suunnittelutieteellisen tutkimuksen käyttäminen progressiivisten WWW-sovellusten ohjelmistoteknisen puolen tutkimiseen oli toimiva tapa saada aikaan perustietoa tutkimuksessa esitetyn käyttötapauksen vaatimuksista ja niiden toteuttamisen haasteista. Progressiiviset WWW-sovellukset ovat edelleen niin tuore ilmiö, että olemassa olevaa tutkimusta oli haastavaa löytää. Tämän takia artefaktin kehittäminen oli tärkeää, sillä sen avulla saatiin paljon ensikäden perustietoa progressiivisten WWW-sovellusten toiminnasta ilman nojaamista olemassa olevaan tutkimukseen.
 
 Käytettävyystutkimuksen näkökulmasta suunnittelutieteellisen tutkimusmetodin käyttäminen oli haastavampaa. Oli tärkeää ottaa huomioon käytettävyystekijät artefaktin suunnitteluvaiheessa, mutta varmempien johtopäätösten vetäminen valmiista artefaktista olisi kenties vaatinut käyttäjätutkimuksen tekemistä. Tästä syystä valmiin artefaktin tutkiminen käytettävyysnäkökulmasta jäi ehkä hieman pintapuoliseksi.
 
-\colorbox{YellowGreen}{// TODO: Voiko tapaustutkimuksen pohjalta tehdä yleistyksiä?}
+Pro gradu -työn vertaaminen olemassa olevaan tutkimukseen on haastavaa myös siitä syystä, että hyvin harva avusteista kommunikaatiota tutkivista tutkimusta lähestyi asiaa tietoteknisestä näkökulmasta. Ainoa selkeästi olemassa olevaa avusteisen kommunikaation ohjelmistoa tutkinut tutkimus, joka tämän pro gradu -työn aineistonkeruussa onnistuttiin löytämään, oli Comunicador-nimistä espanjankielisille käyttäjille suunnattua ohjelmistoa tutkinut tutkimus, jonka tuloksia käsiteltiin luvussa 3.4.1.
 
 \colorbox{YellowGreen}{-- Pohdintaluvussa harjoitetaan itsenäistä ajattelua. Sen voi periaatteessa kirjoittaa ilman lähdekirjallisuutta, sillä tarkastelun kohteena on aiemmin kirjoitettamasi materiaali. Nyt tutkimuksen tuloksia on aika arvioida kriittisesti. Niitä verrataan aiempaan tutkimukseen ja pohditaan, mitä uutta tutkimus paljastaa aiheesta ja miten tulokset suhteutuvat aiempaan tutkimukseen – tukevatko vai ovatko ristiriidassa? Jos analyysivaiheessa on ollut vaikeuksia, niitä ei pidä lakaista maton alle; niiden puntaroiminen kertoo tutkimuksen läpinäkyvyydestä ja tulosten luotettavuudesta. --}
 
 \chapter{Yhteenveto}
-\colorbox{YellowGreen}{// Ohjepituus 3-5 sivua.}
-
-\colorbox{YellowGreen}{-- Tutkielman viimeinen luku on Yhteenveto.  Sen on hyvä olla lyhyt; siinä todetaan, mitä tutkielmassa esitetyn nojalla voidaan sanoa johdannon väitteen totuudesta tai tutkimuskysymyksen vastauksesta. Yhteenvedossa tuodaan myös esille tutkielman heikkoudet (erityisesti tekijät, jotka heikentävät tutkielman tulosten luotettavuutta), ellei niitä ole jo aiemmin tuotu esiin esimerkiksi Pohdinta-luvussa. Tässä luvussa voidaan myös tuoda esille, mitä tutkimusta olisi tämän tutkielman tulosten valossa syytä tehdä seuraavaksi.
-
-Jos Yhteenveto alkaa pitkittyä, se kannattaa jakaa kahtia niin, että tulosten tulkinta otetaan omaksi Pohdinta-luvukseen, jolloin Yhteenvedosta tulee varsin lyhyt ja lakoninen.
-
-Yhteenvedon jälkeen tulee \string\printbibliography-komennolla laadittu lähdeluettelo ja sen jälkeen mahdolliset liitteet. --}
 
 FreeAAC-ohjelmiston prototyyppi sisältää suurimman osan tarpeellisista ominaisuuksista ja siitä pystyttiin toteuttamaan toimiva sekä mahdolliseen koekäyttöön sopiva versio tutkielman aikarajoitteiden puitteissa. Tämän perusteella voidaan todeta, että ainakin perustasolla progressiiviset WWW-sovellukset vaikuttavat lupaavalta ja riittävän kypsältä teknologialta yksinkertaisten mobiilisovellusten toteuttamiseen.
 
-Tämän tutkimuksen pohjalta syntyi useita mahdollisia jatkotutkimuksen aiheita. Yksi FreeAAC-ohjelmiston toteutuksen ulkopuolelle jäänyt perusominaisuus oli massamuistitilan käyttö käyttäjän asetusten ja luotujen korttien pysyvään tallennukseen. Tämän ominaisuuden karsimista perusteltiin Ionic-ohjelmistokehyksen massamuistitallennuksen monimutkaisuudella ja vaihtoehtojen paljoudella. Voisi siis olla kannattavaa tutkia progressiivisten WWW-sovellusten massamuistitallennusvaihtoehtojen hyviä ja huonoja puolia erilaisissa tilanteissa.
+Tämän pro gradu -työn pohjalta syntyi useita mahdollisia jatkotutkimuksen aiheita. Yksi FreeAAC-ohjelmiston toteutuksen ulkopuolelle jäänyt perusominaisuus oli massamuistitilan käyttö käyttäjän asetusten ja luotujen korttien pysyvään tallennukseen. Tämän ominaisuuden karsimista perusteltiin Ionic-ohjelmistokehyksen massamuistitallennuksen monimutkaisuudella ja vaihtoehtojen paljoudella. Voisi siis olla kannattavaa tutkia progressiivisten WWW-sovellusten massamuistitallennusvaihtoehtojen hyviä ja huonoja puolia erilaisissa tilanteissa.
 
-Toinen tutkimuksen aikana esiin noussut puute oli eri erikoisryhmien parissa tehtyjen käytettävyystutkimuksien vähyys. Erityisesti modernien mobiililaitteiden ja kosketusnäyttöjen käytettävyyttä ei ole juurikaan ehditty tutkimaan näiden erityisryhmien näkökulmasta.
+Toinen tutkimuksen aikana esiin noussut puute oli eri erikoisryhmien parissa tehtyjen käytettävyystutkimuksien vähyys. Erityisesti modernien mobiililaitteiden ja kosketusnäyttöjen käytettävyyttä ei ole juurikaan ehditty tutkimaan näiden erityisryhmien näkökulmasta. Esimerkiksi käytettävyyden laatutekijöitä arvioidessa jouduttiin käyttämään yleisiä laatutekijöitä. Ei tiedetä esimerkiksi miten autismi vaikuttaa eri laatutekijöiden arviointiin.
 
 Progressiivisten WWW-sovellusten muistinkäyttö oli yksi tässä tutkimuksessa tarkasteltu asia. Muistinkäyttö ei osoittautunut ongelmaksi tässä nimenomaisessa käyttötapauksessa, mutta tutkimuksen aihepiiriin ei kuulunut suuria määriä muistia vaativien progressiivisten WWW-sovellusten tutkiminen. FreeAAC-ohjelmiston toiminnallisuudet eivät vaadi suuria määriä laskentatehoa tai massiivisia muistiallokaatioita, joten täyttä kuvaa Ionic-ohjelmistokehyksen tai progressiivisten WWW-sovellusten suorituskyvystä ei saatu.
+
+Yleisesti ottaen oli yllättävää miten pieni määrä 
 
 %\printbibliography{gradubibtex}
 
