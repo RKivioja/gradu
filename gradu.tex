@@ -54,7 +54,26 @@
 \maketitle
 
 \begin{thetermlist}
-\item[Ionic] Ohjelmistokehys.
+\item[\textbf{Ionic}] 
+
+Mobiililaitteille suunniteltujen progressiivisten WWW-sovellusten kehittämiseen tarkoitettu avoimen lähdekoodin ohjelmistokehys.
+
+\item[\textbf{Angular}] 
+
+Googlen ylläpitämä avoimen lähdekoodin TypeScript-ohjelmistokehys.
+
+\item[\textbf{TypeScript}] 
+
+Microsoftin ylläpitämä avoimen lähdekoodin ohjelmointikieli.
+
+\item[\textbf{Avusteinen kommunikaatio}]
+
+ Kommunikointia, jossa puhetta joko tukee tai korvaa jokin tekninen apuväline tai muu keino kuten viittomakieli.
+
+\item[\textbf{Electron}] 
+
+GitHubin ylläpitämä progressiivisten WWW-sovellusten kehittämiseen tarkoitettu avoimen lähdekoodin ohjelmistokehys.
+
 \end{thetermlist}
 
 \mainmatter
@@ -64,7 +83,6 @@
 Idea tähän pro gradu -työhön syntyi kun osallistuin Keski-Suomen Autismiliiton kokoontumisen järjestämiseen vuonna 2015. Vapaamuotoisessa kokoontumisessa pääsin näkemään miten autistiset nuoret käyttävät erilaisia apuvälineitä muiden ihmisten kanssa kommunikointiin. Osa nuorista käytti kommunikointiin paperisia apuvälineitä sekä henkilökohtaisen avustajan tukea, mutta osa pystyi kommunikoimaan itsenäisesti tablettitietokoneen avulla.
 
 Toinen tämän pro gradu -työn aiheeseen vaikuttanut tapahtuma oli Adafy Oy:lle tekemäni projekti, jossa käytin Ionic-ohjelmistokehystä. Tuosta projektista minulle jäi vahva tunne, että progressiivisten WWW-sovellusten suosio tulee lähivuosina kasvamaan ja ne ovat käyttökelpoinen tapa toteuttaa yksinkertaisia ohjelmistoja. Viime vuosina näin on myöskin käynyt, sillä erittäin suositut monialustaiset ohjelmistot kuten Visual Studio Code, Slack ja Discord ovat kaikki Electron-ohjelmistokehyksen päälle rakennettuja.
-
 
 \chapter{Tutkimuksen taustat}
 
@@ -328,7 +346,7 @@ Ohjelmiston tärkein näkymä on kommunikointinäkymä eli \texttt{Main}-niminen
   \label{fig:card-create-layout}
 \end{figure}
 
-Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreate}-näkymä on kuvassa \ref{fig:card-create-layout}. \texttt{CardCreate}-näkymässä kortille voidaan valita nimi, koko ja liittää siihen kuvia kuvakirjastosta. Kaikki edellä mainitut ovat pakollisia ja käyttäjälle näytetään \texttt{toast}-virheilmoitus, jos jokin tieto puuttuu. \texttt{Toast}-virheilmoitukset käyttävät Ionicin \texttt{ToastController}-luokkaa. Kuvia valitaan erillisen modaalin kautta ja Ionic-sovelluksessa modaalien näyttämisestä vastaa \texttt{ModalController}-luokka. Korttien tallentaminen tapahtuu \texttt{CardDataProvider}-luokan kautta.
+Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreate}-näkymä on kuvassa \ref{fig:card-create-layout}. \texttt{CardCreate}-näkymässä kortille voidaan valita nimi, koko ja liittää siihen kuvia kuvakirjastosta. Kaikki edellä mainitut ovat pakollisia ja käyttäjälle näytetään \texttt{toast}-virheilmoitus, jos jokin tieto puuttuu. \texttt{Toast}-virheilmoitukset käyttävät Ionicin \texttt{ToastController}-luokkaa. Kuvia valitaan erillisen ponnahdusikkunan kautta ja Ionic-sovelluksessa ponnahdusikkunoiden näyttämisestä vastaa \texttt{ModalController}-luokka. Korttien tallentaminen tapahtuu \texttt{CardDataProvider}-luokan kautta.
 
 \begin{figure}[h]\centering
   \includegraphics[height=10cm,keepaspectratio]{select-symbol-modal-layout}
@@ -337,7 +355,7 @@ Kortteja luodaan ohjelmiston \texttt{CardCreate}-näkymässä. \texttt{CardCreat
   \label{fig:select-symbol-modal-layout}
 \end{figure}
 
-Kuvien valintaa varten aukeava modaali sisältää \texttt{SelectSymbolModal}-näkymän. \texttt{SelectSymbolModal}-näkymän sisältävä modaali on kuvassa \ref{fig:select-symbol-modal-layout}. Näkymässä kuvan voi valita eri kategorioista. Kategoria valitaan pudotusvalikosta. \texttt{SelectSymbolModal}-näkymän komponenttitiedosto sisältää kuvan tallentamiseen ja modaalin sulkemiseen liittyvät aliohjelmat. FreeAAC-ohjelmiston kuvakirjasto koostuu Papunet-sivuston tarjoamasta Creative Commons -lisenssin alaisesta kuvapankista.
+Kuvien valintaa varten aukeava ponnahdusikkuna sisältää \texttt{SelectSymbolModal}-näkymän. \texttt{SelectSymbolModal}-näkymän sisältävä ponnahdusikkuna on kuvassa \ref{fig:select-symbol-modal-layout}. Näkymässä kuvan voi valita eri kategorioista. Kategoria valitaan pudotusvalikosta. \texttt{SelectSymbolModal}-näkymän komponenttitiedosto sisältää kuvan tallentamiseen ja ponnahdusikkunan sulkemiseen liittyvät aliohjelmat. FreeAAC-ohjelmiston kuvakirjasto koostuu Papunet-sivuston tarjoamasta Creative Commons -lisenssin alaisesta kuvapankista.
 
 Kortteja voidaan poistaa erillisessä CardDelete-näkymässä. CardDelete-näkymä koostuu pudotusvalikosta, josta voidaan valita mikä kortti halutaan poistaa sekä vahvistuspainikkeesta. Korttilistaus ladataan \texttt{CardDataProvider}-luokan avulla ja myös poistokomento kulkee samaa reittiä pitkin.
 
