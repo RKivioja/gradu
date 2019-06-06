@@ -64,11 +64,51 @@ Microsoftin ylläpitämä avoimen lähdekoodin ohjelmointikieli.
 
 \item[\textbf{Avusteinen kommunikaatio}]
 
- Kommunikointia, jossa puhetta joko tukee tai korvaa jokin tekninen apuväline tai muu keino kuten viittomakieli.
+Kommunikointia, jossa puhetta joko tukee tai korvaa jokin tekninen apuväline tai muu keino kuten viittomakieli.
 
 \item[\textbf{Electron}] 
 
 GitHubin ylläpitämä progressiivisten WWW-sovellusten kehittämiseen tarkoitettu avoimen lähdekoodin ohjelmistokehys.
+
+\item[\textbf{Apache Cordova}] 
+
+Avoimen lähdekoodin sovelluskehitysympäristö, joka toimii linkityskerroksena WWW-ohjelmistokehyksien ja natiivien ohjelmistokehyksien välisenä linkityskerroksena.
+
+\item[\textbf{GPS}] 
+
+Yhdysvaltain puolustusministeriön ylläpitämä satelliittipaikannusjärjestelmä.
+
+\item[\textbf{MVC-arkkitehtuuri}] 
+
+Ohjelmistoarkkitehtuurityyli, jossa ohjelma on jaettu kolmeen osaan: malli, näkymä ja ohjain/kontrolleri.
+
+\item[\textbf{Web-komponentit}] 
+
+Sateenvarjotermi, jolla tarkoitetaan neljää WWW-selainten standardia: kustomoitavat elementit, varjo-dokumenttioliomalli, mallit ja HTML-tuonti.
+
+\item[\textbf{Kustomoitavat elementit}] 
+
+HTML-standardielementtien ulkopuolisia elementtejä, joita voidaan käyttää standardielementtien seassa.
+
+\item[\textbf{Varjo-dokumenttioliomalli}] 
+
+Piiloitettu osa WWW-sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille..
+
+\item[\textbf{HTML-mallit}] 
+
+HTML-palasia, jotka eivät lataudu välittömästi HTML-sivun auetessa, vaan ne voidaan aktivoida myöhemmin.
+
+\item[\textbf{HTML-tuonti}] 
+
+Tapa ladata HTML-, CSS- ja JavaScript-tiedostoja yhtenäisinä osina.
+
+\item[\textbf{CSS}] 
+
+Cascading Style Sheets eli WWW-sivujen tyyliohjeet, joilla voidaan säätää sivun ulkoasua. 
+
+\item[\textbf{Creative Commons -lisenssi}] 
+
+Tekijänoikeuslisenssi, joka antaa mahdollisuuden levittää ja välittää teosta eteenpäin, tehdä teoksesta kopioita, sekä tehdä siitä johdannaisteoksia. Creative Commons -lisenssiä voidaan kuitenkin rajoittaa lisäehdoilla.
 
 \end{thetermlist}
 
@@ -78,7 +118,7 @@ GitHubin ylläpitämä progressiivisten WWW-sovellusten kehittämiseen tarkoitet
 
 Sosiaalinen kanssakäyminen on ihmisen perustarve ja jokaisella ihmisellä on sisäsyntyinen tarve tulla nähdyksi ja huomioiduksi. Ihmisillä on useita eri tapoja viestiä tahdollisesti ja tahtomattaan muiden ympärillään olevien ihmisten kanssa. Sosiaalisuus ja yhteistyö ovat ihmislajin määrittävimpiä tekijöitä. Siksi puhekyvyn menettäminen tai ilman sitä koko elämän eläminen on hyvin suuri haaste ihmisen elämässä. Teknologialla kuitenkin voidaan merkittävästi helpottaa tästä vaikeasta ongelmasta kärsivien ihmisten elämää.
 
-Tässä pro gradu -työssä tutkitaan progressiivisia WWW-sovelluksia, avusteista kommunikaatiota ja niiden yhteensovittamista. Aihepiiriä ei juurikaan ole aiemmin tutkittu, joten suunnittelutieteellinen tutkimus valikoitui sen takia tämän pro gradu -työn tutkimustyypiksi. Tutkimustietoa kerättiin varsin paljon muiden kuin tietoteknisten julkaisujen aihepiiristä ja sitä jatkojalostettiin tämän tutkimuksen avulla ohjelmistotekniikan käyttötarpeisiin.
+Tässä pro gradu -työssä tutkitaan progressiivisia WWW-sovelluksia, avusteista kommunikaatiota ja niiden yhteensovittamista. Aihepiiriä ei juurikaan ole aiemmin tutkittu, joten suunnittelutieteellinen tutkimus valikoitui sen takia tämän pro gradu -työn tutkimustyypiksi. Tutkimustietoa kerättiin varsin paljon muiden kuin tietoteknisten julkaisujen aihepiiristä ja sitä jatkojalostettiin tämän tutkimuksen avulla ohjelmistotekniikan käyttötarpeisiin. Varsinaisen tutkimusartefaktin kehittäminen lisäsi työmäärää tuntuvasti, mutta ilman sitä tätä tutkimusta olisi ollut hankala toteuttaa.
 
 Idea tähän pro gradu -työhön syntyi, kun osallistuin Keski-Suomen Autismiliiton kokoontumisen järjestämiseen vuonna 2015. Vapaamuotoisessa kokoontumisessa pääsin näkemään miten autistiset nuoret käyttävät erilaisia apuvälineitä muiden ihmisten kanssa kommunikointiin. Osa nuorista käytti kommunikointiin paperisia apuvälineitä sekä henkilökohtaisen avustajan tukea, mutta osa pystyi kommunikoimaan itsenäisesti tablettitietokoneen avulla. Käyttäjien mielestä avusteisen kommunikaation ohjelmistojen laadussa ja saatavuudessa eri laitteille kuitenkin oli vielä paljon parantamisen varaa.
 
@@ -111,7 +151,6 @@ Puhetta tukeva ja korvaava kommunikaatio voidaan jakaa kahtia: avustamattomaan j
 \textbf{Avustettu puhetta tukeva ja korvaava kommunikaatio} tarkoittaa puolestaan kommunikaatiota, jossa käytetään jotain apuvälinettä. Apuvälineenä voi olla esimerkiksi valokuvia, kommunikaatiotaulu tai elektroninen laite. Tämän perusteella avustettu puhetta tukeva ja korvaava kommunikaatio voidaan jakaa edelleen kahdeksi ryhmäksi: matalan teknologian ja korkean teknologian puhetta tukevaan ja korvaavaan kommunikaatioon. Käyttäjä ei välttämättä käytä vain yhtä edellä mainituista tyypeistä. \parencite[]{AAC-conditional-use}
 
 Puhetta tukevaa ja korvaavaa kommunikaatiota voidaan tarjota puheen muodostamisen ongelmista kärsiville myös tietoteknisten sovellusten avulla, joiden kautta käyttäjä kirjoittaa joko suoraan tekstiä tai kommunikoi valitsemalla symboleja. Esimerkiksi autistisilla käyttäjillä on tyypillisesti hyvin henkilö- ja yksityiskohtaisia tarpeita puhetta tukevalle ja korvaavalle kommunikaatiolle, joten tietoteknisten sovellusten suhteellisen helppo muokattavuus puoltaa niiden käyttöä perinteisempien puhetta ja kommunikointia korvaavien apuvälineiden sijaan.
-
 \label{AAC-symbols}
 Puhetta tukevat ja korvaavat kommunikointisovellukset käyttävät yleisimmin symboleja. Usein symbolit ryhmitellään kortteihin, joita on helppo vaihtaa tilanteeseen sopivaksi\label{AAC-cards}. Autisteille tyypillistä on vahva visuaalis-avaruudellinen hahmotuskyky, joten tutkimuksen mukaan piirroksiin ja valokuviin liitetyt merkitykset ovat tälle ryhmälle luonteva tapa kommunikoida. Vaughnin ja Hornerin tutkimuksessa \parencite[]{concrete-versus-verbal} Karl-nimisen autistisen koehenkilön haastava käytös ja aggressio vähenivät, kun pelkästään verbaalisesti annettujen ruokavaihtoehtojen rinnalle tuotiin kuvat ruoka-annoksista. Symbolipohjaiselle puhetta tukevalle ja korvaavalle kommunikaatiolle on siis sekä tutkimuspohjaista näyttöä että käytännön kokemuksiin perustuvaa kannustetta.
 
@@ -119,7 +158,7 @@ Puhetta tukevaan ja korvaavaan kommunikointisovellukseen voidaan liittää myös
 
 Ääniominaisuuden lisäämisellä avustetusta puhetta tukevasta ja korvaavasta kommunikaatiosta voidaan tehdä \textbf{monimodaalista} (engl. \textit{multimodal}). Monimodaalisuus tarkoittaa usean eri kommunikaatiotavan kautta tapahtuvaa kommunikaatiota. Monimodaalinen kommunikaatio voi tapahtua eri tapojen kautta yhtäaikaisesti tai peräkkäin. Puhetta tukevasta ja korvaavasta kommunikaatiosta kannattaa tehdä monimodaalista useista eri syistä. Ensinnäkin suurin osa kaikesta kommunikaatiosta on monimodaalista, sillä toiselle ihmiselle puhuttaessa on tavallista selkeyttää sanomaa ilmein ja elein. Toiseksi puhetta tukevaa ja korvaavaa kommunikaatiota käyttävä henkilön tulee useasti kommunikoida muiden puhetta tukevaa ja korvaavaa kommunikaatiota käyttävien henkilöiden kanssa, jolloin vaihtoehdoista on hyötyä. Kolmas merkittävä syy on se, että eri puhetta tukevissa ja korvaavissa kommuunikaatiotavoissa on vahvuuksia ja heikkouksia, joten eri kommunikaatiotapoja sekoittamalla voidaan korvata yksittäisen kommunikaatiotavan heikkouksia. \parencite[]{AAC-conditional-use}
 
-Puhetta tukevaan ja korvaavaan kommunikaatioon liittyy useita haasteita. Koska syyt ja tarpeet puhetta korvaavalle kommunikaatiolle ovat hyvin moninaisia, yhtenäisiä käytäntöjä on vaikea muodostaa ja tarve henkilökohtaiselle räätälöinnille on suurta. Lisäksi puhetta tukevaa ja korvaavaa kommunikaatiota tarvitsevien henkilöiden määrä ei ole väestötasolla kovin suuri. \colorbox{YellowGreen}{// TODO: lähde?} Tämän takia puhetta tukevia ja korvaavien kommunikointisovellusten tuottamiseen on hyvin vähän kaupallista kannustetta.
+Puhetta tukevaan ja korvaavaan kommunikaatioon liittyy useita haasteita. Koska syyt ja tarpeet puhetta korvaavalle kommunikaatiolle ovat hyvin moninaisia, yhtenäisiä käytäntöjä on vaikea muodostaa ja tarve henkilökohtaiselle räätälöinnille on suurta. Lisäksi puhetta tukevaa ja korvaavaa kommunikaatiota tarvitsevien henkilöiden määrä ei ole väestötasolla kovin suuri: arviolta 1,3 \% yhdysvaltalaisista ei kykene kommunikoimaan puheen välityksellä \parencite[]{AAC-support}. Toisessa tutkimuksessa Iso-Britannian kansalaisista 0,5 \% arvioitiin jonkinlaisten avusteisen kommunikaation tarpeessa oleviksi \parencite[]{AAC-need}. Tämän takia puhetta tukevia ja korvaavien kommunikointisovellusten tuottamiseen on hyvin vähän kaupallista kannustetta.
 
 \section{Progressiiviset WWW-sovellukset}
 
@@ -127,20 +166,17 @@ Puhetta tukevaan ja korvaavaan kommunikaatioon liittyy useita haasteita. Koska s
 
 Progressiivisten sovellusten ilmeisin hyöty on alustariippumattomuus. Samaa sovellusta voidaan käyttää kaikissa ympäristöissä, jotka tukevat moderneja WWW-selaimia. Eri versioita samasta sovelluksesta ei tarvitse kehittää ja ylläpitää erikseen, joten progressiivisten sovellusten avulla voidaan säästää kalliita työresursseja. Hyvä esimerkki progressiivisten sovellusten käyttöä tukevasta markkinatilanteesta on nykyisten älytelevisioiden kirjava tarjonta, sillä valmistajien omien käyttöjärjestelmien lisäksi muunmuassa Apple, Amazon ja Roku kehittävät televisioon liitettäviä laitteita, joiden avulla käyttäjä voi ajaa erilaisia sovelluksia. Näiden kaikkien laitteiden tukeminen olisi hyvin vaikeaa perinteisten sovellusten avulla. \parencite[]{frankston-pwa}
 
-Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen \parencite[]{google-pwa-marketing} mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Yrityksen mukaan luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Google myös väittää, että progressiivisten sovellusten kohdalla käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä ja sovellusmaisuus puolestaan parantaa käyttäjän immersiota.
+Tällä hetkellä erityisesti Google panostaa progressiivisten sovellusten kehittämiseen Chrome-selaimen kehitysympäristön yhteydessä. Googlen \parencite[]{google-pwa-marketing} mukaan progressiiviset sovellukset tarjoavat perinteisiin WWW-sovelluksiin verrattuna enemmän luotettavuutta, käytettävyyttä ja monipuolisempaa sisältöä. Yrityksen mukaan luotettavuus paranee, sillä progressiiviset sovellukset pystyvät tarjoamaan sisältöä myös ilman verkkoyhteyttä. Google myös väittää, että progressiivisten WWW-sovellusten kohdalla käytettävyyttä parantaa nopeammin käyttäjän komentoihin vastaava käyttöliittymä ja sovellusmaisuus puolestaan parantaa käyttäjän immersiota.
 
 Googlen Chrome-selain on rakennettu avoimen lähdekoodin Chromium-selaimen päälle. Yksi merkittävimmistä Chromium-selaimeen pohjautuvista progressiivisten WWW-sovellusten kehitykseen tarkoitetuista kehyksistä on Electron. Electron on Microsoftin nykyisin omistaman GitHubin kehittämä ja ylläpitämä. Esimerkkejä Electron-sovelluksista ovat Discord, Slack ja Visual Studio Code. Microsoftin päätös muuttaa Edge-selain Chromium-pohjaiseksi saattoi johtua ainakin osittain progressiivisten WWW-sovellusten vaatimista ominaisuuksista kuten tehokkaammasta muistinhallinnasta.
 
-Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat olleet positiivisia. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% käyttäjäsessiota kohden, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta muistitilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että vuonna 2017 45\% sen sisällöstä ladattiin 2G-verkon läpi. \parencite[]{beginners-guide-pwa}   
-\colorbox{YellowGreen}{// TODO: Kriittisempi ote.}
+Twitter, AliExpress ja Lancôme ottivat vuonna 2017 käyttöön progressiiviset sovellukset ja julkaistut tulokset ovat olleet positiivisia AppInstitute-sivuston raportin mukaan. Twitter onnistui uuden progressiivisen sovelluksensa ansiosta lisäämään sivupäivityksiä 65\% käyttäjäsessiota kohden, lisäämään lähetettyjen Twitter-viestien määrää 75\% ja vähentämään käytön lopettamista 20\%. Lisäksi raportin mukaan uusi sovellus käytti vähemmän kuin 3\% natiivin sovelluksen vaatimasta muistitilasta ja vähensi datan käyttöä 70\%. Datan käytön määrän vähentyminen on erityisen merkittävää, koska Twitter arvioi, että vuonna 2017 45\% sen sisällöstä ladattiin 2G-verkon läpi. \parencite[]{beginners-guide-pwa}
 
-AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. Edellä mainitut tulokset eivät kuitenkaan ole suoraan yleistettävissä yleisemmin progressiivisten sovellusten vaikutuksiin, sillä niiden otoskoko on erittäin pieni. \parencite[]{beginners-guide-pwa}
+Raportin mukaan AliExpress ja Lancôme ovat molemmat verkkokauppoja, joilla on ollut ongelmia mobiiliverkkokauppojensa tehokkuuden kanssa. Progressiiviseen sovellukseen siirtymällä AliExpress lisäsi uusien asiakkaiden myyntitapahtumien määrää 104\%:lla ja Lancôme 17\%:lla. Lisäksi AliExpress tuplasi sivunlatausten määrän sekä kasvatti sessioiden pituutta 74\%:lla. Lancôme puolestaan onnistui lisäämään iOS-sessioiden määrää 53\%:lla. Edellä mainitut tulokset eivät kuitenkaan ole suoraan yleistettävissä yleisemmin progressiivisten sovellusten vaikutuksiin, sillä niiden otoskoko on erittäin pieni. \parencite[]{beginners-guide-pwa}
 
 Progressiivisten WWW-sovellusten käyttö ei kuitenkaan ole ongelmatonta. Ensinnäkin, koska progressiivisten WWW-sovellusten hyödyntämät teknologiset kehitysaskeleet ja niiden käyttöön kannustavat taloudelliset tekijät ovat verrattain tuoreita, vaaditaan kehittäjiltä paljon uusien asioiden opettelua sekä vakiintumattomien työkalujen ja kehysten käyttämistä kehitystyössä. Toinen merkittävä haaste voi olla tiedon tallentaminen, sillä selaimen toimintaan pohjautuvalle sovellukselle ei ole varattu tietoturvan takia samoja oikeuksia kuin natiiveille sovelluksille. Kolmas ongelma voi tulla eteen käytettävyydessä, sillä selaimessa toimivan sovelluksen vaatimat resurssit saattavat hidastaa sovelluksen toimintaa. \parencite[]{pwa-design-challenges}
 
-Myös progressiivisten sovellusten keskusmuistinkäyttöä on kritisoitu. Progressiiviset sovellukset vaativat perinteisiä sovelluksia enemmän muistia, koska niitä ajetaan selaimen päällä. On vaikea arvioida, kuinka suuri osa muistinkäytöstä johtuu sovelluksen toteutuksesta ja kuinka suuri osa itse ohjelmistokehyksestä, mutta hyvin yksinkertaisissakin testeissä on saatu tuloksia, jotka viittaavat moninkertaiseen keskusmuistinkäyttöön natiiveihin sovelluksiin verrattuna \parencite[]{electron-memory-usage}.
-  
-\colorbox{YellowGreen}{// TODO: selaimen päällä on puhekielisyys}
+Myös progressiivisten sovellusten keskusmuistinkäyttöä on kritisoitu. Progressiiviset WWW-sovellukset vaativat perinteisiä sovelluksia enemmän muistia, koska niitä ajetaan selainympäristössä, jossa pelkästään sovelluksen lisäksi täytyy käyttää resursseja myös selainalustan tarpeisiin. On vaikea arvioida, kuinka suuri osa muistinkäytöstä johtuu sovelluksen toteutuksesta ja kuinka suuri osa itse ohjelmistokehyksestä, mutta hyvin yksinkertaisissakin testeissä on saatu tuloksia, jotka viittaavat moninkertaiseen keskusmuistinkäyttöön natiiveihin sovelluksiin verrattuna \parencite[]{electron-memory-usage}.
 
 Suuremman muistinkäytön lisäksi myös energiankulutus saattaa olla korkeampi progressiivissa WWW-sovelluksissa. Ohjelmistoanalyyttiikkatyökalua tarjoavan Greenspectorin mukaan \parencite[]{pwa-power-usage} Twitterin progressiivisen WWW-sovelluksen energiankulutus valmiustilassa on 12-25\% korkeampi asetuksista riippuen. Greenspectorin motiivit saattavat kuitenkin olla ristiriidassa puolueettoman ohjelmistoanalyysin kanssa, joten tulokset eivät ole välttämättä täysin luotettavia. Voidaan kuitenkin olettaa, että ainakin lisääntynyt muistinkäyttö aiheuttaa myös lisääntynyttä energiankulutusta ja täten haittaa mobiililaitteiden pitkäaikaista käyttöä.
 
@@ -148,7 +184,7 @@ Progressiiviset WWW-sovellukset sopivat siis parhaiten tilanteisiin, joissa väh
 
 \section{Ionic-ohjelmistokehyksen rakenne ja ominaisuudet}
 
-Ionic on yksi suosituimpia progressiivisten sovellusten kehittämiseen tarkoitetuista ohjelmistokehyksistä. \colorbox{YellowGreen}{// TODO: Lähde} Electronin ollessa työasemille suunnattu kehys, Ionic keskittyy mobiililaitteiden vaatimuksiin. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä suosituimpia frontend-ohjelmistokehyksiä. Aiemmin Ionic tuki vain Angular-ohjelmistokehystä, mutta Ionicin versiosta 4 lähtien kehittäjällä on mahdollisuus valita itse käyttämänsä frontend-kehys. Ionic on MIT-lisenssin alainen ja täten avointa lähdekoodia. Angular-ohjelmistokehys perustuu TypeScript-ohjelmointikieleen. Ionicin perusrakenne on kuvattuna kaaviossa \ref{fig:ionic-structure}. Ohjelmistokehyksenä Ionicin päämäärä on tarjota kehittäjälle oikealta näyttävä ja visuaalisesti toimiva sovellus. Sen ei ole tarkoitus korvata tyypillisiä JavaScript-kirjastoja, vaan se toimii niiden tukena. \parencite[]{ionic-documentation}
+Ionic on yksi suosituimpia progressiivisten sovellusten kehittämiseen tarkoitetuista ohjelmistokehyksistä \parencite[]{ionic-marketshare}. Electronin ollessa työasemille suunnattu kehys, Ionic keskittyy mobiililaitteiden vaatimuksiin. Ionic on avointa lähdekoodia ja hyödyntää Apache Cordova -ympäristöä sekä suosituimpia frontend-ohjelmistokehyksiä. Aiemmin Ionic tuki vain Angular-ohjelmistokehystä, mutta Ionicin versiosta 4 lähtien kehittäjällä on mahdollisuus valita itse käyttämänsä frontend-kehys. Ionic on MIT-lisenssin alainen ja täten avointa lähdekoodia. Angular-ohjelmistokehys perustuu TypeScript-ohjelmointikieleen. Ionicin perusrakenne on kuvattuna kaaviossa \ref{fig:ionic-structure}. Ohjelmistokehyksenä Ionicin päämäärä on tarjota kehittäjälle oikealta näyttävä ja visuaalisesti toimiva sovellus. Sen ei ole tarkoitus korvata tyypillisiä JavaScript-kirjastoja, vaan se toimii niiden tukena. \parencite[]{ionic-documentation}
 
 \begin{figure}[h]\centering
   \includegraphics[height=9cm,keepaspectratio]{ionic-structure}
@@ -179,7 +215,7 @@ Angularin komponenttipohjainen rakenne perustuu kolmeen hiljattain ilmestyneesee
 
 \textbf{Kustomoitavat HTML-elementit} ovat HTML-standardielementtien ulkopuolisia elementtejä, joita voidaan käyttää standardielementtien seassa. Kustomoitava HTML-elementti irroittaa komponentin sivun muista osista, joten se mahdollistaa komponentin eristämisen. 
 
-\textbf{Varjo-dokumenttioliomalli} on piiloitettu osa sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille. Varjo-dokumenttioliomallin elementit ja tyylit eivät vaikuta varjo-dokumenttioliomallin ulkopuolisiin alueisiin ja vastavuoroisesti muut sivun elementit ja tyylit eivät vaikuta varjo-dokumenttioliomallin alaisiin osiin. Tätä eristettyä aluetta voidaan täten käyttää komponentin piirtämiseen. 
+\textbf{Varjo-dokumenttioliomalli} on piiloitettu osa WWW-sivua, jolla on oma eristetty ympäristö skripteille, CSS-tyylitiedostoille ja HTML-elementeille. Varjo-dokumenttioliomallin elementit ja tyylit eivät vaikuta varjo-dokumenttioliomallin ulkopuolisiin alueisiin ja vastavuoroisesti muut sivun elementit ja tyylit eivät vaikuta varjo-dokumenttioliomallin alaisiin osiin. Tätä eristettyä aluetta voidaan täten käyttää komponentin piirtämiseen. 
 
 \textbf{Mallit} ovat HTML-palasia, jotka eivät lataudu välittömästi HTML-sivun auetessa, vaan ne voidaan aktivoida JavaScriptillä myöhemmin. Malleista on useita toteutuksia eri kehyksissä, mutta Web-komponentit standardisoivat mallien rakentamisen ja tarjoavat suoran tuen niiden hyödyntämiselle selaimessa. Malleja käyttämällä varjo-dokumenttioliomalliin piilotetusta sisällöstä voidaan tehdä dynaamista. 
 
@@ -201,29 +237,28 @@ Uudelleenkäytettävyyden lisäksi TypeScriptin luokkien avulla saadaan aikaan m
 
 JavaScriptistä poiketen TypeScript on staattisesti tyypitetty kieli. Tyypitys tarkoittaa sitä, että muuttujien ja olioiden tyypit täytyy määritellä ohjelmakoodissa. Dynaamisesti tyypitetyissä kielissä kuten JavaScriptissä muuttujien tyypit päätellään käännöksen aikana. Staattisen tyypityksen avulla ohjelmoijan on helpompi nähdä suoraan, että ohjelman tieto on oikean tyyppistä sitä käsitellessä. Iso osa tyyppivirheistä jää tällöin kiinni jo ennen kääntämistä kun taas JavaScriptilla ohjelmoidun ohjelman kohdalla näin ei käy. Toisaalta vahva tyypitys aiheuttaa lisätyötä tyyppimuunnosten takia.
 
-\section{Käytettävyyden perusteet}
-\colorbox{YellowGreen}{// TODO: Parempi nimi luvulle?}
+\section{Käytettävyyden laatutekijät}
 
-Kaikkiin ihmisen tuottamiin esineisiin ja asiohin liittyy tiedostettu tai tiedostamaton suunnitteluprosessi. Vaikka ihmiset ovat suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. \colorbox{YellowGreen}{// TODO: Täsmennä} Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Jokapäiväisessä kommunikaatiossa avustavan sovelluksen suunnittelussa tulee olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
+Kaikkiin ihmisen tuottamiin esineisiin ja asiohin liittyy tiedostettu tai tiedostamaton suunnitteluprosessi. Vaikka ihmiset ovat suorittaneet aktiivista suunnittelua esihistoriallisista ajoista saakka, on tietoisten suunnitteluprosessien tutkimus verrattain tuoretta. Nykyinen suunnittelun kenttä voidaan jakaa karkeasti kolmeen eri osaan: teollinen suunnittelu, käytettävyyssuunnittelu ja kokemussuunnittelu \parencite[]{norman-doet}. Jokapäiväisessä kommunikaatiossa avustavan sovelluksen suunnittelussa tulee olla erityisen kiinnostuneita käytettävyyssuunnitelusta.
 
 Hyvin suunniteltu sovellus on miellyttävä käyttää ja ohjaa käyttäjää käyttämään sovellusta oikealla tavalla. Tämä on erityisen tärkeää sovelluksissa, joita on tarkoitus käyttää arkisissa tilanteissa, jotka vaativat reaaliaikaista reagointia muiden ihmisten kommunikointiin. Avustettua kommunikaatiota käyttävillä ryhmillä on myös omia käytettävyystarpeita, joiden huomioimista varten täytyy ymmärtää käytettävyyttä tavallista laajemmassa kontekstissa.
 
 \label{general-usability-requirements}
-Ohjelman käyttöliittymän \textbf{käytettävyys} (engl. \textit{usability}) on laadullinen määre, joka \colorbox{YellowGreen}{// TODO: lähde} voidaan jakaa viiteen laadulliseen osa-alueeseen: opittavuus (engl. \textit{learnability}), tehokkuus (engl. \textit{efficiency}), muistettavuus (engl. \textit{memorability}), virhealttius (engl. \textit{errors}) ja tyydyttävyys (engl. \textit{satisfaction}).
+Ohjelman käyttöliittymän \textbf{käytettävyys} (engl. \textit{usability}) on laadullinen määre, joka voidaan jakaa viiteen laadulliseen osa-alueeseen: opittavuus (engl. \textit{learnability}), tehokkuus (engl. \textit{efficiency}), muistettavuus (engl. \textit{memorability}), virhealttius (engl. \textit{errors}) ja tyydyttävyys (engl. \textit{satisfaction}). \parencite[]{usability-101}
 
-\colorbox{YellowGreen}{// TODO: Jaa nämä kategoriat alla oleviin kappaleisiin}
+\textbf{Opittavuus} tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Toisella tapaa ilmaistuna, opittavuus tarkoittaa ohjelmiston kykyä opettaa käyttäjälleen oikea tapa käyttää ohjelmistoa. Opittavuutta vastaava termi on \textbf{löydettävyys} (engl. \textit{discoverability}). Opittavuutta lisääviä ominaisuuksia ovat muunmuassa muistettavuus, loogisuus, toistettavuus ja yhdenmukaisuus. Opittavuudeltaan hyvä ohjelma ilmaisee käyttäjälleen tehokkaasti mitä toiminnallisuuksia se sisältää, mitä eri toiminnot tarkoittavat ja kuinka eri toiminnallisuuksia käytetään. \parencite[]{improving-learnability}
 
-\textbf{Opittavuus} tarkoittaa sitä miten helppo käyttöliittymää on oppia käyttämään. Käyttöliittymän \textbf{tehokkuus} määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. \textbf{Muistettavuus} on määre, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. \textbf{Virhealttiudella} tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. \textbf{Tyydyttävyys} kertoo, miten tyytyväinen käyttäjä on käyttöliittymään. On olemassa muitakin laadullisia määreitä, kuten \textbf{käyttökelpoisuus} (engl. \textit{utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (engl. \textit{usefulness}). \parencite[]{usability-101}
+Käyttöliittymän \textbf{tehokkuus} määrittyy siitä miten nopeasti käyttäjät voivat suorittaa ohjelman toimintoja sen jälkeen kun ohjelman käyttöliittymää on opittu käyttämään. Se on määritelmä tai mitta sille, miten helposti ja nopeasti haluttu toiminto voidaan suorittaa tuttua käyttöliittymää käyttämällä. Tehokkuutta voidaan suoraan mitata esimerkiksi kulunutta aikaa tai välivaiheiden määrää mittaamalla.
 
-Lyhyesti ilmaistuna, opittavuus tarkoittaa ohjelmiston kykyä opettaa käyttäjälleen oikea tapa käyttää ohjelmistoa. Opittavuutta vastaava termi on \textbf{löydettävyys} (engl. \textit{discoverability}). Opittavuutta lisääviä ominaisuuksia ovat muunmuassa muistettavuus, loogisuus, toistettavuus ja yhdenmukaisuus. Opittavuudeltaan hyvä ohjelma ilmaisee käyttäjälleen tehokkaasti mitä toiminnallisuuksia se sisältää, mitä eri toiminnot tarkoittavat ja kuinka eri toiminnallisuuksia käytetään. \parencite[]{improving-learnability}
+\textbf{Muistettavuus} on määre, jonka avulla arvioidaan miten nopeasti käyttäjä muistaa toiminnot ohjelman käyttämisen lopettamisen ja uudelleen aloittamisen jälkeen. Se mittaa sitä, miten helppo käyttäjän on käyttää ohjelmistoa sen jälkeen, kun ohjelmiston edellisestä käyttökerrasta on kulunut aikaa. Muistettavuutta on hankala mitata suoraan tyypillisten käyttäjätutkimusmetodien avulla, mutta esimerkiksi Affordable Usability -sivuston \parencite[]{affordable-usability} mukaan sitä voidaan WWW-sovellusten yhteydessä tutkia erilaisten verkkosivuanalytiikkatyökalujen avulla.
 
-Tehokkuus on määritelmä tai mitta sille, miten helposti ja nopeasti haluttu toiminto voidaan suorittaa tuttua käyttöliittymää käyttämällä. Tehokkuutta voidaan suoraan mitata esimerkiksi kulunutta aikaa tai välivaiheiden määrää mittaamalla. 
+\textbf{Virhealttiudella} tarkoitetaan käyttäjien tekemien virheiden määrää ja niiden laatua sekä kuinka helppoa niistä selviäminen on. Käyttäjien tekemien virheiden määrän minimointi on yksi käyttettävyyssuunnittelun tärkeimmistä tavoitteista. Don Normanin \parencite[]{norman-doet} mukaan  käyttäjää ei juuri koskaan pitäisi syyttää tekemistään virheistä vaan suurin osa käyttövirheistä johtuu huonosta suunnittelusta.
 
-Muistettavuus mittaa sitä, miten helppo käyttäjän on käyttää ohjelmistoa sen jälkeen, kun ohjelmiston edellisestä käyttökerrasta on kulunut aikaa. Muistettavuutta on hankala mitata suoraan tyypillisten käyttäjätutkimusmetodien avulla, mutta esimerkiksi Affordable Usability -sivuston \parencite[]{affordable-usability} mukaan sitä voidaan WWW-sovellusten yhteydessä tutkia erilaisten verkkosivuanalytiikkatyökalujen avulla.
+\textbf{Tyydyttävyys} kertoo, miten tyytyväinen käyttäjä on käyttöliittymään. Tyydyttävyys mittaa sitä miten hyvin käyttöliittymä ottaa huomioon käyttäjän tarpeet ja miten miellyttävää käyttö on. Tyydyttävyyttä ymmärtääkseen täytyy tietää, että käyttöliittymä ja käyttäjäkokemus ovat kaksi eri asiaa. Käyttäjäkokemus ja sen tyydyttävyys tai tyydyttämättömyys on seurausta useasta eri tekijästä. 
 
-Käyttäjien tekemien virheiden määrän minimointi on yksi käyttettävyyssuunnittelun tärkeimmistä tavoitteista. Don Normanin \parencite[]{norman-doet} mukaan  käyttäjää ei juuri koskaan pitäisi syyttää tekemistään virheistä vaan suurin osa käyttövirheistä johtuu huonosta suunnittelusta.
+Visuaalinen ulkoasu on osatekijä käyttöliittymän tyydyttävyyttä arvioidessa, mutta myös halutuilla ominaisuuksilla ja niiden toimivuudella on merkitystä tyydyttävyyteen. Jos käyttäjä ei löydä haluamiaan toimintoja, osa halutuista ominaisuuksista puuttuu tai ne on hankalta löytää, ohjelmiston tyydyttävyys on matala. Tyydyttävyys on viidestä edellä listatusta käytettävyystekijästä kaikista subjektiivisin.
 
-Tyydyttävyys mittaa sitä miten hyvin käyttöliittymä ottaa huomioon käyttäjän tarpeet ja miten miellyttävää käyttö on. Tyydyttävyyttä ymmärtääkseen täytyy tietää, että käyttöliittymä ja käyttäjäkokemus ovat kaksi eri asiaa. Käyttäjäkokemus ja sen tyydyttävyys tai tyydyttämättömyys on seurausta useasta eri tekijästä. Visuaalinen ulkoasu on osatekijä käyttöliittymän tyydyttävyyttä arvioidessa, mutta myös halutuilla ominaisuuksilla ja niiden toimivuudella on merkitystä tyydyttävyyteen. Jos käyttäjä ei löydä haluamiaan toimintoja, osa halutuista ominaisuuksista puuttuu tai ne on hankalta löytää, ohjelmiston tyydyttävyys on matala. Tyydyttävyys on viidestä edellä listatusta käytettävyystekijästä kaikista subjektiivisin.
+On olemassa muitakin laadullisia määreitä, kuten \textbf{käyttökelpoisuus} (engl. \textit{utility}), jolla määritellään ohjelman tarjoamien eri ominaisuuksien määrää ja vertaamista haluttuihin ominaisuuksiin. Käytettävyyttä ja käyttökelpoisuutta yhtä aikaa tarkistelemalla saadaan aikaan kuva ohjelman \textbf{hyödyllisyydestä} (engl. \textit{usefulness}). \parencite[]{usability-101}
 
 \subsection{Käytettävyys ja avusteinen kommunikaatio}
 
@@ -240,7 +275,7 @@ Autismi vaikuttaa monella tapaa ihmisen kykyyn havainnoida ympäristöä ja sen 
 Ilmaiseksi tarjolla olevia avusteisen kommunikaation mobiilisovelluksia tutkineen tutkimuksen \parencite[]{autism-mobile-usability} mukaan autistisilla käyttäjillä on ominaisuus- ja käytettävyystarpeita, joita tarjolla olleissa sovelluksissa ei ole. Tutkimuksen mukaan mahdollisuus kuvien ottamiseen sekä äänen tallentamiseen on erittäin hyödyllinen ominaisuus avusteisia kommunikaatiosovelluksia käyttäville autisteille. Kuvat eri sijainneista ja ihmisistä auttavat päivittäisessä kommunikaatiossa huomattavasti. \label{AAC-photos}
 
 \label{AAC-settings}
-Kommunikaatiosovelluksessa tulisi myös olla mahdollisuus säätää ohjelman asetuksia hallintapaneelin kautta. Hallintapaneelin tulisi olla salasanasuojattu, jotta käyttäjä ei pääse vahingossa poistamaan tärkeitä asetuksia tai kuvia sovelluksesta. Yhteen näyttöön ei saa mahduttaa liian paljon informaatiota, sillä autismiin liittyy usein aistiyliherkkyyttä \colorbox{YellowGreen}{// TODO: lähde}, mikä heikentää autistisen henkilön kykyä ymmärtää isoja määriä informaatiota kerrallaan. Tämän takia esimerkiksi kommunikaatiosovelluksen korteilla olevien kuvien määrää tulisi pystyä säätämään sovelluksen hallintapaneelista. \label{AAC-cardsize}
+Kommunikaatiosovelluksessa tulisi myös olla mahdollisuus säätää ohjelman asetuksia hallintapaneelin kautta. Hallintapaneelin tulisi olla salasanasuojattu, jotta käyttäjä ei pääse vahingossa poistamaan tärkeitä asetuksia tai kuvia sovelluksesta. Yhteen näyttöön ei saa mahduttaa liian paljon informaatiota, sillä autismiin liittyy usein aistiyliherkkyyttä \parencite[]{autism-sensory}, mikä heikentää autistisen henkilön kykyä ymmärtää isoja määriä informaatiota kerrallaan. Tämän takia esimerkiksi kommunikaatiosovelluksen korteilla olevien kuvien määrää tulisi pystyä säätämään sovelluksen hallintapaneelista. \label{AAC-cardsize}
 
 \label{AAC-soundsynth}
 Kommunikaatiosovellusten ääniominaisuus voi auttaa käyttäjää oppimaan sovelluksen käyttöä nopeammin. Äänisyntetisaattoreita Martin-nimisen pojan avulla tutkineessa tutkimuksessa \parencite[]{voca-efficacy} havaittiin, että Martin oppi muodostamaan uusia lauseita helpommin, kun avusteisen kommunikaation sovellus luki kirjoitetun tekstin ääneen. Tutkimuksen luotettavuutta kuitenkin heikentää se, että tutkimuksessa tutkittiin vain yhden koehenkilön oppimistuloksia.
@@ -313,7 +348,7 @@ Ohjelmiston näkymät sijaitsevat \texttt{Pages}-kansiossa. FreeAAC-ohjelmistoss
 
 FreeAAC-ohjelmiston tiedostojen tekstirivien prosenttiosuudet FreeAAC-ohjelmistossa ovat: TypeScript 57,6 \%, HTML 28,0 \%, CSS 11,7 \% ja JavaScript 2,7 \%.
 
-FreeAAC-ohjelmistossa ylivoimaisesti eniten rivejä sisältävät \texttt{package.json}- ja \texttt{package-lock.json}-tiedostot. \texttt{Package.json} on JSON-tiedosto, joka sisältää NodeJS-alustan automaattisesti generoiman kuvauksen ohjelmiston perustiedoista ja riippuvuuksista npm-paketteihin versioineen. \texttt{package-lock.json}-tiedosto taas käytännössä pyrkii varmistamaan, että jokaisesta npm-paketista on käytössä oikea versio ja paketit ovat ehjiä. Sen tarkoitus on varmistaa, että jokainen asennettu ohjelmisto on mahdollisimman samankaltainen ja toimiva. Tämä edesauttaa alustariippumattomuutta. \colorbox{YellowGreen}{// TODO: Lähde}
+FreeAAC-ohjelmistossa ylivoimaisesti eniten rivejä sisältävät \texttt{package.json}- ja \texttt{package-lock.json}-tiedostot. \texttt{Package.json} on JSON-tiedosto, joka sisältää NodeJS-alustan automaattisesti generoiman kuvauksen ohjelmiston perustiedoista ja riippuvuuksista npm-paketteihin versioineen. \texttt{package-lock.json}-tiedosto taas käytännössä pyrkii varmistamaan, että jokaisesta npm-paketista on käytössä oikea versio ja paketit ovat ehjiä. Sen tarkoitus on varmistaa, että jokainen asennettu ohjelmisto on mahdollisimman samankaltainen ja toimiva. Tämä edesauttaa alustariippumattomuutta.
 
 Toinen merkittävän määrän rivejä sisältävä generoitu tiedosto on \texttt{config.xml}, joka on Apache Cordovan käyttämä koko ohjelmiston laajuinen asetustiedosto. Asetustiedostossa on lähinnä Android- ja iOS-käyttöjärjestelmissä ajettavien ohjelmistoversioiden räätälöimiseen tähtääviä asetuksia.
 
@@ -390,6 +425,8 @@ FreeAAC-ohjelmiston käytettävyysvaatimukset johdettiin yleisten suositusten pe
 4. \textit{FreeAAC-ohjelmiston käytettävyyttä arkielämän nopeaa reagointia vaativissa tilanteissa lisäisi mahdollisimman perinpohjainen mahdollisuus räätälöintiin.} \hyperref[AAC-context-settings]{(Luku 3.4.1, s. 15)}
 
 5. \textit{Käyttäjien mahdollisten motoristen haasteiden vuoksi näkymien tulisi olla pääosin staattisia ja niissä ei saisi olla nopeaa reagointia vaativia tapahtumia.} \hyperref[AAC-staticity]{(Luku 3.4.1, s. 15)}
+
+6. \textit{Käyttäjällä tulisi olla mahdollisuus asemoida elementtejä vapaasti ruudulla.} \hyperref[AAC-staticity]{(Luku 3.4.1, s. 16)}
 
 FreeAAC-sovellus käyttää Ionicin oletuselementtejä ja oletusteemaa. Ionicin mukaan oletuselementit ja oletusteema noudattavat Applen iOS-designperiaatteita sekä Googlen Material Design -määrityksiä.  
 
@@ -515,20 +552,17 @@ Korkein mitattu muistinkäyttö rasitukseessa oli 37MB. Liitteissä C ja D on li
 
 Muistinkäyttökäyriä tutkimalla nähdään, että ohjelman käynnistyessä muistinkäyttö nousee hetkellisesti, mutta ensimmäisen roskienkeruun jälkeen muistinkäyttö putoaa heti käynnistyksen jälkeistä tilannetta huomattavasti matalammaksi. Näin käy sekä ilman käyttäjän syötettä, että aktiivisen käytön aikana. Ilman käyttäjän syötteitä FreeAAC-ohjelmiston muistinkäyttö ei nouse ollenkaan. Ohjelmistossa ei ole toimintoja, jotka käyttäisivät muistia silloin kun käyttäjä ei aktiivisesti käytä ohjelmistoa. Tämä on tärkeää, sillä avusteisen kommunikaation sovellusta käytetään useasti vain hetkellisesti. Käytön aikana muistinkäyttö nousee hitaasti ja 5 minuutin testikäytön aikana ei saatu aikaan suuria hyppäyksiä ylöspäin. FreeAAC-ohjelmiston muistinkäyttö vaikuttaa tasaiselta.
 
-FreeAAC-ohjelmiston ohjelmakoodin määrä on maltillinen verrattuna ominaisuusvaatimuksiin, mikä parantaa ohjelmiston ylläpidettävyyttä ja testattavuutta. Ohjelmistossa on myös hyvin vähän sisäisiä riippuvuuksia, koska Angular-ohjelmistokehyksen sekä TypeScript-ohjelmointikielen avulla ohjelmistosta saatiin helposti tehtyä modulaarinen.
-\colorbox{YellowGreen}{// TODO: Lähde?}
+Angular-ohjelmistokehyksen sekä TypeScript-ohjelmointikielen avulla ohjelmistosta saatiin helposti tehtyä modulaarinen, minkä pitäisi parantaa ohjelman ylläpidettävyyttä ja helpottaa sen jatkokehitystä. Ylläpidettävyyttä ja jatkokehitettävyyttä ei kuitenkaan ole helppo mitata ja niiden arviointi ei tämän pro gradun -työn kannalta ole kovin mielekästä.
 
-Näkymien HTML-formaatti ei juurikaan aiheuttanut ohjelmistoteknisiä haasteita tai käytettävyysongelmia. Ainoastaan symbolien vapaa asemointi kortilla osoittautui sen verran haastavaksi tehtäväksi, että sitä ei toteutettu. HTML-kieli on alunperin tarkoitettu dokumenttien hierarkkiseksi ja rakenteelliseksi kuvauskieleksi, joten HTML-elementtien kelluvaa asemointia toisiinsa nähden ei ole helpoin toteuttaa sen avulla. Kelluvien elementtien toteuttaminen on kyllä mahdollista oikeanlaisten CSS-määritysten avulla, mutta tämä vaatisi erillisen asemointipalvelun rakentamista ohjelmistoon sekä CSS-luokkien lisäilyä ja poistamista reaaliajassa. Perinteisessä mobiilisovelluksessa elementtien vapaa asemointi olisi todennäköisesti helpompaa.
-\colorbox{YellowGreen}{// TODO: Lähteitä ja muista lisätä ominaisuusvaatimuksiin!}
+Näkymien HTML-formaatti ei juurikaan aiheuttanut ohjelmistoteknisiä haasteita tai käytettävyysongelmia. Ainoastaan symbolien vapaa asemointi kortilla osoittautui sen verran haastavaksi tehtäväksi, että sitä ei toteutettu. HTML-kieli on alunperin tarkoitettu dokumenttien hierarkkiseksi ja rakenteelliseksi kuvauskieleksi, joten HTML-elementtien kelluvaa asemointia toisiinsa nähden ei ole helpoin toteuttaa sen avulla. Kelluvien elementtien toteuttaminen on kyllä mahdollista oikeanlaisten CSS-määritysten avulla, mutta tämä vaatisi erillisen asemointipalvelun rakentamista ohjelmistoon sekä CSS-luokkien lisäämistä ja poistamista reaaliajassa. Lisäksi korttien asetusten tallentaminen muuttuisi huomattavasti haastavammaksi. Perinteisessä mobiilisovelluksessa elementtien vapaa asemointi olisi todennäköisesti helpompaa.
 
-Kenties haastavin osuus FreeAAC-ohjelmiston toteuttamisessa oli tietojen tallentaminen. Kuten luvussa 4.3 todettiin, progressiivisille WWW-sovelluksille ei ole luontevaa tallennustilaa, sillä selainten oikeuksien määrä on hyvin tarkasti rajoitettua tietoturvasyistä. Kuvat voidaan liittää mukaan sovellukseen, mutta korttien asetuksien tallentaminen ei ole yksinkertaista. Natiivisovelluksilla on suora pääsy rajattuun massamuistitilaan, mutta WWW-sovelluksissa tiedot tulee tallentaa muualle. Täten massamuistiin liittyvät operaatiot jätettiin tämän pro gradu -työn ulkopuolelle.
-\colorbox{YellowGreen}{// TODO: Korjaa hieman aiempaa kerrottua vastaavaksi.}
+Kenties haastavin osuus FreeAAC-ohjelmiston toteuttamisessa oli tietojen tallentaminen. Kuten luvussa 4.3 todettiin, progressiivisille WWW-sovelluksille ei ole luontevaa tallennustilaa, sillä selainten oikeuksien määrä on hyvin tarkasti rajoitettua tietoturvasyistä. Kuvat voidaan liittää mukaan sovellukseen, mutta korttien asetuksien tallentaminen ei ole yksinkertaista. Natiivisovelluksilla on suora pääsy rajattuun massamuistitilaan, mutta WWW-sovelluksissa tiedot tulee tallentaa vaihtelivin tavoin alustasta riippuen. Täten massamuistiin liittyvät operaatiot jätettiin tämän pro gradu -työn ulkopuolelle.
 
 \section{Käytettävyysnäkökulma}
 
 Käytettävyyden perusvaatimusten osalta FreeAAC-ohjelmiston toteutuksessa ei ilmennyt suuria haasteita. Ionicin tarjoama oletusteema on tehty yleisten käytettävyysvaatimusten mukaisesti käyttämällä erityisesti Googlen ja Applen mobiilikäyttöjärjestelmien käytettävyysohjeita, joten suurin osa ohjelmistosta pystyy käyttämään sitä suoraan ilman muutoksia. Tämä nopeuttaa ohjelmiston kehittämistä ja parantaa ohjelmiston ulkoasun käytettävyyttä sekä yhtenäisyyttä.
 
-FreeAAC-sovelluksen elementit ovat riittävän isoja, jotta niiden valitseminen ja toiminnallisuuksien ymmärtäminen on helpompaa kun ohjelmistoa ajetaan pieninäyttöisillä mobiililaitteilla. \colorbox{YellowGreen}{// TODO: Lähde käytettävyysohjeista?} Suuret elementit myös rajoittavat yhteen näkymään mahtuvien ominaisuuksien määrää, mikä auttaa pitämään näkymät riittävän yksinkertaisina käyttäjälle.
+FreeAAC-sovelluksen elementeistä on pyritty tekemään riittävän isoja, jotta niiden valitseminen ja toiminnallisuuksien ymmärtäminen on helpompaa kun ohjelmistoa ajetaan pieninäyttöisillä mobiililaitteilla. Suuret elementit myös rajoittavat yhteen näkymään mahtuvien ominaisuuksien määrää, mikä auttaa pitämään näkymät riittävän yksinkertaisina käyttäjälle.
 
 FreeAAC-ohjelmiston opittavuutta helpottaa se, että näkymät muistuttavat paljolti toisiaan. FreeAAC-ohjelmistossa ei ole moodeja eikä samoja toimintoja voi suorittaa usealla eri tavalla. Tämä lisää sekä opittavuutta, että muistettavuutta. 
 
@@ -557,13 +591,11 @@ FreeAAC-ohjelmistolle listattiin myös joukko erityisryhmien käytettävyysvaati
 
 Sovelluksen käyttämiseen ei tarvita eritysryhmille mahdollisesti motorisesti haastavia eleitä kuten pyyhkäisyjä. Erityisesti autisteilla on usein ongelmia hienomotoristen liikkeiden suorittamisessa, vaikka autististen käyttäjien yksilökohtaiset erot ovat tässäkin suuria \parencite[]{motor-skills-autism}.
 
-FreeAAC-ohjelmiston valikot on toteutettu perinteisellä tavalla painikkeita hyödyntämällä. Monessa mobiilisovelluksessa navigointi tapahtuu niin sanotun \textit{hampurilaisvalikon} avulla, mutta autistisille käyttäjille tarkoitetussa ohjelmistossa abstraktien symbolien käyttö voi olla ongelmallista (lähde), joten ohjelmistossa ei käytetä tätä yleistä ratkaisua.
+FreeAAC-ohjelmiston valikot on toteutettu perinteisellä tavalla painikkeita hyödyntämällä. Monessa mobiilisovelluksessa navigointi tapahtuu niin sanotun \textit{hampurilaisvalikon} avulla, mutta autistisille käyttäjille tarkoitetussa ohjelmistossa abstraktien symbolien käyttö voi olla ongelmallista, joten ohjelmistossa ei käytetä tätä yleistä ratkaisua.
 
-FreeAAC:n ulkoasusta tehtiin mustavalkoinen, jotta symbolit ja käyttäjän mahdollisesti ottamat kuvat erottuvat paremmin muista elementeistä.
+FreeAAC:n ulkoasusta tehtiin mustavalkoinen, jotta symbolit ja käyttäjän mahdollisesti ottamat kuvat erottuvat paremmin muista elementeistä. Riittävä kontrasti oli yksi vaatimus ohjelmiston ulkoasulle ja sen täyttäminen on helpointa käyttämällä mustavalkoista ulkoasua.
 
-FreeAAC-ohjelmiston näkymissä ei ole toimintoja tai elementtejä, joiden käyttäminen vaatii nopeaa reagointia. Näkymistä on pyritty rakentamaan mahdollisimman yksinkertaisia ja tämän esimerkiksi korttien luontinäkymä ja korttien poistonäkymä on erotettu toisistaan.
-
-\colorbox{YellowGreen}{// TODO: korttien vaihtaminen ja korttien koko}
+FreeAAC-ohjelmiston näkymissä ei ole toimintoja tai elementtejä, joiden käyttäminen vaatii nopeaa reagointia. Näkymistä on pyritty rakentamaan mahdollisimman yksinkertaisia ja tämän esimerkiksi korttien luontinäkymä ja korttien poistonäkymä on erotettu toisistaan. Korttien luontinäkymässä voidaan säätää kortin kokoa ja kortteja voidaan vaihtaa kontekstiin sopivaksi päänäkymän pudotusvalikon kautta.
 
 \chapter{Pohdinta}
 
